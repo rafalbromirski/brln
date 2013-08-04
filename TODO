@@ -1,5 +1,7 @@
-[ ] extract Places / Categories as a separate Class
 [ ] check TODO
+[ ] extract Places / Categories as a separate Class like STORAGE
 [ ] fetchrequest instead of current solution
+[ ] install FlatUI and test cocapods
 
-[ ] check tabbar with only one navigationView (right now I have 3)
+[-] check tabbar with only one navigationView (right now I have 3)
+[x] trigger rootControllers for navigationViews
