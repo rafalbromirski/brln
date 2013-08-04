@@ -1,0 +1,100 @@
+{
+    "version": 1.0,
+    "data": [
+    {
+        "categoryName": "Coffee",
+        "places":
+        [{
+            "placeName": "Bonanza Coffee Heroes",
+            "placeDescription": "Opened all the way back in 2007, Bonanza is one of the stalwarts of coffee culture in Berlin. Queues are common, especially on Sundays when the flea market is on at Mauerpark, but it’s worth the wait (and normally not that long anyway). Space is limited because they have to make room for the coffee roasters, but what other cafe can you name that roasts their own coffee on the premises?",
+            "placeUrl": "http://www.bonanzacoffee.de/",
+            "placeAddress": "Oderberger Straße 35, 10435 Berlin Prenzlauer Berg",
+         
+            "placeLocation":
+            {
+                "lat": 52.540006,
+                "long": 13.405456
+            }
+        },
+        {
+            "placeName": "Five Elephants",
+            "placeDescription": "Five Elephant, that’s who. On top of having their own roasters, their beans are also direct trade, meaning they deal on a one-to-one basis with the growers. Five Elephant also scores points for its seclusion, at the far end of Reichenberger Straße, which means that most of the customers are from the neighbourhood and it’s never too packed.",
+            "placeUrl": "http://www.fiveelephant.com/",
+            "placeAddress": "Reichenberger Straße 101, 10999 Berlin Kreuzberg",
+         
+            "placeLocation":
+            {
+                "lat": 52.493376,
+                "long": 13.438299
+            }
+         },
+         {
+            "placeName": "Double Eye",
+            "placeDescription": "Double Eye is owned by the winner of the 2005 European World Cup Barista Champion, Arno Schmeil, and is known for its espresso. It’s also arguably the oldest cafe in Berlin serving such high-grade coffee, having opened in 2001, so they’re excused from not having a proper website or Facebook page. There is no seating, but that’s how espresso was meant to be drank anyway.",
+            "placeUrl": "http://www.doubleeye.de/",
+            "placeAddress": "Akazienstraße 22, 10823 Berlin Schöneberg",
+         
+            "placeLocation":
+            {
+                "lat": 52.487906,
+                "long": 13.354154
+            }
+         },
+         {
+            "placeName": "Cafe CK",
+            "placeDescription": "Speaking of world champions, this past weekend Cafe CK owner Cory Andreen took home a trophy for Germany as he was named the World Cup Tasting Champion (yes, that’s a thing). Cory owns two cafes in Berlin, alongside his business partner Kerstin. Cafe CK, in Prenzlauer Berg, offers a selection of brewed coffees as well as sandwiches and snacks. CK Pour Voo, the newer of the two cafes, is located inside Voo Store, and is decorated with furniture by our favourite Dane Sigurd Larsen. Most Wednesdays Cory hosts public coffee cuppings as well at CK Pour Voo. Look out for the upcoming dates on their Facebook page.",
+            "placeUrl": "http://cafeckberlin.com/",
+            "placeAddress": "Marienburgerstraße 49, 10405 Berlin Prenzlauer Berg",
+         
+            "placeLocation":
+            {
+                "lat": 52.535477,
+                "long": 13.422839
+            }
+         },
+         {
+            "placeName": "Godshot",
+            "placeDescription": "Godshot is owned by Kai-Uwe, who taught himself the art of coffee-making, having first bought a machine for his home use, and then opening Godshot in Prenzlauer Berg. Godshot also hosts periodic seminars on latte art, and can also be found every Saturday at the Arnswalder Platz flea market.",
+            "placeUrl": "http://godshot.de/",
+            "placeAddress": "Immanuelkirchstraße 32, 10405 Berlin Prenzlauer Berg",
+         
+            "placeLocation":
+            {
+                "lat": 52.533014,
+                "long": 13.422999 
+            }
+         }]
+    },
+    {
+        "categoryName": "Lunch",
+        "places":
+        [{
+            "placeName": "Kantina von Hugo",
+            "placeDescription": "nice kantina",
+            "placeUrl": "http://www.kantinavonhugo.de",
+            "placeLocation": {}
+        },
+        {
+            "placeName": "Chez Dong",
+            "placeDescription": "Asian food",
+            "placeUrl": "",
+            "placeLocation": {}
+        }]
+    },
+    {
+        "categoryName": "Breakfast",
+        "places":
+        [{
+            "placeName": "Kantina von Hugo",
+            "placeDescription": "nice kantina",
+            "placeUrl": "http://www.kantinavonhugo.de",
+            "placeLocation": {}
+         },
+         {
+            "placeName": "Chez Dong",
+            "placeDescription": "Asian food",
+            "placeUrl": "",
+            "placeLocation": {}
+         }]
+    }]
+}
