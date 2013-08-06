@@ -9,6 +9,7 @@
 #import "DatabaseHelper.h"
 
 #import "DetailsViewController.h"
+#import "MapViewController.h"
 
 #import "Category.h"
 #import "Place.h"
@@ -36,7 +37,9 @@
     [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];
     
     favoriteButton = [[UIBarButtonItem alloc] initWithTitle:([place favorited] ? @"Remove" : @"Add") style:UIBarButtonItemStyleBordered target:self action:@selector(toggleFavorite:)];
-    [[self navigationItem] setRightBarButtonItem:favoriteButton];    
+    mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(showMap:)];
+    [[self navigationItem] setRightBarButtonItems:[NSArray arrayWithObjects:mapButton, favoriteButton, nil]];
+    
     
     UIView *mainView = [[UIView alloc] init];
     
@@ -121,6 +124,14 @@
     if (error) {
         NSLog(@"ERROR: Save request raised an error - %@", [error description]);
     }
+}
+
+- (void)showMap:(id)sender
+{
+    MapViewController *mvc = [[MapViewController alloc] init];
+    [mvc setManagedObjectContext:managedObjectContext];
+    
+    [self.navigationController pushViewController:mvc animated:YES];
 }
 
 # pragma mark - helpers
