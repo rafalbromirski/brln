@@ -21,6 +21,7 @@
 		24BBBD3E17AD2FD20036161D /* PlaceLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD3D17AD2FD20036161D /* PlaceLocation.m */; };
 		24BBBD4117AD2FD30036161D /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD4017AD2FD30036161D /* Category.m */; };
 		24BBBD4417AD2FD30036161D /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD4317AD2FD30036161D /* Place.m */; };
+		24C4065117B04A5000E98826 /* CategoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4065017B04A5000E98826 /* CategoryStore.m */; };
 		24D3F4E317A07205004759BB /* BRLN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24D3F4E117A07205004759BB /* BRLN.xcdatamodeld */; };
 		24F7BB83179DCFAF003BA61D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F7BB82179DCFAF003BA61D /* UIKit.framework */; };
 		24F7BB85179DCFAF003BA61D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F7BB84179DCFAF003BA61D /* Foundation.framework */; };
@@ -63,6 +64,8 @@
 		24BBBD4017AD2FD30036161D /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Category.m; path = BRLN/models/Category.m; sourceTree = "<group>"; };
 		24BBBD4217AD2FD30036161D /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Place.h; path = BRLN/models/Place.h; sourceTree = "<group>"; };
 		24BBBD4317AD2FD30036161D /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Place.m; path = BRLN/models/Place.m; sourceTree = "<group>"; };
+		24C4064F17B04A5000E98826 /* CategoryStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryStore.h; path = BRLN/stores/CategoryStore.h; sourceTree = "<group>"; };
+		24C4065017B04A5000E98826 /* CategoryStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryStore.m; path = BRLN/stores/CategoryStore.m; sourceTree = "<group>"; };
 		24D3F4E217A07205004759BB /* BRLN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BRLN.xcdatamodel; sourceTree = "<group>"; };
 		24F7BB7F179DCFAF003BA61D /* BRLN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRLN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F7BB82179DCFAF003BA61D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -109,6 +112,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2416663317B19F6400C145AE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		2440FCAF179F32AF001FF0FB /* Details */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,12 +137,23 @@
 			name = resources;
 			sourceTree = "<group>";
 		};
+		24C4064E17B049F700E98826 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				24C4064F17B04A5000E98826 /* CategoryStore.h */,
+				24C4065017B04A5000E98826 /* CategoryStore.m */,
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
 		24F7BB76179DCFAF003BA61D = {
 			isa = PBXGroup;
 			children = (
 				24523B0117ADC0EC00FAF7FA /* TODO */,
 				24F7BB9F179DCFC6003BA61D /* Controllers */,
 				24F7BBA0179DCFCD003BA61D /* Models */,
+				24C4064E17B049F700E98826 /* Stores */,
+				2416663317B19F6400C145AE /* Helpers */,
 				24F7BB88179DCFAF003BA61D /* Main */,
 				24F7BB89179DCFAF003BA61D /* Supporting Files */,
 				24F7BB81179DCFAF003BA61D /* Frameworks */,
@@ -349,6 +370,7 @@
 				24BBBD4417AD2FD30036161D /* Place.m in Sources */,
 				24523AF917AD528B00FAF7FA /* DetailsViewController.m in Sources */,
 				24523B0017AD9B2900FAF7FA /* PlaceAnnotation.m in Sources */,
+				24C4065117B04A5000E98826 /* CategoryStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

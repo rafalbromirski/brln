@@ -13,6 +13,8 @@
 #import "FavoritesViewController.h"
 #import "InfoViewController.h"
 
+#import "CategoryStore.h"
+
 @implementation BRLNAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -211,9 +213,10 @@
     
     // ### COREDATA ###
     NSManagedObjectContext *context = [self managedObjectContext];
-    [cvc setManagedObjectContext:context];
-    [mvc setManagedObjectContext:context];
-    [fvc setManagedObjectContext:context];
+    
+//    [cvc setManagedObjectContext:context];
+//    [mvc setManagedObjectContext:context];
+//    [fvc setManagedObjectContext:context];
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController

@@ -16,6 +16,7 @@
     
     __weak IBOutlet UIScrollView *scrollView;
     UIBarButtonItem *favoriteButton;
+    UIBarButtonItem *mapButton;
     
     Place *place;
 }

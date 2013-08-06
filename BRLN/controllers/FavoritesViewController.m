@@ -24,7 +24,6 @@
         [self setTitle:@"Favorites"];
         
         [[self navigationItem] setLeftBarButtonItem:[self editButtonItem]];
-    
         
         UIBarButtonItem *location = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(showOnMap:)];
         [[self navigationItem] setRightBarButtonItem:location];
@@ -89,19 +88,26 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [[places objectAtIndex:[indexPath row]] setFavorited:NO];        
+        [places removeObjectAtIndex:[indexPath row]];
+        
+        NSError *error = nil;
+        [managedObjectContext save:&error];
+        
+        if (error) {
+            NSLog(@"ERROR: Remove request raised an error - %@", [error description]);
+        }
+        
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        [tableView deleteRowsAtIndexPaths:@[indexPath]  withRowAnimation:UITableViewRowAnimationFade];        
+    }
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.

@@ -9,6 +9,8 @@
 #import "CategoriesViewController.h"
 #import "PlacesViewController.h"
 
+#import "CategoryStore.h"
+
 #import "Category.h"
 #import "Place.h"
 #import "PlaceLocation.h"
@@ -36,7 +38,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [self getAllCategories];    
+//    [self getAllCategories];    
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,7 +52,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [categories count];
+    return [[[CategoryStore defaultStore] allCategories] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -62,7 +64,7 @@
     }
     
     // Configure the cell...
-    NSString *cellName = [[categories objectAtIndex:[indexPath row]] categoryName];
+    NSString *cellName = [[[[CategoryStore defaultStore] allCategories] objectAtIndex:[indexPath row]] categoryName];
     [[cell textLabel] setText:cellName];
     
     return cell;
