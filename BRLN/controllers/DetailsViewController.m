@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 home. All rights reserved.
 //
 
+#import "DatabaseHelper.h"
+
 #import "DetailsViewController.h"
 
 #import "Category.h"
@@ -29,6 +31,9 @@
 {
     [super loadView];
     [self setTitle:[place placeName]];
+    
+    // set context - DatabaseHelper
+    [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];
     
     favoriteButton = [[UIBarButtonItem alloc] initWithTitle:([place favorited] ? @"Remove" : @"Add") style:UIBarButtonItemStyleBordered target:self action:@selector(toggleFavorite:)];
     [[self navigationItem] setRightBarButtonItem:favoriteButton];    

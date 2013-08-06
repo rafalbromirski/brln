@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 home. All rights reserved.
 //
 
+#import "DatabaseHelper.h"
+
 #import "MapViewController.h"
+#import "DetailsViewController.h"
+#import "PlacesViewController.h"
 
 #import "Place.h"
 #import "PlaceLocation.h"
 #import "PlaceAnnotation.h"
-
-#import "DetailsViewController.h"
-#import "PlacesViewController.h"
-
 
 static double location_lat = 52.52426800;
 static double location_long = 13.40629000;
@@ -45,6 +45,9 @@ static double location_distance = 7000;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.    
     [[navigationBar topItem] setTitle:@"Map"];    
+    
+    // set context - DatabaseHelper
+    [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];
     
     [self initData];
     [self initMapView];
@@ -156,7 +159,6 @@ static double location_distance = 7000;
     
     DetailsViewController *detailsViewController = [[DetailsViewController alloc] initWithNibName:@"DetailsViewController" bundle:nil];
     [detailsViewController setPlace:[annotation place]];
-    [detailsViewController setManagedObjectContext:managedObjectContext];
     
     [self.navigationController pushViewController:detailsViewController animated:YES];
 }

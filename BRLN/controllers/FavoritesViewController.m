@@ -5,6 +5,7 @@
 //  Created by Weronika Zawila-Bromirska on 7/22/13.
 //  Copyright (c) 2013 home. All rights reserved.
 //
+#import "DatabaseHelper.h"
 
 #import "FavoritesViewController.h"
 #import "DetailsViewController.h"
@@ -23,8 +24,7 @@
         // Custom initialization
         [self setTitle:@"Favorites"];
         
-        [[self navigationItem] setLeftBarButtonItem:[self editButtonItem]];
-    
+        [[self navigationItem] setLeftBarButtonItem:[self editButtonItem]];    
         
         UIBarButtonItem *location = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(showOnMap:)];
         [[self navigationItem] setRightBarButtonItem:location];
@@ -36,12 +36,10 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self getFavoritedPlaces];
+    // set context - DatabaseHelper
+    [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];
+    
+//    [self getFavoritedPlaces];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -125,7 +123,6 @@
 {
     DetailsViewController *detailsViewController = [[DetailsViewController alloc] initWithNibName:@"DetailsViewController" bundle:nil];
     [detailsViewController setPlace:[places objectAtIndex:[indexPath row]]];
-    [detailsViewController setManagedObjectContext:managedObjectContext];
     
     [self.navigationController pushViewController:detailsViewController animated:YES];
 }

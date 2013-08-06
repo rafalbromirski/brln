@@ -1,7 +1,11 @@
 [ ] check TODO
+[ ] extract importData from CategoriesController
 [ ] extract Places / Categories as a separate Class like STORAGE
-[ ] fetchrequest instead of current solution
-[ ] install FlatUI and test cocapods
+[ ] read about fetchrequestcontroller
+[ ] check delete method; should be: [managedObjectContext deleteObject:eventToDelete];
+    http://developer.apple.com/library/ios/#documentation/DataManagement/Conceptual/iPhoneCoreData01/Articles/06_Deleting.html
+
 
 [-] check tabbar with only one navigationView (right now I have 3)
 [x] trigger rootControllers for navigationViews
+[-] FlatUI / can't replay on it - dependencies (ios7)

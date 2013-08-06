@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2416663717B1A04800C145AE /* DatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2416663617B1A04800C145AE /* DatabaseHelper.m */; };
 		243FBC9917A82FE700825D1B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 243FBC9817A82FE700825D1B /* CoreLocation.framework */; };
 		243FBC9D17A83D1100825D1B /* location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 243FBC9C17A83D1100825D1B /* location.gpx */; };
 		2440FCA8179F2C5B001FF0FB /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440FCA6179F2C5A001FF0FB /* PlacesViewController.m */; };
@@ -43,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2416663517B1A04800C145AE /* DatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseHelper.h; path = BRLN/helpers/DatabaseHelper.h; sourceTree = "<group>"; };
+		2416663617B1A04800C145AE /* DatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseHelper.m; path = BRLN/helpers/DatabaseHelper.m; sourceTree = "<group>"; };
 		243FBC9817A82FE700825D1B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		243FBC9C17A83D1100825D1B /* location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = location.gpx; sourceTree = "<group>"; };
 		2440FCA5179F2C5A001FF0FB /* PlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlacesViewController.h; path = BRLN/controllers/PlacesViewController.h; sourceTree = "<group>"; };
@@ -109,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2416663417B1A01800C145AE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2416663517B1A04800C145AE /* DatabaseHelper.h */,
+				2416663617B1A04800C145AE /* DatabaseHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		2440FCAF179F32AF001FF0FB /* Details */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +144,7 @@
 			children = (
 				24523B0117ADC0EC00FAF7FA /* TODO */,
 				24F7BB9F179DCFC6003BA61D /* Controllers */,
+				2416663417B1A01800C145AE /* Helpers */,
 				24F7BBA0179DCFCD003BA61D /* Models */,
 				24F7BB88179DCFAF003BA61D /* Main */,
 				24F7BB89179DCFAF003BA61D /* Supporting Files */,
@@ -349,6 +362,7 @@
 				24BBBD4417AD2FD30036161D /* Place.m in Sources */,
 				24523AF917AD528B00FAF7FA /* DetailsViewController.m in Sources */,
 				24523B0017AD9B2900FAF7FA /* PlaceAnnotation.m in Sources */,
+				2416663717B1A04800C145AE /* DatabaseHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

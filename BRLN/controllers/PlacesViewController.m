@@ -5,6 +5,7 @@
 //  Created by Weronika Zawila-Bromirska on 7/23/13.
 //  Copyright (c) 2013 home. All rights reserved.
 //
+#import "DatabaseHelper.h"
 
 #import "PlacesViewController.h"
 #import "DetailsViewController.h"
@@ -31,12 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];    
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    // set context - DatabaseHelper
+    [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];
+    
     [self getPlacesWith:currentCategory];
 }
 
@@ -113,7 +112,6 @@
 {
     DetailsViewController *detailsViewController = [[DetailsViewController alloc] initWithNibName:@"DetailsViewController" bundle:nil];
     [detailsViewController setPlace:[places objectAtIndex:[indexPath row]]];
-    [detailsViewController setManagedObjectContext:managedObjectContext];
     
     [self.navigationController pushViewController:detailsViewController animated:YES];
 }

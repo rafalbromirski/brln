@@ -18,6 +18,7 @@
  
     NSManagedObjectContext *managedObjectContext;    
     NSMutableArray *places;
+    NSString *currentCategory;
     
     __weak IBOutlet UINavigationBar *navigationBar;
     __weak IBOutlet MKMapView *mapView;

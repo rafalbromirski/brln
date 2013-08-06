@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 home. All rights reserved.
 //
 
+#import "DatabaseHelper.h"
+
 #import "CategoriesViewController.h"
 #import "PlacesViewController.h"
 
@@ -30,11 +32,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    // set context - DatabaseHelper
+    [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];
     
     [self getAllCategories];    
 }
@@ -112,7 +112,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {    
     PlacesViewController *placesViewController = [[PlacesViewController alloc] initWithStyle:UITableViewStylePlain];
-    [placesViewController setManagedObjectContext:[self managedObjectContext]];
     [placesViewController setCurrentCategory:[[categories objectAtIndex:[indexPath row]] categoryName]];
     
     [self.navigationController pushViewController:placesViewController animated:YES];
@@ -139,6 +138,8 @@
         categories = [[NSMutableArray alloc] initWithArray:results];
     }
 }
+
+// TODO: extract logic from the controller into separate class
 
 - (void)importData
 {
