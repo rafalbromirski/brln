@@ -16,7 +16,8 @@
 @implementation PlacesViewController
 
 @synthesize managedObjectContext;
-@synthesize places;
+@synthesize fetchedResultsController = _fetchedResultsController;
+
 @synthesize currentCategory;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -24,19 +25,25 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        [self setTitle:@"Places"];
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];    
+    [super viewDidLoad];
+    
+    [self setTitle:@"Places"];    
     
     // set context - DatabaseHelper
     [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];
     
-    [self getPlacesWith:currentCategory];
+    NSError *error;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        // update to handle the error
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        exit(-1); //Fail
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,7 +56,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [places count];
+    // Return the number of rows in the section.
+    id sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,96 +70,98 @@
     }
     
     // Configure the cell...
-    NSString *cellName = [[places objectAtIndex:[indexPath row]] placeName];
-    [[cell textLabel] setText:cellName];
+    [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DetailsViewController *detailsViewController = [[DetailsViewController alloc] initWithNibName:@"DetailsViewController" bundle:nil];
-    [detailsViewController setPlace:[places objectAtIndex:[indexPath row]]];
+    [detailsViewController setPlace:[_fetchedResultsController objectAtIndexPath:indexPath]];
     
     [self.navigationController pushViewController:detailsViewController animated:YES];
 }
 
-#pragma mark - CoreData - helpers
+#pragma mark - FetchResultsController delegate
 
-- (void)getAllPlaces
+- (NSFetchedResultsController *)fetchedResultsController
 {
-    NSEntityDescription *placeEntity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:placeEntity];
-
-    NSError *error;
-    NSArray *results = [managedObjectContext executeFetchRequest:request error:&error];
-    
-    if (!results || error) {
-        NSLog(@"ERROR: Fetch request raised an error - %@", [error description]);
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
     }
     
-    places = [[NSMutableArray alloc] initWithArray:results];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"placeName" ascending:YES];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"category.categoryName like %@", currentCategory];
+    
+    [request setEntity:entity];
+    [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+    [request setPredicate:predicate];    
+    [request setFetchBatchSize:20];
+    
+    NSFetchedResultsController *theFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    
+    [self setFetchedResultsController:theFetchedResultsController];
+    [_fetchedResultsController setDelegate:self];
+    
+    return _fetchedResultsController;
 }
 
-- (void)getPlacesWith:(NSString *)categoryName
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
 {
-    NSEntityDescription *placeEntity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:placeEntity];
+    UITableView *tableView = [self tableView];
     
-    NSPredicate *placePredicate = [NSPredicate predicateWithFormat:@"category.categoryName like %@", categoryName];
-    [request setPredicate:placePredicate];
-    
-    NSError *error;
-    NSArray *results = [managedObjectContext executeFetchRequest:request error:&error];
-    
-    if (!results || error) {
-        NSLog(@"ERROR: Fetch request raised an error - %@", [error description]);
+    switch(type)
+    {
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
     }
-    
-    places = [[NSMutableArray alloc] initWithArray:results];
 }
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id )sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
+    
+    switch(type)
+    {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
+    [self.tableView endUpdates];
+}
+
+#pragma mark - Controller helpers
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    NSString *cellName = [[_fetchedResultsController objectAtIndexPath:indexPath] placeName];
+    [[cell textLabel] setText:cellName];
+}
+
 
 @end

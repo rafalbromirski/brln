@@ -12,8 +12,6 @@
 
 @interface DetailsViewController : UIViewController
 {
-    NSManagedObjectContext *managedObjectContext;
-    
     __weak IBOutlet UIScrollView *scrollView;
     UIBarButtonItem *favoriteButton;
     UIBarButtonItem *mapButton;

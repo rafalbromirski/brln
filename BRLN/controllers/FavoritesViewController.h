@@ -8,16 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FavoritesViewController : UITableViewController
-{
-    NSManagedObjectContext *managedObjectContext;
-
-    NSMutableArray *places;
-}
+@interface FavoritesViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) NSMutableArray *places;
-
--(void)getFavoritedPlaces;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
 @end

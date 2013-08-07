@@ -24,6 +24,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
+        // Custom initialization        
     }
     return self;
 }
@@ -100,7 +101,7 @@
     [request setSortDescriptors:[NSArray arrayWithObject:sort]];
     [request setFetchBatchSize:20];
     
-    NSFetchedResultsController *theFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:@"Root"];
+    NSFetchedResultsController *theFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:@"CategoryCache"];
     
     [self setFetchedResultsController:theFetchedResultsController];
     [_fetchedResultsController setDelegate:self];

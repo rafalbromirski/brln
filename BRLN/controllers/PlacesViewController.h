@@ -10,19 +10,14 @@
 
 @class Category;
 
-@interface PlacesViewController : UITableViewController
+@interface PlacesViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 {
-    NSManagedObjectContext *managedObjectContext;
-    
-    NSMutableArray *places;
     NSString *currentCategory;
 }
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) NSMutableArray *places;
-@property (nonatomic, retain) NSString *currentCategory;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
--(void)getAllPlaces;
--(void)getPlacesWith:(NSString *)categoryName;
+@property (nonatomic, retain) NSString *currentCategory;
 
 @end

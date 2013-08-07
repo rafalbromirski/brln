@@ -129,7 +129,6 @@
 - (void)showMap:(id)sender
 {
     MapViewController *mvc = [[MapViewController alloc] init];
-    [mvc setManagedObjectContext:managedObjectContext];
     
     [self.navigationController pushViewController:mvc animated:YES];
 }
