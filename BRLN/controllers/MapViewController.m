@@ -53,6 +53,12 @@ static double location_distance = 7000;
     [self initMapView];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];    
+    [mapView deselectAnnotation:[mapView.selectedAnnotations objectAtIndex:0] animated:NO];    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
