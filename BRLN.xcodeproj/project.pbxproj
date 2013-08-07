@@ -23,6 +23,7 @@
 		24BBBD4117AD2FD30036161D /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD4017AD2FD30036161D /* Category.m */; };
 		24BBBD4417AD2FD30036161D /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD4317AD2FD30036161D /* Place.m */; };
 		24D3F4E317A07205004759BB /* BRLN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24D3F4E117A07205004759BB /* BRLN.xcdatamodeld */; };
+		24D8645E17B2F18F00E0AB3C /* ImportDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D8645D17B2F18F00E0AB3C /* ImportDataHelper.m */; };
 		24F7BB83179DCFAF003BA61D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F7BB82179DCFAF003BA61D /* UIKit.framework */; };
 		24F7BB85179DCFAF003BA61D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F7BB84179DCFAF003BA61D /* Foundation.framework */; };
 		24F7BB87179DCFAF003BA61D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F7BB86179DCFAF003BA61D /* CoreGraphics.framework */; };
@@ -67,6 +68,8 @@
 		24BBBD4217AD2FD30036161D /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Place.h; path = BRLN/models/Place.h; sourceTree = "<group>"; };
 		24BBBD4317AD2FD30036161D /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Place.m; path = BRLN/models/Place.m; sourceTree = "<group>"; };
 		24D3F4E217A07205004759BB /* BRLN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BRLN.xcdatamodel; sourceTree = "<group>"; };
+		24D8645C17B2F18F00E0AB3C /* ImportDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImportDataHelper.h; path = BRLN/helpers/ImportDataHelper.h; sourceTree = "<group>"; };
+		24D8645D17B2F18F00E0AB3C /* ImportDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImportDataHelper.m; path = BRLN/helpers/ImportDataHelper.m; sourceTree = "<group>"; };
 		24F7BB7F179DCFAF003BA61D /* BRLN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRLN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F7BB82179DCFAF003BA61D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24F7BB84179DCFAF003BA61D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 			children = (
 				2416663517B1A04800C145AE /* DatabaseHelper.h */,
 				2416663617B1A04800C145AE /* DatabaseHelper.m */,
+				24D8645C17B2F18F00E0AB3C /* ImportDataHelper.h */,
+				24D8645D17B2F18F00E0AB3C /* ImportDataHelper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				24523AF917AD528B00FAF7FA /* DetailsViewController.m in Sources */,
 				24523B0017AD9B2900FAF7FA /* PlaceAnnotation.m in Sources */,
 				2416663717B1A04800C145AE /* DatabaseHelper.m in Sources */,
+				24D8645E17B2F18F00E0AB3C /* ImportDataHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

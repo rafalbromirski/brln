@@ -13,7 +13,4 @@
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
-//-(void)getAllCategories;
-//-(void)importData;
-
 @end
