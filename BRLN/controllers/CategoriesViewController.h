@@ -8,18 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CategoriesViewController : UITableViewController
-{
-    NSManagedObjectContext *managedObjectContext;
-    
-    NSMutableArray *categories;
-}
+@interface CategoriesViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) NSMutableArray *categories;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
--(void)getAllCategories;
-
--(void)importData;
+//-(void)getAllCategories;
+//-(void)importData;
 
 @end
