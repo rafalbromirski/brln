@@ -41,7 +41,6 @@
     if (![[self fetchedResultsController] performFetch:&error]) {
         // update to handle the error
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        exit(-1); //Fail
     }
     
     if ([[_fetchedResultsController fetchedObjects] count] == 0) {

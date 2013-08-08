@@ -87,17 +87,14 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        [places objectAtIndex:[indexPath row]];
-//        [places removeObjectAtIndex:[indexPath row]];
+        [[_fetchedResultsController objectAtIndexPath:indexPath] setFavorited:NO];
         
-//        NSError *error = nil;
-//        [managedObjectContext save:&error];
-//        
-//        if (error) {
-//            NSLog(@"ERROR: Remove request raised an error - %@", [error description]);
-//        }
+        NSError *error = nil;
+        [managedObjectContext save:&error];
         
-//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        if (error) {
+            NSLog(@"ERROR: Save request raised an error - %@", [error description]);
+        }
     }
 }
 

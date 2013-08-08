@@ -23,7 +23,6 @@ static double location_distance = 7000;
 
 @implementation MapViewController
 
-@synthesize managedObjectContext;
 @synthesize places;
 @synthesize currentCategory;
 
@@ -31,11 +30,18 @@ static double location_distance = 7000;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [self setTitle:@"Map"];
-        
         locationManager = [[CLLocationManager alloc] init];
         [locationManager setDelegate:self];
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];        
+    }
+    return self;
+}
+
+- (id)initWithPlace:(Place *)place;
+{
+    self = [super init];
+    if (self) {
+        
     }
     return self;
 }
@@ -44,7 +50,7 @@ static double location_distance = 7000;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.    
-    [[navigationBar topItem] setTitle:@"Map"];    
+    [[navigationBar topItem] setTitle:@"Map"];
     
     // set context - DatabaseHelper
     [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];
@@ -86,12 +92,12 @@ static double location_distance = 7000;
 
 - (void)initData
 {
-    NSEntityDescription *placeEntity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:managedObjectContext];
+    NSEntityDescription *placeEntity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:[self managedObjectContext]];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:placeEntity];
     
     NSError *error;
-    NSArray *results = [managedObjectContext executeFetchRequest:request error:&error];
+    NSArray *results = [[self managedObjectContext] executeFetchRequest:request error:&error];
     
     if (!results || error) {
         NSLog(@"ERROR: Fetch request raised an error - %@", [error description]);

@@ -15,8 +15,7 @@
 @interface MapViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 {
     CLLocationManager *locationManager;
- 
-    NSManagedObjectContext *managedObjectContext;    
+
     NSMutableArray *places;
     NSString *currentCategory;
     
@@ -25,8 +24,11 @@
 }
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+
 @property (nonatomic, retain) NSMutableArray *places;
 @property (nonatomic, retain) NSString *currentCategory;
+
+- (id)initWithPlace:(Place *)place;
 
 - (void)initData;
 - (void)initMapView;
