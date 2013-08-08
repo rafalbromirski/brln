@@ -20,11 +20,9 @@ static double location_lat = 52.52426800;
 static double location_long = 13.40629000;
 static double location_distance = 7000;
 
-
 @implementation MapViewController
 
-@synthesize places;
-@synthesize currentCategory;
+@synthesize managedObjectContext;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,14 +35,14 @@ static double location_distance = 7000;
     return self;
 }
 
-- (id)initWithPlace:(Place *)place;
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
+//- (id)initWithPlace:(Place *)place;
+//{
+//    self = [super init];
+//    if (self) {
+//        
+//    }
+//    return self;
+//}
 
 - (void)viewDidLoad
 {
@@ -55,15 +53,20 @@ static double location_distance = 7000;
     // set context - DatabaseHelper
     [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];
     
-    [self initData];
+    NSError *error;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        // update to handle the error
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+    }
+    
     [self initMapView];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];    
-    [mapView deselectAnnotation:[mapView.selectedAnnotations objectAtIndex:0] animated:NO];    
-}
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];    
+//    [mapView deselectAnnotation:[mapView.selectedAnnotations objectAtIndex:0] animated:NO];    
+//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -74,6 +77,29 @@ static double location_distance = 7000;
 - (void)dealloc
 {
     [locationManager setDelegate:nil];
+}
+
+#pragma mark - FetchResultsController delegate
+
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"placeName" ascending:YES];
+    
+    [request setEntity:entity];
+    [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+    
+    NSFetchedResultsController *theFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    
+    [self setFetchedResultsController:theFetchedResultsController];
+    [_fetchedResultsController setDelegate:self];
+    
+    return _fetchedResultsController;
 }
 
 #pragma mark - custom inits
@@ -88,22 +114,6 @@ static double location_distance = 7000;
     [mapView setRegion:region];
     [mapView setShowsUserLocation:YES];
     [mapView addAnnotations:[self getPlacesAnnotations]];
-}
-
-- (void)initData
-{
-    NSEntityDescription *placeEntity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:[self managedObjectContext]];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:placeEntity];
-    
-    NSError *error;
-    NSArray *results = [[self managedObjectContext] executeFetchRequest:request error:&error];
-    
-    if (!results || error) {
-        NSLog(@"ERROR: Fetch request raised an error - %@", [error description]);
-    }
-    
-    places = [[NSMutableArray alloc] initWithArray:results];
 }
 
 #pragma mark - CoreLocation helpers
@@ -181,7 +191,7 @@ static double location_distance = 7000;
 {
     NSMutableArray *annotations = [[NSMutableArray alloc] init];
     
-    for (Place *place in places)
+    for (Place *place in [_fetchedResultsController fetchedObjects])
     {        
         PlaceAnnotation *pa = [[PlaceAnnotation alloc] initWithPlace:place];
         [annotations addObject:pa];

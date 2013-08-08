@@ -12,27 +12,20 @@
 
 #import "Place.h"
 
-@interface MapViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface MapViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, NSFetchedResultsControllerDelegate>
 {
     CLLocationManager *locationManager;
-
-    NSMutableArray *places;
-    NSString *currentCategory;
     
     __weak IBOutlet UINavigationBar *navigationBar;
     __weak IBOutlet MKMapView *mapView;
 }
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
-@property (nonatomic, retain) NSMutableArray *places;
-@property (nonatomic, retain) NSString *currentCategory;
+//- (id)initWithPlace:(Place *)place;
 
-- (id)initWithPlace:(Place *)place;
-
-- (void)initData;
 - (void)initMapView;
-
 - (NSArray *)getPlacesAnnotations;
 
 @end
