@@ -18,12 +18,14 @@
 
 @synthesize place;
 @synthesize managedObjectContext;
+@synthesize mapButtonVisible;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [self setMapButtonVisible:YES];
     }
     return self;
 }
@@ -31,15 +33,24 @@
 - (void)loadView
 {
     [super loadView];
+
+    
     [self setTitle:[place placeName]];
     
     // set context - DatabaseHelper
     [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];
     
     favoriteButton = [[UIBarButtonItem alloc] initWithTitle:([place favorited] ? @"Remove" : @"Add") style:UIBarButtonItemStyleBordered target:self action:@selector(toggleFavorite:)];
-    mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(showMap:)];
-    [[self navigationItem] setRightBarButtonItems:[NSArray arrayWithObjects:mapButton, favoriteButton, nil]];
+
+    NSLog(@"mapButtonVisible: %@", [self mapButtonVisible] ? @"YES" : @"NO");
     
+    if (mapButtonVisible) {
+         mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(showMap:)];
+        [[self navigationItem] setRightBarButtonItems:[NSArray arrayWithObjects:mapButton, favoriteButton, nil]];
+    } else {
+        [[self navigationItem] setRightBarButtonItem:favoriteButton];
+    }
+        
     
     UIView *mainView = [[UIView alloc] init];
     
@@ -129,6 +140,8 @@
 - (void)showMap:(id)sender
 {
     MapViewController *mvc = [[MapViewController alloc] init];
+    [mvc setPlaces:[[NSMutableArray alloc] initWithObjects:place, nil]];
+    [mvc setMapAnnotatesClickable:NO];
     
     [self.navigationController pushViewController:mvc animated:YES];
 }

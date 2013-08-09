@@ -20,53 +20,56 @@ static double location_lat = 52.52426800;
 static double location_long = 13.40629000;
 static double location_distance = 7000;
 
+
 @implementation MapViewController
 
 @synthesize managedObjectContext;
+@synthesize places;
+@synthesize mapAnnotatesClickable;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
+        [self setMapAnnotatesClickable:YES];
+        
         locationManager = [[CLLocationManager alloc] init];
         [locationManager setDelegate:self];
-        [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];        
+        [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     }
     return self;
 }
 
-//- (id)initWithPlace:(Place *)place;
-//{
-//    self = [super init];
-//    if (self) {
-//        
-//    }
-//    return self;
-//}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {        
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.    
-    [[navigationBar topItem] setTitle:@"Map"];
+    
+    [self setTitle:@"Map"];    
     
     // set context - DatabaseHelper
     [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];
     
-    NSError *error;
-    if (![[self fetchedResultsController] performFetch:&error]) {
-        // update to handle the error
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-    }
     
+    if (!places) {
+        [self initPlaces];
+    }
     [self initMapView];
 }
 
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    [super viewWillAppear:animated];    
-//    [mapView deselectAnnotation:[mapView.selectedAnnotations objectAtIndex:0] animated:NO];    
-//}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];    
+    [mapView deselectAnnotation:[mapView.selectedAnnotations objectAtIndex:0] animated:NO];    
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -79,36 +82,27 @@ static double location_distance = 7000;
     [locationManager setDelegate:nil];
 }
 
-#pragma mark - FetchResultsController delegate
+#pragma mark - custom inits
 
-- (NSFetchedResultsController *)fetchedResultsController
+- (void)initPlaces
 {
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
+    NSEntityDescription *placeEntity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:placeEntity];
+    
+    NSError *error;
+    NSArray *results = [managedObjectContext executeFetchRequest:request error:&error];
+    
+    if (!results || error) {
+        NSLog(@"ERROR: Fetch request raised an error - %@", [error description]);
     }
     
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"placeName" ascending:YES];
-    
-    [request setEntity:entity];
-    [request setSortDescriptors:[NSArray arrayWithObject:sort]];
-    
-    NSFetchedResultsController *theFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:nil];
-    
-    [self setFetchedResultsController:theFetchedResultsController];
-    [_fetchedResultsController setDelegate:self];
-    
-    return _fetchedResultsController;
+    places = [[NSMutableArray alloc] initWithArray:results];
 }
-
-#pragma mark - custom inits
 
 - (void)initMapView
 {
-    // TODO
-    // IMPORT DATA - lat / long
-    // IMPORT DATA - region
+    // TODO - CONST file
     CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(location_lat, location_long);
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, location_distance, location_distance);
     [mapView setRegion:region];
@@ -157,10 +151,13 @@ static double location_distance = 7000;
             [customAnnotationView setCanShowCallout:YES];
             [customAnnotationView setAnimatesDrop:YES];
             
-            UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-            [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
+            if ([self mapAnnotatesClickable])
+            {
+                UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+                [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
             
-            [customAnnotationView setRightCalloutAccessoryView:rightButton];
+                [customAnnotationView setRightCalloutAccessoryView:rightButton];
+            }
             
             return customAnnotationView;
         }
@@ -181,6 +178,7 @@ static double location_distance = 7000;
     
     DetailsViewController *detailsViewController = [[DetailsViewController alloc] initWithNibName:@"DetailsViewController" bundle:nil];
     [detailsViewController setPlace:[annotation place]];
+    [detailsViewController setMapButtonVisible:NO];
     
     [self.navigationController pushViewController:detailsViewController animated:YES];
 }
@@ -191,7 +189,7 @@ static double location_distance = 7000;
 {
     NSMutableArray *annotations = [[NSMutableArray alloc] init];
     
-    for (Place *place in [_fetchedResultsController fetchedObjects])
+    for (Place *place in places)
     {        
         PlaceAnnotation *pa = [[PlaceAnnotation alloc] initWithPlace:place];
         [annotations addObject:pa];

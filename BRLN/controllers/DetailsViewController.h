@@ -15,12 +15,15 @@
     __weak IBOutlet UIScrollView *scrollView;
     UIBarButtonItem *favoriteButton;
     UIBarButtonItem *mapButton;
+    BOOL mapButtonVisible;
     
     Place *place;
 }
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) Place *place;
+
+@property (nonatomic) BOOL mapButtonVisible;
 
 - (CGRect)makeFrameWithHeight:(CGFloat)height prevElement:(UIView *)element paddingTop:(CGFloat)pt;
 
