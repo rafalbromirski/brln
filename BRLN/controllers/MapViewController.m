@@ -26,6 +26,7 @@ static double location_distance = 7000;
 @synthesize managedObjectContext;
 @synthesize places;
 @synthesize mapAnnotatesClickable;
+@synthesize mapPredicateType;
 
 - (id)init
 {
@@ -36,6 +37,17 @@ static double location_distance = 7000;
         locationManager = [[CLLocationManager alloc] init];
         [locationManager setDelegate:self];
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+        NSLog(@"init");
+    }
+    return self;
+}
+
+- (id)initWithMapPredicateType:(NSString *)predicateType
+{
+    self = [super init];
+    if (self) {
+        [self setMapAnnotatesClickable:YES];
+        [self setMapPredicateType:predicateType];
     }
     return self;
 }
@@ -89,6 +101,11 @@ static double location_distance = 7000;
     NSEntityDescription *placeEntity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:placeEntity];
+    
+    if ([[self mapPredicateType] isEqualToString:@"favorites"]) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"favorited == YES"];
+        [request setPredicate:predicate];
+    }
     
     NSError *error;
     NSArray *results = [managedObjectContext executeFetchRequest:request error:&error];

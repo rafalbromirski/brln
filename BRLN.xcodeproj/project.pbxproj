@@ -19,6 +19,7 @@
 		24523B0017AD9B2900FAF7FA /* PlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24523AFF17AD9B2900FAF7FA /* PlaceAnnotation.m */; };
 		24523B0217ADC0EC00FAF7FA /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 24523B0117ADC0EC00FAF7FA /* TODO */; };
 		2468D0B817A70195003CB08A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2468D0B717A70195003CB08A /* data.json */; };
+		24B21D7717B97B9600E513E4 /* GKLParallaxPicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B21D7617B97B9600E513E4 /* GKLParallaxPicturesViewController.m */; };
 		24BBBD3E17AD2FD20036161D /* PlaceLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD3D17AD2FD20036161D /* PlaceLocation.m */; };
 		24BBBD4117AD2FD30036161D /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD4017AD2FD30036161D /* Category.m */; };
 		24BBBD4417AD2FD30036161D /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD4317AD2FD30036161D /* Place.m */; };
@@ -61,6 +62,8 @@
 		24523AFF17AD9B2900FAF7FA /* PlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceAnnotation.m; path = BRLN/classes/PlaceAnnotation.m; sourceTree = "<group>"; };
 		24523B0117ADC0EC00FAF7FA /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		2468D0B717A70195003CB08A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		24B21D7517B97B9600E513E4 /* GKLParallaxPicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLParallaxPicturesViewController.h; sourceTree = "<group>"; };
+		24B21D7617B97B9600E513E4 /* GKLParallaxPicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLParallaxPicturesViewController.m; sourceTree = "<group>"; };
 		24BBBD3C17AD2FD20036161D /* PlaceLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceLocation.h; path = BRLN/models/PlaceLocation.h; sourceTree = "<group>"; };
 		24BBBD3D17AD2FD20036161D /* PlaceLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceLocation.m; path = BRLN/models/PlaceLocation.m; sourceTree = "<group>"; };
 		24BBBD3F17AD2FD30036161D /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Category.h; path = BRLN/models/Category.h; sourceTree = "<group>"; };
@@ -144,10 +147,20 @@
 			name = resources;
 			sourceTree = "<group>";
 		};
+		24B21D7417B97B8A00E513E4 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				24B21D7517B97B9600E513E4 /* GKLParallaxPicturesViewController.h */,
+				24B21D7617B97B9600E513E4 /* GKLParallaxPicturesViewController.m */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
 		24F7BB76179DCFAF003BA61D = {
 			isa = PBXGroup;
 			children = (
 				24523B0117ADC0EC00FAF7FA /* TODO */,
+				24B21D7417B97B8A00E513E4 /* Libs */,
 				24F7BB9F179DCFC6003BA61D /* Controllers */,
 				2416663417B1A01800C145AE /* Helpers */,
 				24F7BBA0179DCFCD003BA61D /* Models */,
@@ -369,6 +382,7 @@
 				24523B0017AD9B2900FAF7FA /* PlaceAnnotation.m in Sources */,
 				2416663717B1A04800C145AE /* DatabaseHelper.m in Sources */,
 				24D8645E17B2F18F00E0AB3C /* ImportDataHelper.m in Sources */,
+				24B21D7717B97B9600E513E4 /* GKLParallaxPicturesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +462,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BRLN/BRLN-Prefix.pch";
 				INFOPLIST_FILE = "BRLN/BRLN-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -459,6 +474,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BRLN/BRLN-Prefix.pch";
 				INFOPLIST_FILE = "BRLN/BRLN-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -22,11 +22,15 @@
     __weak IBOutlet MKMapView *mapView;
     
     BOOL mapAnnotatesClickable;
+    NSString *mapPredicateType;
 }
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) NSMutableArray *places;
 @property (nonatomic) BOOL mapAnnotatesClickable;
+@property (nonatomic) NSString *mapPredicateType;
+
+- (id)initWithMapPredicateType:(NSString *)predicateType;
 
 - (void)initPlaces;
 - (void)initMapView;

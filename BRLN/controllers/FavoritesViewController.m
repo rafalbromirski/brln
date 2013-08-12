@@ -9,7 +9,9 @@
 
 #import "FavoritesViewController.h"
 #import "DetailsViewController.h"
+#import "MapViewController.h"
 
+#import "Category.h"
 #import "Place.h"
 
 @implementation FavoritesViewController
@@ -48,9 +50,8 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];    
+- (void)viewWillAppear
+{ 
     [[self tableView] reloadData];
 }
 
@@ -62,12 +63,24 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of rows in the section.
-    id sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];          
+    NSLog(@"numberOfSectionsInTableView: %d", [[self.fetchedResultsController sections] count]);
+    return [[self.fetchedResultsController sections] count];
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    // Display the category names as section headings
+    return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -125,12 +138,19 @@
     [request setPredicate:predicate];
     [request setFetchBatchSize:20];
     
-    NSFetchedResultsController *theFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    NSFetchedResultsController *theFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:@"category.categoryName" cacheName:nil];
     
     [self setFetchedResultsController:theFetchedResultsController];
     [_fetchedResultsController setDelegate:self];
     
     return _fetchedResultsController;
+}
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    // The fetch controller is about to start sending change notifications, so prepare the table view for updates.
+    // bug? when updating favorites from detailsViewController app crashed ;(
+    [self.tableView beginUpdates];
 }
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
@@ -189,7 +209,8 @@
 
 - (void)showOnMap:(id)sender
 {
-    NSLog(@"Show on map!");
+    MapViewController *mvc = [[MapViewController alloc] initWithMapPredicateType:@"favorites"];
+    [self.navigationController pushViewController:mvc animated:YES];
 }
 
 @end

@@ -41,8 +41,6 @@
     [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];
     
     favoriteButton = [[UIBarButtonItem alloc] initWithTitle:([place favorited] ? @"Remove" : @"Add") style:UIBarButtonItemStyleBordered target:self action:@selector(toggleFavorite:)];
-
-    NSLog(@"mapButtonVisible: %@", [self mapButtonVisible] ? @"YES" : @"NO");
     
     if (mapButtonVisible) {
          mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(showMap:)];
