@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 GoKart Labs. All rights reserved.
 //
 
-#import "GKLParallaxPicturesViewController.h"
+#import "ParallaxViewController.h"
 
 @interface GKLParallaxPicturesViewController ()
 
@@ -52,6 +52,7 @@ static CGFloat PageControlHeight = 20.0f;
         [_contentScrollView addSubview:_pageControl];
         [_contentScrollView addSubview:_transparentScroller];
         _contentView = contentView;
+        
         [self.view addSubview:_imageScroller];
         [self.view addSubview:_contentScrollView];
         
