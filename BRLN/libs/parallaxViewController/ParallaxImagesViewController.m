@@ -1,18 +1,14 @@
 //
-//  GKLParallaxPicturesViewController.m
-//  ParallaxPictures
+//  ParallaxImagesViewController.m
 //
 //  Created by Joseph Pintozzi on 11/19/12.
 //  Copyright (c) 2012 GoKart Labs. All rights reserved.
 //
 
-#import "ParallaxViewController.h"
+#import "ParallaxImagesViewController.h"
 
-@interface GKLParallaxPicturesViewController ()
+@implementation ParallaxImagesViewController
 
-@end
-
-@implementation GKLParallaxPicturesViewController
 @synthesize parallaxDelegate;
 
 static CGFloat WindowHeight = 200.0;
@@ -51,7 +47,8 @@ static CGFloat PageControlHeight = 20.0f;
         [_contentScrollView addSubview:contentView];
         [_contentScrollView addSubview:_pageControl];
         [_contentScrollView addSubview:_transparentScroller];
-        _contentView = contentView;
+//        _contentView = contentView;
+        _contentView = [[UIView alloc] init];
         
         [self.view addSubview:_imageScroller];
         [self.view addSubview:_contentScrollView];

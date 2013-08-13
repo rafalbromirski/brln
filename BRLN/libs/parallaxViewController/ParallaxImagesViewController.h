@@ -1,6 +1,5 @@
 //
-//  GKLParallaxPicturesViewController.h
-//  ParallaxPictures
+//  ParallaxImagesViewController.h
 //
 //  Created by Joseph Pintozzi on 11/19/12.
 //  Copyright (c) 2012 GoKart Labs. All rights reserved.
@@ -8,13 +7,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GKLParallaxPicturesViewController : UIViewController<UIScrollViewDelegate> {
+@interface ParallaxImagesViewController : UIViewController<UIScrollViewDelegate>
+{
     NSMutableArray  *_imageViews;
     UIScrollView    *_imageScroller;
+    
     UIScrollView    *_transparentScroller;
     UIScrollView    *_contentScrollView;
     UIView          *_contentView;
     UIPageControl   *_pageControl;
+    
     id parallaxDelegate;
 }
 

@@ -5,6 +5,7 @@
 //  Created by Weronika Zawila-Bromirska on 8/3/13.
 //  Copyright (c) 2013 home. All rights reserved.
 //
+#import "MDCParallaxView.h"
 
 #import "DatabaseHelper.h"
 

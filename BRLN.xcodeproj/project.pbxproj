@@ -22,7 +22,8 @@
 		24BBBD3E17AD2FD20036161D /* PlaceLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD3D17AD2FD20036161D /* PlaceLocation.m */; };
 		24BBBD4117AD2FD30036161D /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD4017AD2FD30036161D /* Category.m */; };
 		24BBBD4417AD2FD30036161D /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD4317AD2FD30036161D /* Place.m */; };
-		24CA352C17BAABF200633820 /* ParallaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CA352B17BAABF200633820 /* ParallaxViewController.m */; };
+		24CA352C17BAABF200633820 /* ParallaxImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CA352B17BAABF200633820 /* ParallaxImagesViewController.m */; };
+		24CA352F17BABC6E00633820 /* MDCParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CA352E17BABC6E00633820 /* MDCParallaxView.m */; };
 		24D3F4E317A07205004759BB /* BRLN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24D3F4E117A07205004759BB /* BRLN.xcdatamodeld */; };
 		24D8645E17B2F18F00E0AB3C /* ImportDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D8645D17B2F18F00E0AB3C /* ImportDataHelper.m */; };
 		24F7BB83179DCFAF003BA61D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F7BB82179DCFAF003BA61D /* UIKit.framework */; };
@@ -68,8 +69,10 @@
 		24BBBD4017AD2FD30036161D /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Category.m; path = BRLN/models/Category.m; sourceTree = "<group>"; };
 		24BBBD4217AD2FD30036161D /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Place.h; path = BRLN/models/Place.h; sourceTree = "<group>"; };
 		24BBBD4317AD2FD30036161D /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Place.m; path = BRLN/models/Place.m; sourceTree = "<group>"; };
-		24CA352A17BAABF200633820 /* ParallaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParallaxViewController.h; path = BRLN/libs/parallaxViewController/ParallaxViewController.h; sourceTree = "<group>"; };
-		24CA352B17BAABF200633820 /* ParallaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParallaxViewController.m; path = BRLN/libs/parallaxViewController/ParallaxViewController.m; sourceTree = "<group>"; };
+		24CA352A17BAABF200633820 /* ParallaxImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParallaxImagesViewController.h; path = BRLN/libs/parallaxViewController/ParallaxImagesViewController.h; sourceTree = "<group>"; };
+		24CA352B17BAABF200633820 /* ParallaxImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParallaxImagesViewController.m; path = BRLN/libs/parallaxViewController/ParallaxImagesViewController.m; sourceTree = "<group>"; };
+		24CA352D17BABC6E00633820 /* MDCParallaxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCParallaxView.h; sourceTree = "<group>"; };
+		24CA352E17BABC6E00633820 /* MDCParallaxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCParallaxView.m; sourceTree = "<group>"; };
 		24D3F4E217A07205004759BB /* BRLN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BRLN.xcdatamodel; sourceTree = "<group>"; };
 		24D8645C17B2F18F00E0AB3C /* ImportDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImportDataHelper.h; path = BRLN/helpers/ImportDataHelper.h; sourceTree = "<group>"; };
 		24D8645D17B2F18F00E0AB3C /* ImportDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImportDataHelper.m; path = BRLN/helpers/ImportDataHelper.m; sourceTree = "<group>"; };
@@ -150,8 +153,10 @@
 		24B21D7417B97B8A00E513E4 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				24CA352A17BAABF200633820 /* ParallaxViewController.h */,
-				24CA352B17BAABF200633820 /* ParallaxViewController.m */,
+				24CA352D17BABC6E00633820 /* MDCParallaxView.h */,
+				24CA352E17BABC6E00633820 /* MDCParallaxView.m */,
+				24CA352A17BAABF200633820 /* ParallaxImagesViewController.h */,
+				24CA352B17BAABF200633820 /* ParallaxImagesViewController.m */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -382,7 +387,8 @@
 				24523B0017AD9B2900FAF7FA /* PlaceAnnotation.m in Sources */,
 				2416663717B1A04800C145AE /* DatabaseHelper.m in Sources */,
 				24D8645E17B2F18F00E0AB3C /* ImportDataHelper.m in Sources */,
-				24CA352C17BAABF200633820 /* ParallaxViewController.m in Sources */,
+				24CA352C17BAABF200633820 /* ParallaxImagesViewController.m in Sources */,
+				24CA352F17BABC6E00633820 /* MDCParallaxView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

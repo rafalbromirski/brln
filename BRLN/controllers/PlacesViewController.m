@@ -78,7 +78,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DetailsViewController *detailsViewController = [[DetailsViewController alloc] initWithNibName:@"DetailsViewController" bundle:nil];
+    DetailsViewController *detailsViewController = [[DetailsViewController alloc] init];
     [detailsViewController setPlace:[_fetchedResultsController objectAtIndexPath:indexPath]];
     
     [self.navigationController pushViewController:detailsViewController animated:YES];
