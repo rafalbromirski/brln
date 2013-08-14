@@ -8,6 +8,7 @@
 
 #import "BRLNAppDelegate.h"
 
+#import "StylesHelper.h"
 #import "DatabaseHelper.h"
 
 #import "CategoriesViewController.h"
@@ -21,6 +22,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    [StylesHelper applyStyle];
     
     [self initWindows];
         
