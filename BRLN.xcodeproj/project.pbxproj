@@ -26,6 +26,8 @@
 		24196EEB17BC10C70083185C /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24196EE217BC10C70083185C /* Lato-LightItalic.ttf */; };
 		24196EEE17BC14D10083185C /* tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 24196EEC17BC14D10083185C /* tabbar.png */; };
 		24196EEF17BC14D10083185C /* tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24196EED17BC14D10083185C /* tabbar@2x.png */; };
+		243D563517BC36A600522DB3 /* CategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 243D563417BC36A600522DB3 /* CategoryViewCell.m */; };
+		243D563817BC371300522DB3 /* CategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243D563717BC371300522DB3 /* CategoryViewCell.xib */; };
 		243FBC9917A82FE700825D1B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 243FBC9817A82FE700825D1B /* CoreLocation.framework */; };
 		243FBC9D17A83D1100825D1B /* location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 243FBC9C17A83D1100825D1B /* location.gpx */; };
 		2440FCA8179F2C5B001FF0FB /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440FCA6179F2C5A001FF0FB /* PlacesViewController.m */; };
@@ -37,6 +39,12 @@
 		24523B0017AD9B2900FAF7FA /* PlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24523AFF17AD9B2900FAF7FA /* PlaceAnnotation.m */; };
 		24523B0217ADC0EC00FAF7FA /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 24523B0117ADC0EC00FAF7FA /* TODO */; };
 		2468D0B817A70195003CB08A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2468D0B717A70195003CB08A /* data.json */; };
+		24AC8E9E17BD7F1E003584E6 /* PlaceViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AC8E9D17BD7F1E003584E6 /* PlaceViewCell.m */; };
+		24AC8EA017BD7F34003584E6 /* PlaceViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24AC8E9F17BD7F34003584E6 /* PlaceViewCell.xib */; };
+		24AC8EA317BD85D7003584E6 /* navbar-button-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AC8EA117BD85D7003584E6 /* navbar-button-highlighted.png */; };
+		24AC8EA417BD85D7003584E6 /* navbar-button-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AC8EA217BD85D7003584E6 /* navbar-button-highlighted@2x.png */; };
+		24AC8EA717BD8918003584E6 /* navbar-button-back-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AC8EA517BD8918003584E6 /* navbar-button-back-highlighted.png */; };
+		24AC8EA817BD8918003584E6 /* navbar-button-back-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AC8EA617BD8918003584E6 /* navbar-button-back-highlighted@2x.png */; };
 		24BBBD3E17AD2FD20036161D /* PlaceLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD3D17AD2FD20036161D /* PlaceLocation.m */; };
 		24BBBD4117AD2FD30036161D /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD4017AD2FD30036161D /* Category.m */; };
 		24BBBD4417AD2FD30036161D /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD4317AD2FD30036161D /* Place.m */; };
@@ -86,6 +94,9 @@
 		24196EE217BC10C70083185C /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LightItalic.ttf"; path = "resources/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		24196EEC17BC14D10083185C /* tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar.png; path = resources/components/tabbar.png; sourceTree = "<group>"; };
 		24196EED17BC14D10083185C /* tabbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabbar@2x.png"; path = "resources/components/tabbar@2x.png"; sourceTree = "<group>"; };
+		243D563317BC36A600522DB3 /* CategoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryViewCell.h; path = BRLN/classes/CategoryViewCell.h; sourceTree = "<group>"; };
+		243D563417BC36A600522DB3 /* CategoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryViewCell.m; path = BRLN/classes/CategoryViewCell.m; sourceTree = "<group>"; };
+		243D563717BC371300522DB3 /* CategoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryViewCell.xib; path = BRLN/classes/CategoryViewCell.xib; sourceTree = "<group>"; };
 		243FBC9817A82FE700825D1B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		243FBC9C17A83D1100825D1B /* location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = location.gpx; sourceTree = "<group>"; };
 		2440FCA5179F2C5A001FF0FB /* PlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlacesViewController.h; path = BRLN/controllers/PlacesViewController.h; sourceTree = "<group>"; };
@@ -100,6 +111,13 @@
 		24523AFF17AD9B2900FAF7FA /* PlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceAnnotation.m; path = BRLN/classes/PlaceAnnotation.m; sourceTree = "<group>"; };
 		24523B0117ADC0EC00FAF7FA /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		2468D0B717A70195003CB08A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		24AC8E9C17BD7F1E003584E6 /* PlaceViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceViewCell.h; path = BRLN/classes/PlaceViewCell.h; sourceTree = "<group>"; };
+		24AC8E9D17BD7F1E003584E6 /* PlaceViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceViewCell.m; path = BRLN/classes/PlaceViewCell.m; sourceTree = "<group>"; };
+		24AC8E9F17BD7F34003584E6 /* PlaceViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlaceViewCell.xib; path = BRLN/classes/PlaceViewCell.xib; sourceTree = "<group>"; };
+		24AC8EA117BD85D7003584E6 /* navbar-button-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-button-highlighted.png"; path = "resources/components/navbar-button-highlighted.png"; sourceTree = "<group>"; };
+		24AC8EA217BD85D7003584E6 /* navbar-button-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-button-highlighted@2x.png"; path = "resources/components/navbar-button-highlighted@2x.png"; sourceTree = "<group>"; };
+		24AC8EA517BD8918003584E6 /* navbar-button-back-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-button-back-highlighted.png"; path = "resources/components/navbar-button-back-highlighted.png"; sourceTree = "<group>"; };
+		24AC8EA617BD8918003584E6 /* navbar-button-back-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-button-back-highlighted@2x.png"; path = "resources/components/navbar-button-back-highlighted@2x.png"; sourceTree = "<group>"; };
 		24BBBD3C17AD2FD20036161D /* PlaceLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceLocation.h; path = BRLN/models/PlaceLocation.h; sourceTree = "<group>"; };
 		24BBBD3D17AD2FD20036161D /* PlaceLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceLocation.m; path = BRLN/models/PlaceLocation.m; sourceTree = "<group>"; };
 		24BBBD3F17AD2FD30036161D /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Category.h; path = BRLN/models/Category.h; sourceTree = "<group>"; };
@@ -178,8 +196,12 @@
 				24196EC317BBFA280083185C /* navbar@2x.png */,
 				24196ECB17BBFD0C0083185C /* navbar-button.png */,
 				24196ECC17BBFD0C0083185C /* navbar-button@2x.png */,
+				24AC8EA117BD85D7003584E6 /* navbar-button-highlighted.png */,
+				24AC8EA217BD85D7003584E6 /* navbar-button-highlighted@2x.png */,
 				24196ED517BC09A00083185C /* navbar-button-back.png */,
 				24196ED617BC09A10083185C /* navbar-button-back@2x.png */,
+				24AC8EA517BD8918003584E6 /* navbar-button-back-highlighted.png */,
+				24AC8EA617BD8918003584E6 /* navbar-button-back-highlighted@2x.png */,
 				24196EEC17BC14D10083185C /* tabbar.png */,
 				24196EED17BC14D10083185C /* tabbar@2x.png */,
 			);
@@ -200,6 +222,21 @@
 				24196EE217BC10C70083185C /* Lato-LightItalic.ttf */,
 			);
 			name = fonts;
+			sourceTree = "<group>";
+		};
+		243D563617BC36BF00522DB3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				243D563317BC36A600522DB3 /* CategoryViewCell.h */,
+				243D563417BC36A600522DB3 /* CategoryViewCell.m */,
+				243D563717BC371300522DB3 /* CategoryViewCell.xib */,
+				24523AFE17AD9B2900FAF7FA /* PlaceAnnotation.h */,
+				24523AFF17AD9B2900FAF7FA /* PlaceAnnotation.m */,
+				24AC8E9C17BD7F1E003584E6 /* PlaceViewCell.h */,
+				24AC8E9D17BD7F1E003584E6 /* PlaceViewCell.m */,
+				24AC8E9F17BD7F34003584E6 /* PlaceViewCell.xib */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		2440FCAF179F32AF001FF0FB /* Details */ = {
@@ -237,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				24523B0117ADC0EC00FAF7FA /* TODO */,
+				243D563617BC36BF00522DB3 /* Classes */,
 				24B21D7417B97B8A00E513E4 /* Libs */,
 				24F7BB9F179DCFC6003BA61D /* Controllers */,
 				2416663417B1A01800C145AE /* Helpers */,
@@ -342,8 +380,6 @@
 				24F7BBA8179DD235003BA61D /* MapViewController.h */,
 				24F7BBA9179DD235003BA61D /* MapViewController.m */,
 				24F7BBAA179DD235003BA61D /* MapViewController.xib */,
-				24523AFE17AD9B2900FAF7FA /* PlaceAnnotation.h */,
-				24523AFF17AD9B2900FAF7FA /* PlaceAnnotation.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -451,6 +487,12 @@
 				24196EEB17BC10C70083185C /* Lato-LightItalic.ttf in Resources */,
 				24196EEE17BC14D10083185C /* tabbar.png in Resources */,
 				24196EEF17BC14D10083185C /* tabbar@2x.png in Resources */,
+				243D563817BC371300522DB3 /* CategoryViewCell.xib in Resources */,
+				24AC8EA017BD7F34003584E6 /* PlaceViewCell.xib in Resources */,
+				24AC8EA317BD85D7003584E6 /* navbar-button-highlighted.png in Resources */,
+				24AC8EA417BD85D7003584E6 /* navbar-button-highlighted@2x.png in Resources */,
+				24AC8EA717BD8918003584E6 /* navbar-button-back-highlighted.png in Resources */,
+				24AC8EA817BD8918003584E6 /* navbar-button-back-highlighted@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +521,8 @@
 				24CA352C17BAABF200633820 /* ParallaxImagesViewController.m in Sources */,
 				24CA352F17BABC6E00633820 /* MDCParallaxView.m in Sources */,
 				24196EBC17BBF8310083185C /* StylesHelper.m in Sources */,
+				243D563517BC36A600522DB3 /* CategoryViewCell.m in Sources */,
+				24AC8E9E17BD7F1E003584E6 /* PlaceViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

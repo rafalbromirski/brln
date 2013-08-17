@@ -12,6 +12,8 @@
 #import "CategoriesViewController.h"
 #import "PlacesViewController.h"
 
+#import "CategoryViewCell.h"
+
 #import "Category.h"
 
 @implementation CategoriesViewController
@@ -57,6 +59,11 @@
 
 #pragma mark - Table view data source
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60.0;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
@@ -66,13 +73,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"CategoryCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"CategoryViewCellIdentifier";
+    CategoryViewCell *cell = (CategoryViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"CategoryViewCell" owner:nil options:nil];
+        
+        for (id currentObject in nibObjects)
+        {
+            if ([currentObject isKindOfClass:[CategoryViewCell class]])
+            {
+                cell = (CategoryViewCell *)currentObject;
+            }
+        }
     }
-    
-    // Configure the cell...
+
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
@@ -127,7 +142,8 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];            
+            // custom cell requires extra (CategoryViewCell *)
+            [self configureCell:(CategoryViewCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
@@ -159,9 +175,10 @@
 
 #pragma mark - Controller helpers
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSString *cellName = [[_fetchedResultsController objectAtIndexPath:indexPath] categoryName];
-    [[cell textLabel] setText:cellName];
+- (void)configureCell:(CategoryViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    [[cell categoryNameLabel] setText:[[_fetchedResultsController objectAtIndexPath:indexPath] categoryName]];
+    [[cell categoryDescriptionLabel] setText:@"Category description..."];
+    [[cell categorySizeLabel] setText:[NSString stringWithFormat:@"%d", [[[_fetchedResultsController objectAtIndexPath:indexPath] places] count]]];
 }
 
 @end

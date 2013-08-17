@@ -10,6 +10,8 @@
 #import "PlacesViewController.h"
 #import "DetailsViewController.h"
 
+#import "PlaceViewCell.h"
+
 #import "Category.h"
 #import "Place.h"
 
@@ -62,10 +64,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"PlaceCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"PlaceViewCellIdentifier";
+    PlaceViewCell *cell = (PlaceViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"PlaceViewCell" owner:nil options:nil];
+        
+        for (id currentObject in nibObjects)
+        {
+            if ([currentObject isKindOfClass:[PlaceViewCell class]])
+            {
+                cell = (PlaceViewCell *)currentObject;
+            }
+        }
     }
     
     // Configure the cell...
@@ -125,7 +136,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:(PlaceViewCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
@@ -157,9 +168,8 @@
 
 #pragma mark - Controller helpers
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSString *cellName = [[_fetchedResultsController objectAtIndexPath:indexPath] placeName];
-    [[cell textLabel] setText:cellName];
+- (void)configureCell:(PlaceViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    [[cell placeNameLabel] setText:[[_fetchedResultsController objectAtIndexPath:indexPath] placeName]];
 }
 
 

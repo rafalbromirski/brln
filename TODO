@@ -2,6 +2,7 @@
 [ ] subentities / check if I need them (eg. places - I need title and number)
 [ ] detailsView - FetchedRequest instead of passing an object / initWithPlaceName
 [ ] remove unused fonts
+[ ] check reusedIdentifier
 
 [-] check tabbar with only one navigationView (right now I have 3)
 [x] trigger rootControllers for navigationViews
