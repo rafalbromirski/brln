@@ -94,6 +94,11 @@ static double location_distance = 7000;
     [locationManager setDelegate:nil];
 }
 
+- (NSString *)tabImageName
+{
+	return @"icon-map";
+}
+
 #pragma mark - custom inits
 
 - (void)initPlaces

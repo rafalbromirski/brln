@@ -57,6 +57,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSString *)tabImageName
+{
+	return @"icon-list";
+}
+
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -16,6 +16,8 @@
 #import "FavoritesViewController.h"
 #import "InfoViewController.h"
 
+#import "AKTabBarController.h"
+
 @implementation BRLNAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -68,8 +70,6 @@
 {
     // ### CONTROLLERS: LIST / CATEGORIES ###
     UINavigationController *listController = [[UINavigationController alloc] init];
-    [[listController tabBarItem] setTitle:@"List"];
-    [[listController tabBarItem] setImage:[UIImage imageNamed:@"icon-list"]];
     
     CategoriesViewController *cvc = [[CategoriesViewController alloc] init];
     [listController setViewControllers:[NSArray arrayWithObjects:cvc, nil]];
@@ -77,8 +77,6 @@
     
     // ### CONTROLLERS: MAP ###
     UINavigationController *mapViewController = [[UINavigationController alloc] init];
-    [[mapViewController tabBarItem]setTitle:@"Map"];
-    [[mapViewController tabBarItem] setImage:[UIImage imageNamed:@"icon-map"]];
 
     MapViewController *mvc = [[MapViewController alloc] init];
     [mapViewController setViewControllers:[NSArray arrayWithObjects:mvc, nil]];
@@ -86,25 +84,31 @@
     
     // ### CONTROLLERS: FAVORITES ###
     UINavigationController *favoritesController = [[UINavigationController alloc] init];
-    [[favoritesController tabBarItem] setTitle:@"Favorite"];
-    [[favoritesController tabBarItem] setImage:[UIImage imageNamed:@"icon-list"]];
     
     FavoritesViewController *fvc = [[FavoritesViewController alloc] init];
     [favoritesController setViewControllers:[NSArray arrayWithObjects:fvc, nil]];
     
-    
     // ### CONTROLLERS: INFO ###
     InfoViewController *infoController = [[InfoViewController alloc] init];
-    [[infoController tabBarItem] setTitle:@"Info"];
-    [[infoController tabBarItem] setImage:[UIImage imageNamed:@"icon-info"]];
-    
     
     // ### MAIN: TABBAR ###
-    NSArray *viewControllers = [NSArray arrayWithObjects:listController, mapViewController, favoritesController, infoController, nil];
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    [tabBarController setViewControllers:viewControllers];
-    [tabBarController setDelegate:self];    
+    AKTabBarController *tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:50];
+    [tabBarController setBackgroundImageName:@"tabbar"];
+    [tabBarController setSelectedBackgroundImageName:@"tabbar-highlighted"];
+    [tabBarController setIconGlossyIsHidden:YES];
+    [tabBarController setIconShadowColor:[UIColor clearColor]];
+    [tabBarController setIconColors:[NSArray arrayWithObjects:[UIColor colorWithRed:89.0/255.0 green:95.0/255.0 blue:106.0/255.0 alpha:1.0], [UIColor colorWithRed:89.0/255.0 green:95.0/255.0 blue:106.0/255.0 alpha:1.0], nil]];
+    [tabBarController setSelectedIconColors:[NSArray arrayWithObjects:[UIColor whiteColor], [UIColor whiteColor], nil]];
     
+    [tabBarController setTabTitleIsHidden:YES];
+    [tabBarController setTabStrokeColor:[UIColor clearColor]];
+    [tabBarController setTabInnerStrokeColor:[UIColor clearColor]];
+    [tabBarController setTabEdgeColor:[UIColor clearColor]];
+    [tabBarController setTopEdgeColor:[UIColor redColor]];
+    [tabBarController setSelectedIconOuterGlowColor:[UIColor clearColor]];
+    [tabBarController setTabColors:[NSArray arrayWithObjects:[UIColor clearColor], [UIColor clearColor], nil]];
+    
+    [tabBarController setViewControllers:[NSMutableArray arrayWithObjects:listController, mapViewController, favoritesController, infoController, nil]];    
     [[self window] setRootViewController:tabBarController];
 }
 

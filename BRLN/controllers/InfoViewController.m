@@ -36,4 +36,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSString *)tabImageName
+{
+	return @"icon-info";
+}
+
 @end
