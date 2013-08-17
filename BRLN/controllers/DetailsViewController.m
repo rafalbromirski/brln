@@ -39,68 +39,79 @@
     // set context - DatabaseHelper
     [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];
     
-    favoriteButton = [[UIBarButtonItem alloc] initWithTitle:([place favorited] ? @"Remove" : @"Add") style:UIBarButtonItemStyleBordered target:self action:@selector(toggleFavorite:)];
-    
     if (mapButtonVisible) {
          mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(showMap:)];
-        [[self navigationItem] setRightBarButtonItems:[NSArray arrayWithObjects:mapButton, favoriteButton, nil]];
-    } else {
-        [[self navigationItem] setRightBarButtonItem:favoriteButton];
+        [[self navigationItem] setRightBarButtonItem:mapButton];
     }
-        
-    
-    UIView *mainView = [[UIView alloc] init];
-    
-    UIImageView *placeImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-    [placeImage setImage:[UIImage imageNamed:@"place.jpg"]];
-    [placeImage setContentMode:UIViewContentModeScaleAspectFit];
-    [mainView addSubview:placeImage];
     
     
-    UILabel *placeNameLabel = [[UILabel alloc] initWithFrame:[self makeFrameWithHeight:20 prevElement:placeImage paddingTop:10]];
+    UIView *placeWrapperView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 500)];
+    
+    UIImageView *placeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
+    [placeImageView setImage:[UIImage imageNamed:@"place.jpg"]];
+    [placeImageView setContentMode:UIViewContentModeScaleAspectFill];
+    [placeWrapperView addSubview:placeImageView];
+    
+    
+    UIView *placeDetailsView = [[UIView alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, 500)];
+    [placeDetailsView setBackgroundColor:[UIColor colorWithRed:247.0/255.0 green:249.0/255.0 blue:250.0/255.0 alpha:1.0]];
+    [placeWrapperView addSubview:placeDetailsView];
+    
+    
+    favoriteButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [favoriteButton setFrame:CGRectMake(self.view.frame.size.width - 60, 20, 40, 40)];
+    [favoriteButton setTitle:([place favorited] ? @"Rem" : @"Add") forState:UIControlStateNormal];
+    [favoriteButton setUserInteractionEnabled:YES];
+    [favoriteButton setMultipleTouchEnabled:YES];
+    [favoriteButton addTarget:self action:@selector(toggleFavorite:) forControlEvents:UIControlEventTouchUpInside];
+    [placeDetailsView addSubview:favoriteButton];
+    
+    
+    UILabel *placeNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, self.view.frame.size.width - 80, 20)];
     [placeNameLabel setText:[place placeName]];
-    [placeNameLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:18.0]];
+    [placeNameLabel setBackgroundColor:[UIColor clearColor]];
+    [placeNameLabel setTextColor:[UIColor colorWithRed:57.0/255.0 green:65.0/255.0 blue:76.0/255.0 alpha:1.0]];
+    [placeNameLabel setFont:[UIFont fontWithName:@"Lato-Bold" size:18.0]];
     [placeNameLabel setNumberOfLines:0];
     [placeNameLabel sizeToFit];
-    [mainView addSubview:placeNameLabel];
-    
-    
-    UILabel *placeCategoryLabel = [[UILabel alloc] initWithFrame:[self makeFrameWithHeight:20 prevElement:placeNameLabel paddingTop:0]];
+    [placeDetailsView addSubview:placeNameLabel];
+
+
+    UILabel *placeCategoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, placeNameLabel.frame.origin.y + placeNameLabel.frame.size.height + 5, self.view.frame.size.width - 40, 20)];
     [placeCategoryLabel setText:[[place category] categoryName]];
-    [placeCategoryLabel setFont:[UIFont fontWithName:@"Helvetica" size:14.0]];
+    [placeCategoryLabel setBackgroundColor:[UIColor clearColor]];
+    [placeCategoryLabel setTextColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:1.0]];
+    [placeCategoryLabel setFont:[UIFont fontWithName:@"Lato-Bold" size:10.0]];
     [placeCategoryLabel setNumberOfLines:0];
     [placeCategoryLabel sizeToFit];
-    [mainView addSubview:placeCategoryLabel];
+    [placeDetailsView addSubview:placeCategoryLabel];
 
 
-    UITextView *placeDescriptionText = [[UITextView alloc] initWithFrame:[self makeFrameWithHeight:50 prevElement:placeCategoryLabel paddingTop:10]];
-    [placeDescriptionText setEditable:NO];
-    [placeDescriptionText setScrollEnabled:NO];
-    [placeDescriptionText setShowsHorizontalScrollIndicator:NO];
-    [placeDescriptionText setShowsVerticalScrollIndicator:NO];
-    [placeDescriptionText setContentInset:UIEdgeInsetsMake(-8, -8, -8, -8)];
+    UILabel *placeDescriptionText = [[UILabel alloc] initWithFrame:CGRectMake(20, placeCategoryLabel.frame.origin.y + placeCategoryLabel.frame.size.height + 15, self.view.frame.size.width - 40, 20)];
     [placeDescriptionText setText:[place placeDescription]];
-    [placeDescriptionText setFont:[UIFont fontWithName:@"Helvetica" size:14.0]];
-    [mainView addSubview:placeDescriptionText];
+    [placeDescriptionText setBackgroundColor:[UIColor clearColor]];
+    [placeDescriptionText setTextColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:1.0]];
+    [placeDescriptionText setFont:[UIFont fontWithName:@"Lato-Regular" size:10.0]];
+    [placeDescriptionText setNumberOfLines:0];
+    [placeDescriptionText sizeToFit];
+    [placeDetailsView addSubview:placeDescriptionText];
+    
+    
+    
 
-    CGRect placeDescriptionFrame = placeDescriptionText.frame;
-    placeDescriptionFrame.size.height = placeDescriptionText.contentSize.height;
-    placeDescriptionText.frame = placeDescriptionFrame;
-
+//    UILabel *placeUrlLabel = [[UILabel alloc] initWithFrame:[self makeFrameWithHeight:20 prevElement:placeDescriptionText paddingTop:5]];
+//    [placeUrlLabel setText:[place placeUrl]];
+//    [placeUrlLabel setFont:[UIFont fontWithName:@"Helvetica" size:14.0]];
+//    [placeUrlLabel setNumberOfLines:0];
+//    [placeUrlLabel sizeToFit];
+//    [placeDetails addSubview:placeUrlLabel];
+//    
+//    
+//    UIView *_lastElement = placeDetails;
+//    [mainView setFrame:CGRectMake(0, 0, self.view.frame.size.width, _lastElement.frame.origin.y + _lastElement.frame.size.height + 20)];
     
-    UILabel *placeUrlLabel = [[UILabel alloc] initWithFrame:[self makeFrameWithHeight:20 prevElement:placeDescriptionText paddingTop:5]];
-    [placeUrlLabel setText:[place placeUrl]];
-    [placeUrlLabel setFont:[UIFont fontWithName:@"Helvetica" size:14.0]];
-    [placeUrlLabel setNumberOfLines:0];
-    [placeUrlLabel sizeToFit];
-    [mainView addSubview:placeUrlLabel];
-    
-    
-    UIView *_lastElement = placeUrlLabel;
-    [mainView setFrame:CGRectMake(0, 0, self.view.frame.size.width, _lastElement.frame.origin.y + _lastElement.frame.size.height + 20)];
-    
-    [scrollView addSubview:mainView];
-    [scrollView setContentSize:CGSizeMake(mainView.frame.size.width, mainView.frame.size.height)];
+    [scrollView addSubview:placeWrapperView];
+    [scrollView setContentSize:CGSizeMake(placeWrapperView.frame.size.width, placeDetailsView.frame.size.height + placeDetailsView.frame.origin.y)];
 }
 
 - (void)viewDidLoad
@@ -119,11 +130,11 @@
     if ([place favorited])
     {
         [place setFavorited:NO];
-        [favoriteButton setTitle:@"Add"];
+        [favoriteButton setTitle:@"Add" forState:UIControlStateNormal];
     } else
     {
         [place setFavorited:YES];
-        [favoriteButton setTitle:@"Remove"];        
+        [favoriteButton setTitle:@"Rem" forState:UIControlStateNormal];
     }
     
     NSError *error = nil;

@@ -13,8 +13,8 @@
 @interface DetailsViewController : UIViewController
 {
     __weak IBOutlet UIScrollView *scrollView;
-    UIBarButtonItem *favoriteButton;
     UIBarButtonItem *mapButton;
+    UIButton *favoriteButton;
     BOOL mapButtonVisible;
     
     Place *place;
