@@ -53,7 +53,7 @@
     [placeWrapperView addSubview:placeImageView];
     
     
-    UIView *placeDetailsView = [[UIView alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, 500)];
+    UIView *placeDetailsView = [[UIView alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, 300)];
     [placeDetailsView setBackgroundColor:[UIColor colorWithRed:247.0/255.0 green:249.0/255.0 blue:250.0/255.0 alpha:1.0]];
     [placeWrapperView addSubview:placeDetailsView];
     
