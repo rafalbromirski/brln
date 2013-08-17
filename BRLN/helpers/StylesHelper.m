@@ -85,6 +85,10 @@
     [tableViewAppearance setBackgroundColor:[UIColor colorWithRed:247.0/255.0 green:249.0/255.0 blue:250.0/255.0 alpha:1.0]];
     [tableViewAppearance setSeparatorColor:[UIColor colorWithRed:209.0/255.0 green:214.0/255.0 blue:221.0/255.0 alpha:1.0]];
     [tableViewAppearance setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    
+    UILabel *tableViewHeaderAppearance = [UILabel appearanceWhenContainedIn:[UITableViewHeaderFooterView class], nil];
+    [tableViewHeaderAppearance setFont:[UIFont fontWithName:@"Lato-Bold" size:12.0]];
+    [tableViewHeaderAppearance setShadowColor:[UIColor clearColor]];
 }
 
 @end

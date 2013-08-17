@@ -45,6 +45,8 @@
     [[self categoryDescriptionLabel] setTextColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:1.0]];
     
     [[self categorySizeLabel] setFont:[UIFont fontWithName:@"Lato-Bold" size:self.categorySizeLabel.font.pointSize]];
+    
+    [self setAccessoryView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-disclosure"]]];
 }
 
 @end

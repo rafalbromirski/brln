@@ -82,11 +82,11 @@
     return [sectionInfo numberOfObjects];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    // Display the category names as section headings
-    return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    // Display the category names as section headings
+//    return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
+//}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -134,6 +134,28 @@
     [detailsViewController setPlace:[_fetchedResultsController objectAtIndexPath:indexPath]];
     
     [self.navigationController pushViewController:detailsViewController animated:YES];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectZero];
+    [headerView setBackgroundColor:[UIColor colorWithRed:209.0/255.0 green:214.0/255.0 blue:221.0/255.0 alpha:1.0]];
+
+    NSString *headerText = [NSString stringWithString:[[[self.fetchedResultsController sections] objectAtIndex:section] name]];
+    
+    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, tableView.frame.size.width - 40, 20)];
+    [headerLabel setText:headerText];
+    [headerLabel setBackgroundColor:[UIColor clearColor]];
+    [headerLabel setFont:[UIFont fontWithName:@"Lato-Bold" size:12.0]];
+    [headerLabel setTextColor:[UIColor colorWithRed:57.0/255.0 green:65.0/255.0 blue:76.0/255.0 alpha:0.6]];
+    [headerView addSubview:headerLabel];
+    
+    return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 22.0;
 }
 
 #pragma mark - FetchResultsController delegate

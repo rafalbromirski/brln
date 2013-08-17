@@ -37,6 +37,8 @@
 {
     [[self placeNameLabel] setFont:[UIFont fontWithName:@"Lato-Bold" size:self.placeNameLabel.font.pointSize]];
     [[self placeNameLabel] setTextColor:[UIColor colorWithRed:57.0/255.0 green:65.0/255.0 blue:76.0/255.0 alpha:1.0]];
+    
+    [self setAccessoryView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-disclosure"]]];    
 }
 
 @end
