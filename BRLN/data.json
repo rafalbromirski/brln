@@ -1,103 +1,1153 @@
 {
     "version": 1.0,
     "data": [
-    {
-        "categoryName": "Coffee",
-        "categoryDescription": "Nunc elementum lectus lacus, quis blandit est semper bibendum",
-        "places":
-        [{
-            "placeName": "Bonanza Coffee Heroes",
-            "placeDescription": "Opened all the way back in 2007, Bonanza is one of the stalwarts of coffee culture in Berlin. Queues are common, especially on Sundays when the flea market is on at Mauerpark, but it’s worth the wait (and normally not that long anyway). Space is limited because they have to make room for the coffee roasters, but what other cafe can you name that roasts their own coffee on the premises?",
-            "placeUrl": "http://www.bonanzacoffee.de/",
-            "placeAddress": "Oderberger Straße 35, 10435 Berlin Prenzlauer Berg",
-         
-            "placeLocation":
-            {
-                "lat": 52.540006,
-                "long": 13.405456
-            }
-        },
-        {
-            "placeName": "Five Elephants",
-            "placeDescription": "Five Elephant, that’s who. On top of having their own roasters, their beans are also direct trade, meaning they deal on a one-to-one basis with the growers. Five Elephant also scores points for its seclusion, at the far end of Reichenberger Straße, which means that most of the customers are from the neighbourhood and it’s never too packed.",
-            "placeUrl": "http://www.fiveelephant.com/",
-            "placeAddress": "Reichenberger Straße 101, 10999 Berlin Kreuzberg",
-         
-            "placeLocation":
-            {
-                "lat": 52.493376,
-                "long": 13.438299
-            }
-         },
-         {
-            "placeName": "Double Eye",
-            "placeDescription": "Double Eye is owned by the winner of the 2005 European World Cup Barista Champion, Arno Schmeil, and is known for its espresso. It’s also arguably the oldest cafe in Berlin serving such high-grade coffee, having opened in 2001, so they’re excused from not having a proper website or Facebook page. There is no seating, but that’s how espresso was meant to be drank anyway.",
-            "placeUrl": "http://www.doubleeye.de/",
-            "placeAddress": "Akazienstraße 22, 10823 Berlin Schöneberg",
-         
-            "placeLocation":
-            {
-                "lat": 52.487906,
-                "long": 13.354154
-            }
-         },
-         {
-            "placeName": "Cafe CK",
-            "placeDescription": "Speaking of world champions, this past weekend Cafe CK owner Cory Andreen took home a trophy for Germany as he was named the World Cup Tasting Champion (yes, that’s a thing). Cory owns two cafes in Berlin, alongside his business partner Kerstin. Cafe CK, in Prenzlauer Berg, offers a selection of brewed coffees as well as sandwiches and snacks. CK Pour Voo, the newer of the two cafes, is located inside Voo Store, and is decorated with furniture by our favourite Dane Sigurd Larsen. Most Wednesdays Cory hosts public coffee cuppings as well at CK Pour Voo. Look out for the upcoming dates on their Facebook page.",
-            "placeUrl": "http://cafeckberlin.com/",
-            "placeAddress": "Marienburgerstraße 49, 10405 Berlin Prenzlauer Berg",
-         
-            "placeLocation":
-            {
-                "lat": 52.535477,
-                "long": 13.422839
-            }
-         },
-         {
-            "placeName": "Godshot",
-            "placeDescription": "Godshot is owned by Kai-Uwe, who taught himself the art of coffee-making, having first bought a machine for his home use, and then opening Godshot in Prenzlauer Berg. Godshot also hosts periodic seminars on latte art, and can also be found every Saturday at the Arnswalder Platz flea market.",
-            "placeUrl": "http://godshot.de/",
-            "placeAddress": "Immanuelkirchstraße 32, 10405 Berlin Prenzlauer Berg",
-         
-            "placeLocation":
-            {
-                "lat": 52.533014,
-                "long": 13.422999 
-            }
-         }]
-    },
-    {
-        "categoryName": "Lunch",
-        "categoryDescription": "Nullam ultricies sagittis eros sed blandit",
-        "places":
-        [{
-            "placeName": "Kantina von Hugo",
-            "placeDescription": "nice kantina",
-            "placeUrl": "http://www.kantinavonhugo.de",
-            "placeLocation": {}
-        },
-        {
-            "placeName": "Chez Dong",
-            "placeDescription": "Asian food",
-            "placeUrl": "",
-            "placeLocation": {}
-        }]
-    },
-    {
-        "categoryName": "Breakfast",
-        "categoryDescription": "Phasellus tristique ipsum non ipsum faucibus mattis",             
-        "places":
-        [{
-            "placeName": "Kantina von Hugo",
-            "placeDescription": "nice kantina",
-            "placeUrl": "http://www.kantinavonhugo.de",
-            "placeLocation": {}
-         },
-         {
-            "placeName": "Chez Dong",
-            "placeDescription": "Asian food",
-            "placeUrl": "",
-            "placeLocation": {}
-         }]
-    }]
+             {
+             "categoryName": "Coffee",
+             "categoryDescription": "Nunc elementum lectus lacus, quis blandit",
+             "places": [
+                        {
+                        "placeName": "Bonanza Coffee Heroes",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.bonanzacoffee.de/",
+                        "placeAddress": "Oderberger Straße 35, 10435 Berlin",
+                        "placeLocation": {
+                        "lat": "52.540006",
+                        "long": "13.405456"
+                        }
+                        },
+                        {
+                        "placeName": "Five Elephants",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.fiveelephant.com/",
+                        "placeAddress": "Reichenberger Straße 101, 10999 Berlin",
+                        "placeLocation": {
+                        "lat": "52.493376",
+                        "long": "13.438299"
+                        }
+                        },
+                        {
+                        "placeName": "Katie's Blue Cat",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.katiesbluecat.de/",
+                        "placeAddress": "Friedelstraße 31, 12047 Berlin",
+                        "placeLocation": {
+                        "lat": "52.493032",
+                        "long": "13.428262"
+                        }
+                        },
+                        {
+                        "placeName": "Double Eye",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.doubleeye.de/",
+                        "placeAddress": "Akazienstraße 22, 10823 Berlin",
+                        "placeLocation": {
+                        "lat": "52.487906",
+                        "long": "13.354154"
+                        }
+                        },
+                        {
+                        "placeName": "Cafe CK",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://cafeckberlin.com/",
+                        "placeAddress": "Marienburgerstraße 49, 10405 Berlin",
+                        "placeLocation": {
+                        "lat": "52.535477",
+                        "long": "13.422839"
+                        }
+                        },
+                        {
+                        "placeName": "Godshot",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://godshot.de/",
+                        "placeAddress": "Immanuelkirchstraße 32, 10405 Berlin",
+                        "placeLocation": {
+                        "lat": "52.533014",
+                        "long": "13.422999"
+                        }
+                        },
+                        {
+                        "placeName": "Slörm",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://sloerm.net/",
+                        "placeAddress": "Danzigerstraße 53, 10435 Berlin",
+                        "placeLocation": {
+                        "lat": "52.5399241",
+                        "long": "13.4207842"
+                        }
+                        },
+                        {
+                        "placeName": "the Barn",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://barn.bigcartel.com/coffee-shop",
+                        "placeAddress": "Auguststraße 58, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.5274054",
+                        "long": "13.398246"
+                        }
+                        },
+                        {
+                        "placeName": "Luzia",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.luzia.tc/",
+                        "placeAddress": "Oranierstraße 34, 10999 Berlin",
+                        "placeLocation": {
+                        "lat": "52.5016512",
+                        "long": "13.4181339"
+                        }
+                        },
+                        {
+                        "placeName": "Brezel Company ",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.brezel-company-berlin.de/",
+                        "placeAddress": "Lenaustraße 10, 12047 Berlin",
+                        "placeLocation": {
+                        "lat": "52.4901291",
+                        "long": "13.4269727"
+                        }
+                        },
+                        {
+                        "placeName": "Companion Coffee",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://companioncoffee.com/",
+                        "placeAddress": "Oranienstraße 24, 10999 Berlin",
+                        "placeLocation": {
+                        "lat": "52.5010436",
+                        "long": "13.419788"
+                        }
+                        },
+                        {
+                        "placeName": "Bullys Bakery",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.bullysbakery.com/",
+                        "placeAddress": "Friedelstraße 7, 12047 Berlin",
+                        "placeLocation": {
+                        "lat": "52.4882626",
+                        "long": "13.4281182"
+                        }
+                        },
+                        {
+                        "placeName": "Zeit fur Brot",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.zeitfuerbrot.com/",
+                        "placeAddress": "Alte Schönhauser Straße 4",
+                        "placeLocation": {
+                        "lat": "52.5279024",
+                        "long": "13.4085985"
+                        }
+                        },
+                        {
+                        "placeName": "Oslo Kaffebar",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.oslokaffebar.com/",
+                        "placeAddress": "Eichendorffstraße 13, 10115 Berlin",
+                        "placeLocation": {
+                        "lat": "52.531152",
+                        "long": "13.386982"
+                        }
+                        },
+                        {
+                        "placeName": "Kaffeebar",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://kaffeebar-berlin.com/",
+                        "placeAddress": "Graefestraße 8, 10967 Berlin",
+                        "placeLocation": {
+                        "lat": "52.494362",
+                        "long": "13.418801"
+                        }
+                        },
+                        {
+                        "placeName": "Antipodes",
+                        "placeDescription": "empty",
+                        "placeUrl": "https://www.facebook.com/pages/Antipodes/124448277614199",
+                        "placeAddress": "Fehrbelliner Straße 5, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.530928",
+                        "long": "13.409948"
+                        }
+                        },
+                        {
+                        "placeName": "Double Eye",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.doubleeye.de/",
+                        "placeAddress": "Akazienstraße 22, 10823 Berlin",
+                        "placeLocation": {
+                        "lat": "52.48798",
+                        "long": "13.354292"
+                        }
+                        },
+                        {
+                        "placeName": "Café Bondi",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://cafebondi.de/menu.html",
+                        "placeAddress": "Eichendorffstraße 6, 10115 Berlin",
+                        "placeLocation": {
+                        "lat": "52.530263",
+                        "long": "13.3875"
+                        }
+                        },
+                        {
+                        "placeName": "Aunt Benny",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://auntbenny.com/",
+                        "placeAddress": "Oderstraße 7, 10247 Berlin",
+                        "placeLocation": {
+                        "lat": "52.510154",
+                        "long": "13.471121"
+                        }
+                        },
+                        {
+                        "placeName": "Schuchmanns",
+                        "placeDescription": "empty",
+                        "placeUrl": "https://www.facebook.com/schuchmanns.berlin",
+                        "placeAddress": "Paul-Lincke-Ufer 22, 10999 Berlin Kreuzberg",
+                        "placeLocation": {
+                        "lat": "52.49377",
+                        "long": "13.429124"
+                        }
+                        },
+                        {
+                        "placeName": "Chapter One",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.chapter-one-coffee.com/",
+                        "placeAddress": "Mittenwalder Straße  30, 10961 Berlin",
+                        "placeLocation": {
+                        "lat": "52.489758",
+                        "long": "13.395971"
+                        }
+                        },
+                        {
+                        "placeName": "Giro Coffee Bar",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.girocoffeebar.de/",
+                        "placeAddress": "Knesebeckstraße 5, 10623 Berlin",
+                        "placeLocation": {
+                        "lat": "52.510113",
+                        "long": "13.323028"
+                        }
+                        }
+                        ]
+             },
+             {
+             "categoryName": "Breakfast",
+             "categoryDescription": "Praesent viverra, urna eget adipiscing vehicula",
+             "places": [
+                        {
+                        "placeName": "Einstein Stammhaus",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.cafeeinstein.com/",
+                        "placeAddress": "Kurfürstenstraße 58, 10785 Berlin\n",
+                        "placeLocation": {
+                        "lat": "52.501888",
+                        "long": "13.354763"
+                        }
+                        },
+                        {
+                        "placeName": "Mogg & Melzer",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.moggandmelzer.com/",
+                        "placeAddress": "Auguststraße 11, 10117 Berlin\n",
+                        "placeLocation": {
+                        "lat": "52.526543",
+                        "long": "13.39431"
+                        }
+                        },
+                        {
+                        "placeName": "KaffeeMitte",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://kaffeemitte.de/",
+                        "placeAddress": "Weinmeisterstraße 9, 10178 Berlin\n",
+                        "placeLocation": {
+                        "lat": "52.525084",
+                        "long": "13.405947"
+                        }
+                        },
+                        {
+                        "placeName": "Salumeria Lamuri",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://lasalumeria.wordpress.com/",
+                        "placeAddress": "Köpenicker Straße 183, 10997 Berlin\n",
+                        "placeLocation": {
+                        "lat": "52.503191",
+                        "long": "13.437838"
+                        }
+                        },
+                        {
+                        "placeName": "The Dairy",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.thedairy.de/",
+                        "placeAddress": "Raumerstr 12, 10437 Berlin",
+                        "placeLocation": {
+                        "lat": "52.542372",
+                        "long": "13.419532"
+                        }
+                        },
+                        {
+                        "placeName": "Flamingo Fresh Food Bar",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.flamingo-freshfood.de/",
+                        "placeAddress": "Neustadtische Kirchstrasse 8, 13189 Berlin",
+                        "placeLocation": {
+                        "lat": "52.519474",
+                        "long": "13.385325"
+                        }
+                        },
+                        {
+                        "placeName": "Fuchsbau",
+                        "placeDescription": "empty",
+                        "placeUrl": "-",
+                        "placeAddress": "Planufer 95, 10967 Berlin",
+                        "placeLocation": {
+                        "lat": "52.495803",
+                        "long": "13.418917"
+                        }
+                        },
+                        {
+                        "placeName": "Mathilda",
+                        "placeDescription": "empty",
+                        "placeUrl": "-",
+                        "placeAddress": "Graefestraße 12, 10967 Berlin",
+                        "placeLocation": {
+                        "lat": "52.49352",
+                        "long": "13.418158"
+                        }
+                        }
+                        ]
+             },
+             {
+             "categoryName": "Lunch",
+             "categoryDescription": "Etiam ornare nibh eget leo pharetra",
+             "places": [
+                        {
+                        "placeName": "Café Pförtner",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://pfoertner.co/",
+                        "placeAddress": "Uferstrasse 8, 13357 Berlin",
+                        "placeLocation": {
+                        "lat": "52.551607",
+                        "long": "13.374441"
+                        }
+                        },
+                        {
+                        "placeName": "Chipps",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.chipps.eu/",
+                        "placeAddress": "Jägerstraße 35, 10117 Berlin\n",
+                        "placeLocation": {
+                        "lat": "52.514496",
+                        "long": "13.397486"
+                        }
+                        },
+                        {
+                        "placeName": "The Bird",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.thebirdinberlin.com/",
+                        "placeAddress": "Am Falkplatz 5, 10435 Berlin",
+                        "placeLocation": {
+                        "lat": "52.54677",
+                        "long": "13.405575"
+                        }
+                        },
+                        {
+                        "placeName": "Hashi Izakaya",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.hashi-kitchen.de/",
+                        "placeAddress": "Rosenthaler Straße 63, 10119 Berlin\n",
+                        "placeLocation": {
+                        "lat": "52.527808",
+                        "long": "13.402823"
+                        }
+                        },
+                        {
+                        "placeName": "Smart Deli",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.smartdeli.org/",
+                        "placeAddress": "Chausseestraße 5, 10115 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.527775",
+                        "long": "13.386626"
+                        }
+                        },
+                        {
+                        "placeName": "Ron Telesky Canadian Pizza\n\n",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.ron-telesky.de/",
+                        "placeAddress": "Dieffenbachstraße 62, 10967 Berlin Kreuzberg",
+                        "placeLocation": {
+                        "lat": "52.492923",
+                        "long": "13.415288"
+                        }
+                        },
+                        {
+                        "placeName": "Kantine",
+                        "placeDescription": "empty",
+                        "placeUrl": "-",
+                        "placeAddress": "Joachimstrasse 11, 10119 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.528434",
+                        "long": "13.400244"
+                        }
+                        },
+                        {
+                        "placeName": "Heno Heno",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://henoheno.de/",
+                        "placeAddress": "Kantstraße 65, 10627 Berlin Charlottenburg",
+                        "placeLocation": {
+                        "lat": "52.506821",
+                        "long": "13.303497"
+                        }
+                        },
+                        {
+                        "placeName": "Zula Hummus Café",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.zulaberlin.com/",
+                        "placeAddress": "Husemannstraße 10, 10435 Berlin Prenzlauer Berg",
+                        "placeLocation": {
+                        "lat": "52.537607",
+                        "long": "13.417486"
+                        }
+                        },
+                        {
+                        "placeName": "Blue Nile",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.bluenileberlin.de/",
+                        "placeAddress": "Tempelhofer Ufer 6, 10963 Berlin Kreuzberg",
+                        "placeLocation": {
+                        "lat": "52.49771",
+                        "long": "13.388489"
+                        }
+                        },
+                        {
+                        "placeName": "Mädchenitaliener",
+                        "placeDescription": "empty",
+                        "placeUrl": "https://www.facebook.com/pages/M%C3%A4dchenitaliener/140338359314608",
+                        "placeAddress": "Alte Schönhauser Straße 12, 10119 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.526871",
+                        "long": "13.407925"
+                        }
+                        },
+                        {
+                        "placeName": "Cô Cô – Bánh Mì Deli",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.co-co.net/",
+                        "placeAddress": "Rosenthalerstr. 2, 10119 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.53002",
+                        "long": "13.406615"
+                        }
+                        },
+                        {
+                        "placeName": "YamYam",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.yamyam-berlin.de",
+                        "placeAddress": "Alte Schönhauser Straße 6, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.527726",
+                        "long": "13.408549"
+                        }
+                        },
+                        {
+                        "placeName": "Mo’s kleiner Imbiss",
+                        "placeDescription": "empty",
+                        "placeUrl": "-",
+                        "placeAddress": "Graefestraße 9, 10967 Berlin Kreuzberg",
+                        "placeLocation": {
+                        "lat": "52.49422",
+                        "long": "13.418695"
+                        }
+                        },
+                        {
+                        "placeName": "Pappa e Ciccia",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.pappaeciccia.de/",
+                        "placeAddress": "Schwedter Strasse 18, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.534186",
+                        "long": "13.408536"
+                        }
+                        },
+                        {
+                        "placeName": "DUDU",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.dudu-berlin.de/",
+                        "placeAddress": "Torstr. 134, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.529552",
+                        "long": "13.39962"
+                        }
+                        },
+                        {
+                        "placeName": "Zsa Zsa & Loui",
+                        "placeDescription": "empty",
+                        "placeUrl": "-",
+                        "placeAddress": "Richardstr.103, 12043 Berlin Neukölln",
+                        "placeLocation": {
+                        "lat": "52.47751",
+                        "long": "13.44031"
+                        }
+                        },
+                        {
+                        "placeName": "Kantine9",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.kantine-neun.de/",
+                        "placeAddress": "Eisenbahnstraße 42/43 10997 Berlin Kreuzberg",
+                        "placeLocation": {
+                        "lat": "52.501976",
+                        "long": "13.432163"
+                        }
+                        },
+                        {
+                        "placeName": "LA BONNE FRANQUETTE",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://labonnefranquette.de/",
+                        "placeAddress": "Chausseestrasse 110, 10115 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.531132",
+                        "long": "13.382291"
+                        }
+                        },
+                        {
+                        "placeName": "Sabzi",
+                        "placeDescription": "empty",
+                        "placeUrl": "-",
+                        "placeAddress": "Luisenstr 15, 10117 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.523177",
+                        "long": "13.379517"
+                        }
+                        },
+                        {
+                        "placeName": "Hamburger Heaven",
+                        "placeDescription": "empty",
+                        "placeUrl": "www.hamburgerheaven.org",
+                        "placeAddress": "Graefestraße 93, 10967 Berlin",
+                        "placeLocation": {
+                        "lat": "52.495349",
+                        "long": "13.419567"
+                        }
+                        },
+                        {
+                        "placeName": "Auf die hand",
+                        "placeDescription": "empty",
+                        "placeUrl": "www.aufdiehand.com",
+                        "placeAddress": "Luisenstrasse 45, 10117 Berlin Mitte\n",
+                        "placeLocation": {
+                        "lat": "52.523193",
+                        "long": "13.379533"
+                        }
+                        }
+                        ]
+             },
+             {
+             "categoryName": "Dinner",
+             "categoryDescription": "Cras blandit ac metus quis venenatis",
+             "places": [
+                        {
+                        "placeName": "Cookies Cream",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.cookiescream.com/",
+                        "placeAddress": "Behrenstraße 55, 10117 Berlin",
+                        "placeLocation": {
+                        "lat": "52.515452",
+                        "long": "13.385893"
+                        }
+                        },
+                        {
+                        "placeName": "Pauly Saal",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://paulysaal.com/",
+                        "placeAddress": "Auguststraße 11, 10117 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.526543",
+                        "long": "13.39431"
+                        }
+                        },
+                        {
+                        "placeName": "Katz Orange",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.katzorange.com/en/",
+                        "placeAddress": "Bergstraße 22, 10115 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.531473",
+                        "long": "13.394447"
+                        }
+                        },
+                        {
+                        "placeName": "3 Schwestern",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://3schwestern-berlin.de/",
+                        "placeAddress": "Mariannenplatz 2, 10997 Berlin Kreuzberg",
+                        "placeLocation": {
+                        "lat": "52.502903",
+                        "long": "13.424145"
+                        }
+                        },
+                        {
+                        "placeName": "Lavanderia Vecchia",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.lavanderiavecchia.de/",
+                        "placeAddress": "Flughafenstraße 46, 12053 Berlin Neukölln",
+                        "placeLocation": {
+                        "lat": "52.481026",
+                        "long": "13.426683"
+                        }
+                        },
+                        {
+                        "placeName": "Cocoro",
+                        "placeDescription": "empty",
+                        "placeUrl": "-",
+                        "placeAddress": "Mehringdamm 64, 10963 Berlin Schöneberg",
+                        "placeLocation": {
+                        "lat": "52.493835",
+                        "long": "13.38362"
+                        }
+                        },
+                        {
+                        "placeName": "La Soupe Populaire",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://lasoupepopulaire.de/",
+                        "placeAddress": "Atelierhaus, 10405 Berlin",
+                        "placeLocation": {
+                        "lat": "52.540835",
+                        "long": "13.425755"
+                        }
+                        },
+                        {
+                        "placeName": "Pantry",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.pantry-berlin.com/",
+                        "placeAddress": "Friedrichstr. 120, 10117 Berlin",
+                        "placeLocation": {
+                        "lat": "52.526662",
+                        "long": "13.387082"
+                        }
+                        },
+                        {
+                        "placeName": "Sauvage",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.sauvageberlin.com/",
+                        "placeAddress": "Pflügerstrasse 25, 12047 Berlin",
+                        "placeLocation": {
+                        "lat": "52.489994",
+                        "long": "13.43354"
+                        }
+                        },
+                        {
+                        "placeName": "Bar Raval",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.barraval.de/",
+                        "placeAddress": "Lübbener Straße 1, 10997 Berlin",
+                        "placeLocation": {
+                        "lat": "52.498245",
+                        "long": "13.436331"
+                        }
+                        },
+                        {
+                        "placeName": "Schneeweiss",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.schneeweiss-berlin.de",
+                        "placeAddress": "Simplonstraße 16, 10245 Berlin",
+                        "placeLocation": {
+                        "lat": "52.508653",
+                        "long": "13.458456"
+                        }
+                        },
+                        {
+                        "placeName": "Das Lokal",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.lokal-berlin.blogspot.de/",
+                        "placeAddress": "Linienstraße 160, 10115 Berlin Mitte ",
+                        "placeLocation": {
+                        "lat": "52.527941",
+                        "long": "13.394604"
+                        }
+                        },
+                        {
+                        "placeName": "Alpenstueck",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.­alpenstueck.­de/",
+                        "placeAddress": "Gartenstrasse 9, 10115 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.530163",
+                        "long": "13.391783"
+                        }
+                        },
+                        {
+                        "placeName": "A Magica",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.amagica.de/",
+                        "placeAddress": "Greifenhagener Str. 54 10437 Berlin",
+                        "placeLocation": {
+                        "lat": "52.547778",
+                        "long": "13.415471"
+                        }
+                        },
+                        {
+                        "placeName": "Monsieur Vuong",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.monsieurvuong.de/",
+                        "placeAddress": "Alte Schönhauser Str. 46, 10119 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.526678",
+                        "long": "13.407776"
+                        }
+                        },
+                        {
+                        "placeName": "Ristorante Caffe Bocconi",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.webadresse.de/restaurant-berlin-ristorante-caffe-bocconi",
+                        "placeAddress": "Schluterstrasse 74, 10625 Berlin",
+                        "placeLocation": {
+                        "lat": "52.508719",
+                        "long": "13.317945"
+                        }
+                        }
+                        ]
+             },
+             {
+             "categoryName": "Fashion",
+             "categoryDescription": "Praesent lobortis metus eu nunc\n",
+             "places": [
+                        {
+                        "placeName": "Das Neue Schwarz",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.dasneueschwarz.de/",
+                        "placeAddress": "Mulackstrasse 38, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.527108",
+                        "long": "13.407258"
+                        }
+                        },
+                        {
+                        "placeName": "Civilist",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.civilistberlin.com/",
+                        "placeAddress": "Brunnenstrasse 13, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.531616",
+                        "long": "13.39969"
+                        }
+                        },
+                        {
+                        "placeName": "Don’t Shoot The Messengers",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://dont-shoot-the-messengers.com/",
+                        "placeAddress": "Zehdenickerstraße 25, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.530311",
+                        "long": "13.40634"
+                        }
+                        },
+                        {
+                        "placeName": "XVII Store",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://delivery.XVII-store.com",
+                        "placeAddress": "Steinstrasse 17, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.527045",
+                        "long": "13.404824"
+                        }
+                        },
+                        {
+                        "placeName": "Temporary Showroom",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.temporaryshowroom.com",
+                        "placeAddress": "Kastanienallee 36a, 10435 Berlin",
+                        "placeLocation": {
+                        "lat": "52.536118",
+                        "long": "13.407112"
+                        }
+                        },
+                        {
+                        "placeName": "Konzept86",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://fiermanagement.com/",
+                        "placeAddress": "Skalitzer Straße 86, 10997 Berlin",
+                        "placeLocation": {
+                        "lat": "52.500083",
+                        "long": "13.436102"
+                        }
+                        },
+                        {
+                        "placeName": "Andreas Murkudis",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.andreasmurkudis.com/",
+                        "placeAddress": "Potsdamer Strasse 81E, 10785 Berlin",
+                        "placeLocation": {
+                        "lat": "52.502187",
+                        "long": "13.364917"
+                        }
+                        },
+                        {
+                        "placeName": "Oukan",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.oukan71.com/",
+                        "placeAddress": "Kronenstraße 71, 10117 Berlin",
+                        "placeLocation": {
+                        "lat": "52.511107",
+                        "long": "13.38775"
+                        }
+                        },
+                        {
+                        "placeName": "Yuu Shop",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.yuu-shop.de/",
+                        "placeAddress": "Steinstraße 26, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.527023",
+                        "long": "13.40483"
+                        }
+                        },
+                        {
+                        "placeName": "No. 74\n\n",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://no74-berlin.com",
+                        "placeAddress": "Torstrasse 74, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.529112",
+                        "long": "13.407282"
+                        }
+                        },
+                        {
+                        "placeName": "Sing Blackbird",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.singblackbird.com",
+                        "placeAddress": "Sanderstraße 11, 12047 Berlin",
+                        "placeLocation": {
+                        "lat": "52.492449",
+                        "long": "13.426095"
+                        }
+                        },
+                        {
+                        "placeName": "Darklands",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.darklandsberlin.com/",
+                        "placeAddress": "Heidestrasse 46-52, 10557 Berlin",
+                        "placeLocation": {
+                        "lat": "52.532009",
+                        "long": "13.366768"
+                        }
+                        },
+                        {
+                        "placeName": "Baerck",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.baerck.net/",
+                        "placeAddress": "Mulackstraße 12, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.527482",
+                        "long": "13.405326"
+                        }
+                        },
+                        {
+                        "placeName": "SOTO",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.sotostore.com",
+                        "placeAddress": "Torstrasse 72, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.529082",
+                        "long": "13.407449"
+                        }
+                        },
+                        {
+                        "placeName": "BUTTERFLYSOULFIRE Boutique",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.butterflysoulfire.com",
+                        "placeAddress": "Mulackstraße 11, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.52745",
+                        "long": "13.405514"
+                        }
+                        },
+                        {
+                        "placeName": "LaLa Berlin",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.lalaberlin.com",
+                        "placeAddress": "Mulackstraße 7, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.527318",
+                        "long": "13.406266"
+                        }
+                        },
+                        {
+                        "placeName": "Voo",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.vooberlin.com/",
+                        "placeAddress": "Oranienstraße 24, 10999 Berlin Kreuzberg",
+                        "placeLocation": {
+                        "lat": "52.500838",
+                        "long": "13.420923"
+                        }
+                        },
+                        {
+                        "placeName": "konk",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.konk-berlin.de/",
+                        "placeAddress": "Kleine Hamburger Straße 15, 10117 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.51778",
+                        "long": "13.38877"
+                        }
+                        },
+                        {
+                        "placeName": "Happy Shop",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://happyshop-berlin.com/",
+                        "placeAddress": "Torstraße 67, 10119 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.529226",
+                        "long": "13.407588"
+                        }
+                        },
+                        {
+                        "placeName": "Starstyling",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.starstyling.net/",
+                        "placeAddress": "Mulackstraße 4, 10119 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.527143",
+                        "long": "13.407177"
+                        }
+                        },
+                        {
+                        "placeName": "Schwarzhogerzeil II",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://schwarzhogerzeil.de/",
+                        "placeAddress": "Mulackstraße 23, 10119 Berlin Mittte",
+                        "placeLocation": {
+                        "lat": "52.527671",
+                        "long": "13.404105"
+                        }
+                        }
+                        ]
+             },
+             {
+             "categoryName": "Nightlife",
+             "categoryDescription": "Etiam odio sapien, ornare sit amet hendrerit",
+             "places": [
+                        {
+                        "placeName": "Melody Nelson Bar",
+                        "placeDescription": "empty",
+                        "placeUrl": "-",
+                        "placeAddress": "Novalis Strasse 2, 10115 Berlin",
+                        "placeLocation": {
+                        "lat": "52.528029",
+                        "long": "13.388883"
+                        }
+                        },
+                        {
+                        "placeName": "Lugosi Bar",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://lugosi-berlin.de/",
+                        "placeAddress": "Reichenberger Str 152, 10999 Berlin",
+                        "placeLocation": {
+                        "lat": "52.497354",
+                        "long": "13.424184"
+                        }
+                        },
+                        {
+                        "placeName": "Loophole",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.loophole-berlin.com/",
+                        "placeAddress": "Boddinstrasse 60, 12053 Berlin",
+                        "placeLocation": {
+                        "lat": "52.480797",
+                        "long": "13.432936"
+                        }
+                        },
+                        {
+                        "placeName": "NEU! Bar",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.myspace.com/neubar",
+                        "placeAddress": "Greifswalderstr. 218, 10405 Berlin",
+                        "placeLocation": {
+                        "lat": "52.531001",
+                        "long": "13.426759"
+                        }
+                        },
+                        {
+                        "placeName": "Wendel",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.nstp.de",
+                        "placeAddress": "Schlesische Straße 42, 10997 Berlin",
+                        "placeLocation": {
+                        "lat": "52.500346",
+                        "long": "13.443417"
+                        }
+                        },
+                        {
+                        "placeName": "Berghain",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.berghain.de",
+                        "placeAddress": "Am Wriezener Bahnhof, 10243 Berlin",
+                        "placeLocation": {
+                        "lat": "52.509475",
+                        "long": "13.44118"
+                        }
+                        },
+                        {
+                        "placeName": "Kirk",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.kirkbar-berlin.de",
+                        "placeAddress": "Skalitzer Straße 75, 10997 Berlin",
+                        "placeLocation": {
+                        "lat": "52.500687",
+                        "long": "13.440251"
+                        }
+                        },
+                        {
+                        "placeName": "White Trash Fast Food",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.whitetrashfastfood.com/",
+                        "placeAddress": "Schönhauser Allee 6-7, 10119 Berlin",
+                        "placeLocation": {
+                        "lat": "52.529592",
+                        "long": "13.41012"
+                        }
+                        },
+                        {
+                        "placeName": "Beckett's Kopf",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.becketts-kopf.de",
+                        "placeAddress": "Pappelallee 64, 10437 Berlin",
+                        "placeLocation": {
+                        "lat": "52.545568",
+                        "long": "13.417222"
+                        }
+                        }
+                        ]
+             },
+             {
+             "categoryName": "Sweets",
+             "categoryDescription": "Ut tincidunt varius hendrerit",
+             "places": [
+                        {
+                        "placeName": "Hudson's",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.hudsonscakes.com/",
+                        "placeAddress": "Boppstrasse 1, 10967 Berlin Kreuzberg",
+                        "placeLocation": {
+                        "lat": "52.491107",
+                        "long": "13.420886"
+                        }
+                        },
+                        {
+                        "placeName": "Salon Sucre",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://salonsucre.de/",
+                        "placeAddress": "Görlitzerstrasse 32A, 10997 Berlin Kreuzberg",
+                        "placeLocation": {
+                        "lat": "52.495168",
+                        "long": "13.444768"
+                        }
+                        },
+                        {
+                        "placeName": "Du Bonheur",
+                        "placeDescription": "empty",
+                        "placeUrl": "-",
+                        "placeAddress": "Brunnenstr. 39, 10115 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.536225",
+                        "long": "13.397606"
+                        }
+                        },
+                        {
+                        "placeName": "Koriat",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.koriat.de/",
+                        "placeAddress": "Pannierstraße 29, 12047 Berlin",
+                        "placeLocation": {
+                        "lat": "52.490704",
+                        "long": "13.434705"
+                        }
+                        },
+                        {
+                        "placeName": "Efa's",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.efas.de/",
+                        "placeAddress": "Weinbergsweg 24, 10119 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.5307",
+                        "long": "13.402021"
+                        }
+                        },
+                        {
+                        "placeName": "Kadó",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.kado.de/",
+                        "placeAddress": "Graefestrasse 20, Kreuzberg 10967",
+                        "placeLocation": {
+                        "lat": "52.492624",
+                        "long": "13.417447"
+                        }
+                        }
+                        ]
+             },
+             {
+             "categoryName": "Sweets",
+             "categoryDescription": "Ut tincidunt varius hendrerit",
+             "places": [
+                        {
+                        "placeName": "Hudson's",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.hudsonscakes.com/",
+                        "placeAddress": "Boppstrasse 1, 10967 Berlin Kreuzberg",
+                        "placeLocation": {
+                        "lat": "52.491107",
+                        "long": "13.420886"
+                        }
+                        },
+                        {
+                        "placeName": "Salon Sucre",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://salonsucre.de/",
+                        "placeAddress": "Görlitzerstrasse 32A, 10997 Berlin Kreuzberg",
+                        "placeLocation": {
+                        "lat": "52.495168",
+                        "long": "13.444768"
+                        }
+                        },
+                        {
+                        "placeName": "Du Bonheur",
+                        "placeDescription": "empty",
+                        "placeUrl": "-",
+                        "placeAddress": "Brunnenstr. 39, 10115 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.536225",
+                        "long": "13.397606"
+                        }
+                        },
+                        {
+                        "placeName": "Koriat",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.koriat.de/",
+                        "placeAddress": "Pannierstraße 29, 12047 Berlin",
+                        "placeLocation": {
+                        "lat": "52.490704",
+                        "long": "13.434705"
+                        }
+                        },
+                        {
+                        "placeName": "Efa's",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.efas.de/",
+                        "placeAddress": "Weinbergsweg 24, 10119 Berlin Mitte",
+                        "placeLocation": {
+                        "lat": "52.5307",
+                        "long": "13.402021"
+                        }
+                        },
+                        {
+                        "placeName": "Kadó",
+                        "placeDescription": "empty",
+                        "placeUrl": "http://www.kado.de/",
+                        "placeAddress": "Graefestrasse 20, Kreuzberg 10967",
+                        "placeLocation": {
+                        "lat": "52.492624",
+                        "long": "13.417447"
+                        }
+                        }
+                        ]
+             }
+             ]
 }

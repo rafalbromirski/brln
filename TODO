@@ -3,6 +3,7 @@
 [ ] detailsView - FetchedRequest instead of passing an object / initWithPlaceName
 [ ] remove unused fonts
 [ ] check reusedIdentifier
+[ ] check icon-list tabbar (1px diff?)
 
 [-] check tabbar with only one navigationView (right now I have 3)
 [x] trigger rootControllers for navigationViews

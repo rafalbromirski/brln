@@ -88,7 +88,8 @@
 
 
     UILabel *placeDescriptionText = [[UILabel alloc] initWithFrame:CGRectMake(20, placeCategoryLabel.frame.origin.y + placeCategoryLabel.frame.size.height + 15, self.view.frame.size.width - 40, 20)];
-    [placeDescriptionText setText:[place placeDescription]];
+//    [placeDescriptionText setText:[place placeDescription]];
+    [placeDescriptionText setText:@"Proin sit amet dapibus purus, sit amet tempor erat. Suspendisse at enim vel lectus aliquet varius vel sed massa. Nunc bibendum scelerisque magna, id imperdiet nulla aliquam non. Nullam sed augue vestibulum, tincidunt orci sed, accumsan lectus. Phasellus non ornare leo, vel rhoncus quam. Donec id diam aliquet, lobortis sem nec, semper diam. Vivamus in eros nunc. Aenean tempor pretium lorem. Proin fringilla risus ac ipsum porttitor, non feugiat nulla iaculis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer metus dolor, fringilla sed feugiat in, hendrerit non ligula. Proin sit amet dapibus purus, sit amet tempor erat. Suspendisse at enim vel lectus aliquet varius vel sed massa. Nunc bibendum scelerisque magna, id imperdiet nulla aliquam non. Nullam sed augue vestibulum, tincidunt orci sed, accumsan lectus. Phasellus non ornare leo, vel rhoncus quam. Donec id diam aliquet, lobortis sem nec, semper diam. Vivamus in eros nunc. Aenean tempor pretium lorem. Proin fringilla risus ac ipsum porttitor, non feugiat nulla iaculis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer metus dolor, fringilla sed feugiat in, hendrerit non ligula."];
     [placeDescriptionText setBackgroundColor:[UIColor clearColor]];
     [placeDescriptionText setTextColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:1.0]];
     [placeDescriptionText setFont:[UIFont fontWithName:@"Lato-Regular" size:10.0]];

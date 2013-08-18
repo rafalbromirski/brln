@@ -35,7 +35,7 @@
 {
     [super viewDidLoad];
     
-    [self setTitle:@"Places"];    
+    [self setTitle:currentCategory];
     
     // set context - DatabaseHelper
     [self setManagedObjectContext:[[DatabaseHelper sharedInstance] managedObjectContext]];

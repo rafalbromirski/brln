@@ -1,0 +1,166 @@
+{
+  "categoryName": "Dinner",
+  "categoryDescription": "Cras blandit ac metus quis venenatis",
+  "places": [
+    {
+      "placeName": "Cookies Cream",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.cookiescream.com/",
+      "placeAddress": "Behrenstraße 55, 10117 Berlin",
+      "placeLocation": {
+        "lat": "52.515452",
+        "long": "13.385893"
+      }
+    },
+    {
+      "placeName": "Pauly Saal",
+      "placeDescription": "empty",
+      "placeUrl": "http://paulysaal.com/",
+      "placeAddress": "Auguststraße 11, 10117 Berlin Mitte",
+      "placeLocation": {
+        "lat": "52.526543",
+        "long": "13.39431"
+      }
+    },
+    {
+      "placeName": "Katz Orange",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.katzorange.com/en/",
+      "placeAddress": "Bergstraße 22, 10115 Berlin Mitte",
+      "placeLocation": {
+        "lat": "52.531473",
+        "long": "13.394447"
+      }
+    },
+    {
+      "placeName": "3 Schwestern",
+      "placeDescription": "empty",
+      "placeUrl": "http://3schwestern-berlin.de/",
+      "placeAddress": "Mariannenplatz 2, 10997 Berlin Kreuzberg",
+      "placeLocation": {
+        "lat": "52.502903",
+        "long": "13.424145"
+      }
+    },
+    {
+      "placeName": "Lavanderia Vecchia",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.lavanderiavecchia.de/",
+      "placeAddress": "Flughafenstraße 46, 12053 Berlin Neukölln",
+      "placeLocation": {
+        "lat": "52.481026",
+        "long": "13.426683"
+      }
+    },
+    {
+      "placeName": "Cocoro",
+      "placeDescription": "empty",
+      "placeUrl": "-",
+      "placeAddress": "Mehringdamm 64, 10963 Berlin Schöneberg",
+      "placeLocation": {
+        "lat": "52.493835",
+        "long": "13.38362"
+      }
+    },
+    {
+      "placeName": "La Soupe Populaire",
+      "placeDescription": "empty",
+      "placeUrl": "http://lasoupepopulaire.de/",
+      "placeAddress": "Atelierhaus, 10405 Berlin",
+      "placeLocation": {
+        "lat": "52.540835",
+        "long": "13.425755"
+      }
+    },
+    {
+      "placeName": "Pantry",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.pantry-berlin.com/",
+      "placeAddress": "Friedrichstr. 120, 10117 Berlin",
+      "placeLocation": {
+        "lat": "52.526662",
+        "long": "13.387082"
+      }
+    },
+    {
+      "placeName": "Sauvage",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.sauvageberlin.com/",
+      "placeAddress": "Pflügerstrasse 25, 12047 Berlin",
+      "placeLocation": {
+        "lat": "52.489994",
+        "long": "13.43354"
+      }
+    },
+    {
+      "placeName": "Bar Raval",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.barraval.de/",
+      "placeAddress": "Lübbener Straße 1, 10997 Berlin",
+      "placeLocation": {
+        "lat": "52.498245",
+        "long": "13.436331"
+      }
+    },
+    {
+      "placeName": "Schneeweiss",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.schneeweiss-berlin.de",
+      "placeAddress": "Simplonstraße 16, 10245 Berlin",
+      "placeLocation": {
+        "lat": "52.508653",
+        "long": "13.458456"
+      }
+    },
+    {
+      "placeName": "Das Lokal",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.lokal-berlin.blogspot.de/",
+      "placeAddress": "Linienstraße 160, 10115 Berlin Mitte ",
+      "placeLocation": {
+        "lat": "52.527941",
+        "long": "13.394604"
+      }
+    },
+    {
+      "placeName": "Alpenstueck",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.­alpenstueck.­de/",
+      "placeAddress": "Gartenstrasse 9, 10115 Berlin Mitte",
+      "placeLocation": {
+        "lat": "52.530163",
+        "long": "13.391783"
+      }
+    },
+    {
+      "placeName": "A Magica",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.amagica.de/",
+      "placeAddress": "Greifenhagener Str. 54 10437 Berlin",
+      "placeLocation": {
+        "lat": "52.547778",
+        "long": "13.415471"
+      }
+    },
+    {
+      "placeName": "Monsieur Vuong",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.monsieurvuong.de/",
+      "placeAddress": "Alte Schönhauser Str. 46, 10119 Berlin Mitte",
+      "placeLocation": {
+        "lat": "52.526678",
+        "long": "13.407776"
+      }
+    },
+    {
+      "placeName": "Ristorante Caffe Bocconi",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.webadresse.de/restaurant-berlin-ristorante-caffe-bocconi",
+      "placeAddress": "Schluterstrasse 74, 10625 Berlin",
+      "placeLocation": {
+        "lat": "52.508719",
+        "long": "13.317945"
+      }
+    }
+  ]
+}

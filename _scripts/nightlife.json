@@ -1,0 +1,96 @@
+{
+  "categoryName": "Nightlife",
+  "categoryDescription": "Etiam odio sapien, ornare sit amet hendrerit",
+  "places": [
+    {
+      "placeName": "Melody Nelson Bar",
+      "placeDescription": "empty",
+      "placeUrl": "-",
+      "placeAddress": "Novalis Strasse 2, 10115 Berlin",
+      "placeLocation": {
+        "lat": "52.528029",
+        "long": "13.388883"
+      }
+    },
+    {
+      "placeName": "Lugosi Bar",
+      "placeDescription": "empty",
+      "placeUrl": "http://lugosi-berlin.de/",
+      "placeAddress": "Reichenberger Str 152, 10999 Berlin",
+      "placeLocation": {
+        "lat": "52.497354",
+        "long": "13.424184"
+      }
+    },
+    {
+      "placeName": "Loophole",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.loophole-berlin.com/",
+      "placeAddress": "Boddinstrasse 60, 12053 Berlin",
+      "placeLocation": {
+        "lat": "52.480797",
+        "long": "13.432936"
+      }
+    },
+    {
+      "placeName": "NEU! Bar",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.myspace.com/neubar",
+      "placeAddress": "Greifswalderstr. 218, 10405 Berlin",
+      "placeLocation": {
+        "lat": "52.531001",
+        "long": "13.426759"
+      }
+    },
+    {
+      "placeName": "Wendel",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.nstp.de",
+      "placeAddress": "Schlesische Straße 42, 10997 Berlin",
+      "placeLocation": {
+        "lat": "52.500346",
+        "long": "13.443417"
+      }
+    },
+    {
+      "placeName": "Berghain",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.berghain.de",
+      "placeAddress": "Am Wriezener Bahnhof, 10243 Berlin",
+      "placeLocation": {
+        "lat": "52.509475",
+        "long": "13.44118"
+      }
+    },
+    {
+      "placeName": "Kirk",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.kirkbar-berlin.de",
+      "placeAddress": "Skalitzer Straße 75, 10997 Berlin",
+      "placeLocation": {
+        "lat": "52.500687",
+        "long": "13.440251"
+      }
+    },
+    {
+      "placeName": "White Trash Fast Food",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.whitetrashfastfood.com/",
+      "placeAddress": "Schönhauser Allee 6-7, 10119 Berlin",
+      "placeLocation": {
+        "lat": "52.529592",
+        "long": "13.41012"
+      }
+    },
+    {
+      "placeName": "Beckett's Kopf",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.becketts-kopf.de",
+      "placeAddress": "Pappelallee 64, 10437 Berlin",
+      "placeLocation": {
+        "lat": "52.545568",
+        "long": "13.417222"
+      }
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "categoryName": "Lunch",
+  "categoryDescription": "Etiam ornare nibh eget leo pharetra",
+  "places": [
+    {
+      "placeName": "Café Pförtner",
+      "placeDescription": "empty",
+      "placeUrl": "http://pfoertner.co/",
+      "placeAddress": "Uferstrasse 8, 13357 Berlin",
+      "placeLocation": {
+        "lat": "52.551607",
+        "long": "13.374441"
+      }
+    },
+    {
+      "placeName": "Chipps",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.chipps.eu/",
+      "placeAddress": "Jägerstraße 35, 10117 Berlin\n",
+      "placeLocation": {
+        "lat": "52.514496",
+        "long": "13.397486"
+      }
+    },
+    {
+      "placeName": "The Bird",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.thebirdinberlin.com/",
+      "placeAddress": "Am Falkplatz 5, 10435 Berlin",
+      "placeLocation": {
+        "lat": "52.54677",
+        "long": "13.405575"
+      }
+    },
+    {
+      "placeName": "Hashi Izakaya",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.hashi-kitchen.de/",
+      "placeAddress": "Rosenthaler Straße 63, 10119 Berlin\n",
+      "placeLocation": {
+        "lat": "52.527808",
+        "long": "13.402823"
+      }
+    },
+    {
+      "placeName": "Smart Deli",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.smartdeli.org/",
+      "placeAddress": "Chausseestraße 5, 10115 Berlin Mitte",
+      "placeLocation": {
+        "lat": "52.527775",
+        "long": "13.386626"
+      }
+    },
+    {
+      "placeName": "Ron Telesky Canadian Pizza\n\n",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.ron-telesky.de/",
+      "placeAddress": "Dieffenbachstraße 62, 10967 Berlin Kreuzberg",
+      "placeLocation": {
+        "lat": "52.492923",
+        "long": "13.415288"
+      }
+    },
+    {
+      "placeName": "Kantine",
+      "placeDescription": "empty",
+      "placeUrl": "-",
+      "placeAddress": "Joachimstrasse 11, 10119 Berlin Mitte",
+      "placeLocation": {
+        "lat": "52.528434",
+        "long": "13.400244"
+      }
+    },
+    {
+      "placeName": "Heno Heno",
+      "placeDescription": "empty",
+      "placeUrl": "http://henoheno.de/",
+      "placeAddress": "Kantstraße 65, 10627 Berlin Charlottenburg",
+      "placeLocation": {
+        "lat": "52.506821",
+        "long": "13.303497"
+      }
+    },
+    {
+      "placeName": "Zula Hummus Café",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.zulaberlin.com/",
+      "placeAddress": "Husemannstraße 10, 10435 Berlin Prenzlauer Berg",
+      "placeLocation": {
+        "lat": "52.537607",
+        "long": "13.417486"
+      }
+    },
+    {
+      "placeName": "Blue Nile",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.bluenileberlin.de/",
+      "placeAddress": "Tempelhofer Ufer 6, 10963 Berlin Kreuzberg",
+      "placeLocation": {
+        "lat": "52.49771",
+        "long": "13.388489"
+      }
+    },
+    {
+      "placeName": "Mädchenitaliener",
+      "placeDescription": "empty",
+      "placeUrl": "https://www.facebook.com/pages/M%C3%A4dchenitaliener/140338359314608",
+      "placeAddress": "Alte Schönhauser Straße 12, 10119 Berlin Mitte",
+      "placeLocation": {
+        "lat": "52.526871",
+        "long": "13.407925"
+      }
+    },
+    {
+      "placeName": "Cô Cô – Bánh Mì Deli",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.co-co.net/",
+      "placeAddress": "Rosenthalerstr. 2, 10119 Berlin Mitte",
+      "placeLocation": {
+        "lat": "52.53002",
+        "long": "13.406615"
+      }
+    },
+    {
+      "placeName": "YamYam",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.yamyam-berlin.de",
+      "placeAddress": "Alte Schönhauser Straße 6, 10119 Berlin",
+      "placeLocation": {
+        "lat": "52.527726",
+        "long": "13.408549"
+      }
+    },
+    {
+      "placeName": "Mo’s kleiner Imbiss",
+      "placeDescription": "empty",
+      "placeUrl": "-",
+      "placeAddress": "Graefestraße 9, 10967 Berlin Kreuzberg",
+      "placeLocation": {
+        "lat": "52.49422",
+        "long": "13.418695"
+      }
+    },
+    {
+      "placeName": "Pappa e Ciccia",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.pappaeciccia.de/",
+      "placeAddress": "Schwedter Strasse 18, 10119 Berlin",
+      "placeLocation": {
+        "lat": "52.534186",
+        "long": "13.408536"
+      }
+    },
+    {
+      "placeName": "DUDU",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.dudu-berlin.de/",
+      "placeAddress": "Torstr. 134, 10119 Berlin",
+      "placeLocation": {
+        "lat": "52.529552",
+        "long": "13.39962"
+      }
+    },
+    {
+      "placeName": "Zsa Zsa & Loui",
+      "placeDescription": "empty",
+      "placeUrl": "-",
+      "placeAddress": "Richardstr.103, 12043 Berlin Neukölln",
+      "placeLocation": {
+        "lat": "52.47751",
+        "long": "13.44031"
+      }
+    },
+    {
+      "placeName": "Kantine9",
+      "placeDescription": "empty",
+      "placeUrl": "http://www.kantine-neun.de/",
+      "placeAddress": "Eisenbahnstraße 42/43 10997 Berlin Kreuzberg",
+      "placeLocation": {
+        "lat": "52.501976",
+        "long": "13.432163"
+      }
+    },
+    {
+      "placeName": "LA BONNE FRANQUETTE",
+      "placeDescription": "empty",
+      "placeUrl": "http://labonnefranquette.de/",
+      "placeAddress": "Chausseestrasse 110, 10115 Berlin Mitte",
+      "placeLocation": {
+        "lat": "52.531132",
+        "long": "13.382291"
+      }
+    },
+    {
+      "placeName": "Sabzi",
+      "placeDescription": "empty",
+      "placeUrl": "-",
+      "placeAddress": "Luisenstr 15, 10117 Berlin Mitte",
+      "placeLocation": {
+        "lat": "52.523177",
+        "long": "13.379517"
+      }
+    },
+    {
+      "placeName": "Hamburger Heaven",
+      "placeDescription": "empty",
+      "placeUrl": "www.hamburgerheaven.org",
+      "placeAddress": "Graefestraße 93, 10967 Berlin",
+      "placeLocation": {
+        "lat": "52.495349",
+        "long": "13.419567"
+      }
+    },
+    {
+      "placeName": "Auf die hand",
+      "placeDescription": "empty",
+      "placeUrl": "www.aufdiehand.com",
+      "placeAddress": "Luisenstrasse 45, 10117 Berlin Mitte\n",
+      "placeLocation": {
+        "lat": "52.523193",
+        "long": "13.379533"
+      }
+    }
+  ]
+}
