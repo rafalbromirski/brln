@@ -15,12 +15,13 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-//        [self setBackgroundColor:[UIColor blackColor]];
 
         [self setImage:[UIImage imageNamed:@"favorite-button"] forState:UIControlStateNormal];
-        [self setImage:[UIImage imageNamed:@"favorite-button"] forState:UIControlStateHighlighted];
+        // [self setImage:[UIImage imageNamed:@"favorite-button"] forState:UIControlStateNormal | UIControlStateHighlighted];
         [self setImage:[UIImage imageNamed:@"favorite-button-selected"] forState:UIControlStateSelected];
+        // [self setImage:[UIImage imageNamed:@"favorite-button-selected"] forState:UIControlStateSelected | UIControlStateHighlighted];
         
+        [self setAdjustsImageWhenHighlighted:NO];
         [self addTarget:self action:@selector(toggleClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;

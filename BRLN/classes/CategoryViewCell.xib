@@ -106,10 +106,9 @@
 							<object class="IBUIView" id="226118721">
 								<reference key="NSNextResponder" ref="883931477"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{245, 22}, {40, 16}}</string>
+								<string key="NSFrame">{{255, 22}, {30, 16}}</string>
 								<reference key="NSSuperview" ref="883931477"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -243,14 +242,14 @@
 					<string key="className">CategoryViewCell</string>
 					<string key="superclassName">UITableViewCell</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="categoryBadge">BRLNBadge</string>
+						<string key="categoryBadge">LKBadgeView</string>
 						<string key="categoryDescriptionLabel">UILabel</string>
 						<string key="categoryNameLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="categoryBadge">
 							<string key="name">categoryBadge</string>
-							<string key="candidateClassName">BRLNBadge</string>
+							<string key="candidateClassName">LKBadgeView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="categoryDescriptionLabel">
 							<string key="name">categoryDescriptionLabel</string>

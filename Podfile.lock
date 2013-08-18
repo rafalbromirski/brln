@@ -1,13 +1,16 @@
 PODS:
   - AKTabBarController (1.1.0)
   - LKbadgeView (1.1.0)
+  - TTTAttributedLabel (1.7.1)
 
 DEPENDENCIES:
   - AKTabBarController
   - LKbadgeView
+  - TTTAttributedLabel
 
 SPEC CHECKSUMS:
   AKTabBarController: 34443d5d028700dea1d00a6f275e8ef17fc947c2
   LKbadgeView: 484f871824ac2e132878bd866449d221640590dc
+  TTTAttributedLabel: e504133915a9b11de63cb470ffa2790383a3eb23
 
 COCOAPODS: 0.22.3

@@ -15,6 +15,7 @@
 #import "Place.h"
 
 #import "BRLNFavoriteButton.h"
+#import "TTTAttributedLabel.h"
 
 @implementation DetailsViewController
 
@@ -76,8 +77,12 @@
     [placeNameLabel sizeToFit];
     [placeDetailsView addSubview:placeNameLabel];
 
+    
+    UIImageView *placeAddressIcon = [[UIImageView alloc] initWithFrame:CGRectMake(20, placeNameLabel.frame.origin.y + placeNameLabel.frame.size.height + 5, 14, 14)];
+    [placeAddressIcon setImage:[UIImage imageNamed:@"icon-map"]];
+    [placeDetailsView addSubview:placeAddressIcon];
 
-    UILabel *placeAddressLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, placeNameLabel.frame.origin.y + placeNameLabel.frame.size.height + 5, self.view.frame.size.width - 40, 20)];
+    UILabel *placeAddressLabel = [[UILabel alloc] initWithFrame:CGRectMake(35, placeNameLabel.frame.origin.y + placeNameLabel.frame.size.height + 6, self.view.frame.size.width - 40, 14)];
     [placeAddressLabel setText:[place placeAddress]];
     [placeAddressLabel setBackgroundColor:[UIColor clearColor]];
     [placeAddressLabel setTextColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:1.0]];
@@ -87,13 +92,17 @@
     [placeDetailsView addSubview:placeAddressLabel];
 
 
-    UILabel *placeDescriptionText = [[UILabel alloc] initWithFrame:CGRectMake(20, placeAddressLabel.frame.origin.y + placeAddressLabel.frame.size.height + 15, self.view.frame.size.width - 40, 20)];
-//    [placeDescriptionText setText:[place placeDescription]];
-    [placeDescriptionText setText:@"Proin sit amet dapibus purus, sit amet tempor erat. Suspendisse at enim vel lectus aliquet varius vel sed massa. Nunc bibendum scelerisque magna, id imperdiet nulla aliquam non. Nullam sed augue vestibulum, tincidunt orci sed, accumsan lectus. Phasellus non ornare leo, vel rhoncus quam. Donec id diam aliquet, lobortis sem nec, semper diam. Vivamus in eros nunc. Aenean tempor pretium lorem. Proin fringilla risus ac ipsum porttitor, non feugiat nulla iaculis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer metus dolor, fringilla sed feugiat in, hendrerit non ligula. Proin sit amet dapibus purus, sit amet tempor erat. Suspendisse at enim vel lectus aliquet varius vel sed massa. Nunc bibendum scelerisque magna, id imperdiet nulla aliquam non. Nullam sed augue vestibulum, tincidunt orci sed, accumsan lectus. Phasellus non ornare leo, vel rhoncus quam. Donec id diam aliquet, lobortis sem nec, semper diam. Vivamus in eros nunc. Aenean tempor pretium lorem. Proin fringilla risus ac ipsum porttitor, non feugiat nulla iaculis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer metus dolor, fringilla sed feugiat in, hendrerit non ligula."];
-    [placeDescriptionText setBackgroundColor:[UIColor clearColor]];
-    [placeDescriptionText setTextColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:1.0]];
+
+    TTTAttributedLabel *placeDescriptionText = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(20, placeAddressLabel.frame.origin.y + placeAddressLabel.frame.size.height + 15, self.view.frame.size.width - 40, 100)];
+    
     [placeDescriptionText setFont:[UIFont fontWithName:@"Lato-Regular" size:10.0]];
+    [placeDescriptionText setTextColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:1.0]];
+    [placeDescriptionText setBackgroundColor:[UIColor clearColor]];
     [placeDescriptionText setNumberOfLines:0];
+    [placeDescriptionText setVerticalAlignment:TTTAttributedLabelVerticalAlignmentTop];
+    [placeDescriptionText setLineHeightMultiple:1.25f];
+//    [placeDescriptionText setText:[place placeDescription]];    
+    [placeDescriptionText setText:@"Proin sit amet dapibus purus, sit amet tempor erat. Suspendisse at enim vel lectus aliquet varius vel sed massa. Nunc bibendum scelerisque magna, id imperdiet nulla aliquam non. Nullam sed augue vestibulum, tincidunt orci sed, accumsan lectus. Phasellus non ornare leo, vel rhoncus quam. Donec id diam aliquet, lobortis sem nec, semper diam. Vivamus in eros nunc. Aenean tempor pretium lorem. Proin fringilla. Proin sit amet dapibus purus, sit amet tempor erat. Suspendisse at enim vel lectus aliquet varius vel sed massa. Nunc bibendum scelerisque magna, id imperdiet nulla aliquam non. Nullam sed augue vestibulum, tincidunt orci sed, accumsan lectus. Phasellus non ornare leo, vel rhoncus quam. Donec id diam aliquet, lobortis sem nec, semper diam. Vivamus in eros nunc. Aenean tempor pretium lorem. Proin fringilla. Proin sit amet dapibus purus, sit amet tempor erat. Suspendisse at enim vel lectus aliquet varius vel sed massa. Nunc bibendum scelerisque magna, id imperdiet nulla aliquam non. Nullam sed augue vestibulum, tincidunt orci sed, accumsan lectus. Phasellus non ornare leo, vel rhoncus quam. Donec id diam aliquet, lobortis sem nec, semper diam. Vivamus in eros nunc. Aenean tempor pretium lorem. Proin fringilla"];
     [placeDescriptionText sizeToFit];
     [placeDetailsView addSubview:placeDescriptionText];
     
