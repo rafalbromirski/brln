@@ -3,6 +3,7 @@
     "data": [
     {
         "categoryName": "Coffee",
+        "categoryDescription": "Nunc elementum lectus lacus, quis blandit est semper bibendum",
         "places":
         [{
             "placeName": "Bonanza Coffee Heroes",
@@ -67,6 +68,7 @@
     },
     {
         "categoryName": "Lunch",
+        "categoryDescription": "Nullam ultricies sagittis eros sed blandit",
         "places":
         [{
             "placeName": "Kantina von Hugo",
@@ -83,6 +85,7 @@
     },
     {
         "categoryName": "Breakfast",
+        "categoryDescription": "Phasellus tristique ipsum non ipsum faucibus mattis",             
         "places":
         [{
             "placeName": "Kantina von Hugo",

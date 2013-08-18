@@ -14,6 +14,7 @@
 			<string>IBProxyObject</string>
 			<string>IBUILabel</string>
 			<string>IBUITableViewCell</string>
+			<string>IBUIView</string>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -80,7 +81,7 @@
 								<string key="NSFrame">{{20, 30}, {217, 20}}</string>
 								<reference key="NSSuperview" ref="883931477"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="80191773"/>
+								<reference key="NSNextKeyView" ref="226118721"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -102,33 +103,19 @@
 								</object>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
-							<object class="IBUILabel" id="80191773">
+							<object class="IBUIView" id="226118721">
 								<reference key="NSNextResponder" ref="883931477"/>
-								<int key="NSvFlags">273</int>
-								<string key="NSFrame">{{245, 15}, {50, 29}}</string>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{245, 22}, {40, 16}}</string>
 								<reference key="NSSuperview" ref="883931477"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<bool key="IBUIOpaque">NO</bool>
-								<bool key="IBUIClipsSubviews">YES</bool>
-								<int key="IBUIContentMode">7</int>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<object class="NSColor" key="IBUIBackgroundColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
+								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<string key="IBUIText">{{count}}</string>
-								<reference key="IBUITextColor" ref="397402201"/>
-								<nil key="IBUIHighlightedColor"/>
-								<int key="IBUIBaselineAdjustment">0</int>
-								<int key="IBUITextAlignment">2</int>
-								<object class="IBUIFontDescription" key="IBUIFontDescription">
-									<int key="type">1</int>
-									<double key="pointSize">12</double>
-								</object>
-								<object class="NSFont" key="IBUIFont">
-									<string key="NSName">Helvetica</string>
-									<double key="NSSize">12</double>
-									<int key="NSfFlags">16</int>
-								</object>
-								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
 						<string key="NSFrameSize">{300, 59}</string>
@@ -180,11 +167,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">categorySizeLabel</string>
+						<string key="label">categoryBadge</string>
 						<reference key="source" ref="966354757"/>
-						<reference key="destination" ref="80191773"/>
+						<reference key="destination" ref="226118721"/>
 					</object>
-					<int key="connectionID">29</int>
+					<int key="connectionID">34</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -212,7 +199,7 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="214594268"/>
 							<reference ref="667929410"/>
-							<reference ref="80191773"/>
+							<reference ref="226118721"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -227,8 +214,8 @@
 						<reference key="parent" ref="966354757"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">28</int>
-						<reference key="object" ref="80191773"/>
+						<int key="objectID">33</int>
+						<reference key="object" ref="226118721"/>
 						<reference key="parent" ref="966354757"/>
 					</object>
 				</array>
@@ -241,25 +228,38 @@
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="24.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="25.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="28.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="33.CustomClassName">BRLNBadge</string>
+				<string key="33.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">29</int>
+			<int key="maxID">34</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
+					<string key="className">BRLNBadge</string>
+					<string key="superclassName">LKBadgeView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/BRLNBadge.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">CategoryViewCell</string>
 					<string key="superclassName">UITableViewCell</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="categoryBadge">BRLNBadge</string>
 						<string key="categoryDescriptionLabel">UILabel</string>
 						<string key="categoryNameLabel">UILabel</string>
-						<string key="categorySizeLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="categoryBadge">
+							<string key="name">categoryBadge</string>
+							<string key="candidateClassName">BRLNBadge</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="categoryDescriptionLabel">
 							<string key="name">categoryDescriptionLabel</string>
 							<string key="candidateClassName">UILabel</string>
@@ -268,14 +268,18 @@
 							<string key="name">categoryNameLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="categorySizeLabel">
-							<string key="name">categorySizeLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/CategoryViewCell.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">LKBadgeView</string>
+					<string key="superclassName">UIView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/LKBadgeView.h</string>
 					</object>
 				</object>
 			</array>

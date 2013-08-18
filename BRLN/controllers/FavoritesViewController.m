@@ -72,7 +72,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSLog(@"numberOfSectionsInTableView: %d", [[self.fetchedResultsController sections] count]);
     return [[self.fetchedResultsController sections] count];
 }
 
@@ -240,6 +239,11 @@
 
 - (void)configureCell:(PlaceViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     [[cell placeNameLabel] setText:[[_fetchedResultsController objectAtIndexPath:indexPath] placeName]];
+}
+
+- (void)showOnMap:(id)sender
+{
+    NSLog(@"show on map");
 }
 
 

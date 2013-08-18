@@ -34,6 +34,7 @@
 		24523B0017AD9B2900FAF7FA /* PlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24523AFF17AD9B2900FAF7FA /* PlaceAnnotation.m */; };
 		24523B0217ADC0EC00FAF7FA /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 24523B0117ADC0EC00FAF7FA /* TODO */; };
 		2468D0B817A70195003CB08A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2468D0B717A70195003CB08A /* data.json */; };
+		2483BB6317C0F8420040B8A2 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2483BB6217C0F8420040B8A2 /* Category.m */; };
 		24AC8E9E17BD7F1E003584E6 /* PlaceViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AC8E9D17BD7F1E003584E6 /* PlaceViewCell.m */; };
 		24AC8EA017BD7F34003584E6 /* PlaceViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24AC8E9F17BD7F34003584E6 /* PlaceViewCell.xib */; };
 		24AC8EA317BD85D7003584E6 /* navbar-button-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AC8EA117BD85D7003584E6 /* navbar-button-highlighted.png */; };
@@ -48,8 +49,8 @@
 		24B0E0CD17C00ECD008ED81B /* tabbar-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B0E0CB17C00ECD008ED81B /* tabbar-highlighted@2x.png */; };
 		24B0E0D017C024D9008ED81B /* icon-disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B0E0CE17C024D9008ED81B /* icon-disclosure.png */; };
 		24B0E0D117C024D9008ED81B /* icon-disclosure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B0E0CF17C024D9008ED81B /* icon-disclosure@2x.png */; };
+		24B0E0D417C03132008ED81B /* BRLNBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B0E0D317C03132008ED81B /* BRLNBadge.m */; };
 		24BBBD3E17AD2FD20036161D /* PlaceLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD3D17AD2FD20036161D /* PlaceLocation.m */; };
-		24BBBD4117AD2FD30036161D /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD4017AD2FD30036161D /* Category.m */; };
 		24BBBD4417AD2FD30036161D /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BBBD4317AD2FD30036161D /* Place.m */; };
 		24CA352C17BAABF200633820 /* ParallaxImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CA352B17BAABF200633820 /* ParallaxImagesViewController.m */; };
 		24CA352F17BABC6E00633820 /* MDCParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CA352E17BABC6E00633820 /* MDCParallaxView.m */; };
@@ -114,6 +115,8 @@
 		24523AFF17AD9B2900FAF7FA /* PlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceAnnotation.m; path = BRLN/classes/PlaceAnnotation.m; sourceTree = "<group>"; };
 		24523B0117ADC0EC00FAF7FA /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		2468D0B717A70195003CB08A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		2483BB6117C0F8420040B8A2 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Category.h; path = BRLN/models/Category.h; sourceTree = "<group>"; };
+		2483BB6217C0F8420040B8A2 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Category.m; path = BRLN/models/Category.m; sourceTree = "<group>"; };
 		24AC8E9C17BD7F1E003584E6 /* PlaceViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceViewCell.h; path = BRLN/classes/PlaceViewCell.h; sourceTree = "<group>"; };
 		24AC8E9D17BD7F1E003584E6 /* PlaceViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceViewCell.m; path = BRLN/classes/PlaceViewCell.m; sourceTree = "<group>"; };
 		24AC8E9F17BD7F34003584E6 /* PlaceViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlaceViewCell.xib; path = BRLN/classes/PlaceViewCell.xib; sourceTree = "<group>"; };
@@ -129,10 +132,10 @@
 		24B0E0CB17C00ECD008ED81B /* tabbar-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabbar-highlighted@2x.png"; path = "resources/components/tabbar-highlighted@2x.png"; sourceTree = "<group>"; };
 		24B0E0CE17C024D9008ED81B /* icon-disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-disclosure.png"; path = "resources/components/icon-disclosure.png"; sourceTree = "<group>"; };
 		24B0E0CF17C024D9008ED81B /* icon-disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-disclosure@2x.png"; path = "resources/components/icon-disclosure@2x.png"; sourceTree = "<group>"; };
+		24B0E0D217C03132008ED81B /* BRLNBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRLNBadge.h; path = BRLN/classes/BRLNBadge.h; sourceTree = "<group>"; };
+		24B0E0D317C03132008ED81B /* BRLNBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRLNBadge.m; path = BRLN/classes/BRLNBadge.m; sourceTree = "<group>"; };
 		24BBBD3C17AD2FD20036161D /* PlaceLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceLocation.h; path = BRLN/models/PlaceLocation.h; sourceTree = "<group>"; };
 		24BBBD3D17AD2FD20036161D /* PlaceLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceLocation.m; path = BRLN/models/PlaceLocation.m; sourceTree = "<group>"; };
-		24BBBD3F17AD2FD30036161D /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Category.h; path = BRLN/models/Category.h; sourceTree = "<group>"; };
-		24BBBD4017AD2FD30036161D /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Category.m; path = BRLN/models/Category.m; sourceTree = "<group>"; };
 		24BBBD4217AD2FD30036161D /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Place.h; path = BRLN/models/Place.h; sourceTree = "<group>"; };
 		24BBBD4317AD2FD30036161D /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Place.m; path = BRLN/models/Place.m; sourceTree = "<group>"; };
 		24CA352A17BAABF200633820 /* ParallaxImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParallaxImagesViewController.h; path = BRLN/libs/parallaxViewController/ParallaxImagesViewController.h; sourceTree = "<group>"; };
@@ -254,6 +257,8 @@
 				24AC8E9C17BD7F1E003584E6 /* PlaceViewCell.h */,
 				24AC8E9D17BD7F1E003584E6 /* PlaceViewCell.m */,
 				24AC8E9F17BD7F34003584E6 /* PlaceViewCell.xib */,
+				24B0E0D217C03132008ED81B /* BRLNBadge.h */,
+				24B0E0D317C03132008ED81B /* BRLNBadge.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -372,10 +377,10 @@
 			isa = PBXGroup;
 			children = (
 				24D3F4E117A07205004759BB /* BRLN.xcdatamodeld */,
+				2483BB6117C0F8420040B8A2 /* Category.h */,
+				2483BB6217C0F8420040B8A2 /* Category.m */,
 				24BBBD4217AD2FD30036161D /* Place.h */,
 				24BBBD4317AD2FD30036161D /* Place.m */,
-				24BBBD3F17AD2FD30036161D /* Category.h */,
-				24BBBD4017AD2FD30036161D /* Category.m */,
 				24BBBD3C17AD2FD20036161D /* PlaceLocation.h */,
 				24BBBD3D17AD2FD20036161D /* PlaceLocation.m */,
 			);
@@ -573,7 +578,6 @@
 				2440FCA8179F2C5B001FF0FB /* PlacesViewController.m in Sources */,
 				24D3F4E317A07205004759BB /* BRLN.xcdatamodeld in Sources */,
 				24BBBD3E17AD2FD20036161D /* PlaceLocation.m in Sources */,
-				24BBBD4117AD2FD30036161D /* Category.m in Sources */,
 				24BBBD4417AD2FD30036161D /* Place.m in Sources */,
 				24523AF917AD528B00FAF7FA /* DetailsViewController.m in Sources */,
 				24523B0017AD9B2900FAF7FA /* PlaceAnnotation.m in Sources */,
@@ -584,6 +588,8 @@
 				24196EBC17BBF8310083185C /* StylesHelper.m in Sources */,
 				243D563517BC36A600522DB3 /* CategoryViewCell.m in Sources */,
 				24AC8E9E17BD7F1E003584E6 /* PlaceViewCell.m in Sources */,
+				24B0E0D417C03132008ED81B /* BRLNBadge.m in Sources */,
+				2483BB6317C0F8420040B8A2 /* Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

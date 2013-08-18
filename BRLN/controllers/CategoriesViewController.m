@@ -13,6 +13,7 @@
 #import "PlacesViewController.h"
 
 #import "CategoryViewCell.h"
+#import "BRLNBadge.h"
 
 #import "Category.h"
 
@@ -182,8 +183,8 @@
 
 - (void)configureCell:(CategoryViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     [[cell categoryNameLabel] setText:[[_fetchedResultsController objectAtIndexPath:indexPath] categoryName]];
-    [[cell categoryDescriptionLabel] setText:@"Category description..."];
-    [[cell categorySizeLabel] setText:[NSString stringWithFormat:@"%d", [[[_fetchedResultsController objectAtIndexPath:indexPath] places] count]]];
+    [[cell categoryDescriptionLabel] setText:[[_fetchedResultsController objectAtIndexPath:indexPath] categoryDescription]];
+    [[cell categoryBadge] setText:[NSString stringWithFormat:@"%d", [[[_fetchedResultsController objectAtIndexPath:indexPath] places] count]]];
 }
 
 @end

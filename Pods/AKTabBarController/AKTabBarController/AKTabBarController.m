@@ -331,7 +331,7 @@ typedef enum {
 - (void)tabBar:(AKTabBar *)AKTabBarDelegate didSelectTabAtIndex:(NSInteger)index
 {
     UIViewController *vc = (self.viewControllers)[index];
-    
+
     if (self.selectedViewController == vc)
     {
         if ([vc isKindOfClass:[UINavigationController class]])

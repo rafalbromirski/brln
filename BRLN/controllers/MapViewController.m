@@ -37,7 +37,6 @@ static double location_distance = 7000;
         locationManager = [[CLLocationManager alloc] init];
         [locationManager setDelegate:self];
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-        NSLog(@"init");
     }
     return self;
 }

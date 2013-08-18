@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Category" representedClassName="Category" syncable="YES">
+        <attribute name="categoryDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="places" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Place" inverseName="category" inverseEntity="Place" syncable="YES"/>
     </entity>
@@ -18,7 +19,7 @@
         <relationship name="place" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Place" inverseName="placeLocation" inverseEntity="Place" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Category" positionX="369" positionY="239" width="128" height="73"/>
+        <element name="Category" positionX="369" positionY="239" width="128" height="90"/>
         <element name="Place" positionX="142" positionY="239" width="128" height="133"/>
         <element name="PlaceLocation" positionX="-54" positionY="236" width="128" height="90"/>
     </elements>

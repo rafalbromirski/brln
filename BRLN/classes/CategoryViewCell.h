@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class BRLNBadge;
+
 @interface CategoryViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *categoryNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *categoryDescriptionLabel;
-@property (weak, nonatomic) IBOutlet UILabel *categorySizeLabel;
+@property (weak, nonatomic) IBOutlet BRLNBadge *categoryBadge;
 
 - (void)applyStyle;
 

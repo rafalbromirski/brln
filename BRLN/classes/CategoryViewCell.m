@@ -7,17 +7,15 @@
 //
 
 #import "CategoryViewCell.h"
+#import "BRLNBadge.h"
 
 @implementation CategoryViewCell
-
-@synthesize categoryNameLabel, categoryDescriptionLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        [[self categoryNameLabel] setFont:[UIFont fontWithName:@"Lato-Bold" size:18.0]];
     }
     return self;
 }
@@ -44,8 +42,10 @@
     [[self categoryDescriptionLabel] setFont:[UIFont fontWithName:@"Lato-Bold" size:self.categoryDescriptionLabel.font.pointSize]];
     [[self categoryDescriptionLabel] setTextColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:1.0]];
     
-    [[self categorySizeLabel] setFont:[UIFont fontWithName:@"Lato-Bold" size:self.categorySizeLabel.font.pointSize]];
-    
+    [[self categoryBadge] setHorizontalAlignment:LKBadgeViewHorizontalAlignmentRight];
+    [[self categoryBadge] setFont:[UIFont fontWithName:@"Lato-Bold" size:10.0]];
+    [[self categoryBadge] setBadgeColor:[UIColor colorWithRed:158.0/255.0 green:177.0/255.0 blue:191.0/255.0 alpha:1.0]];
+
     [self setAccessoryView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-disclosure"]]];
 }
 

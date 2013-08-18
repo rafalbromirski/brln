@@ -49,6 +49,7 @@ static ImportDataHelper *sharedInstance = nil;
     while (enumeratorCategory = [enumeratorCategories nextObject]) {
         Category *c = [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:managedObjectContext];
         [c setCategoryName:[enumeratorCategory valueForKey:@"categoryName"]];
+        [c setCategoryDescription:[enumeratorCategory valueForKey:@"categoryDescription"]];
         
         NSEnumerator *enumeratorPlaces = [[enumeratorCategory objectForKey:@"places"] objectEnumerator];
         id enumeratorPlace;
