@@ -2,7 +2,7 @@
 //  Place.m
 //  BRLN
 //
-//  Created by Weronika Zawila-Bromirska on 8/3/13.
+//  Created by Weronika Zawila-Bromirska on 8/18/13.
 //  Copyright (c) 2013 home. All rights reserved.
 //
 
@@ -17,6 +17,7 @@
 @dynamic placeDescription;
 @dynamic placeName;
 @dynamic placeUrl;
+@dynamic placeAddress;
 @dynamic category;
 @dynamic placeLocation;
 

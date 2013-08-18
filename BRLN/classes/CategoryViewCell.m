@@ -7,7 +7,7 @@
 //
 
 #import "CategoryViewCell.h"
-#import "BRLNBadge.h"
+#import "LKBadgeView.h"
 
 @implementation CategoryViewCell
 

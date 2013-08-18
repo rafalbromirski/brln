@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @class Place;
+@class BRLNFavoriteButton;
 
 @interface DetailsViewController : UIViewController
 {
     __weak IBOutlet UIScrollView *scrollView;
     UIBarButtonItem *mapButton;
-    UIButton *favoriteButton;
+    BRLNFavoriteButton *favoriteButton;
     BOOL mapButtonVisible;
     
     Place *place;

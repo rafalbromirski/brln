@@ -13,7 +13,7 @@
 #import "PlacesViewController.h"
 
 #import "CategoryViewCell.h"
-#import "BRLNBadge.h"
+#import "LKBadgeView.h"
 
 #import "Category.h"
 

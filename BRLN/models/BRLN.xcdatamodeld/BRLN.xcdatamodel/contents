@@ -7,6 +7,7 @@
     </entity>
     <entity name="Place" representedClassName="Place" syncable="YES">
         <attribute name="favorited" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="placeAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="placeDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="placeName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="placeUrl" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,7 +21,7 @@
     </entity>
     <elements>
         <element name="Category" positionX="369" positionY="239" width="128" height="90"/>
-        <element name="Place" positionX="142" positionY="239" width="128" height="133"/>
+        <element name="Place" positionX="142" positionY="239" width="128" height="150"/>
         <element name="PlaceLocation" positionX="-54" positionY="236" width="128" height="90"/>
     </elements>
 </model>

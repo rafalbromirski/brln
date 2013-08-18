@@ -14,6 +14,8 @@
 #import "Category.h"
 #import "Place.h"
 
+#import "BRLNFavoriteButton.h"
+
 @implementation DetailsViewController
 
 @synthesize place;
@@ -58,11 +60,9 @@
     [placeWrapperView addSubview:placeDetailsView];
     
     
-    favoriteButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [favoriteButton setFrame:CGRectMake(self.view.frame.size.width - 60, 20, 40, 40)];
-    [favoriteButton setTitle:([place favorited] ? @"Rem" : @"Add") forState:UIControlStateNormal];
-    [favoriteButton setUserInteractionEnabled:YES];
-    [favoriteButton setMultipleTouchEnabled:YES];
+    favoriteButton = [BRLNFavoriteButton buttonWithType:UIButtonTypeCustom];
+    [favoriteButton setFrame:CGRectMake(self.view.frame.size.width - 45, 20, 25, 25)];
+    [favoriteButton setSelected:([place favorited] ? YES : NO)];
     [favoriteButton addTarget:self action:@selector(toggleFavorite:) forControlEvents:UIControlEventTouchUpInside];
     [placeDetailsView addSubview:favoriteButton];
     
@@ -77,17 +77,17 @@
     [placeDetailsView addSubview:placeNameLabel];
 
 
-    UILabel *placeCategoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, placeNameLabel.frame.origin.y + placeNameLabel.frame.size.height + 5, self.view.frame.size.width - 40, 20)];
-    [placeCategoryLabel setText:[[place category] categoryName]];
-    [placeCategoryLabel setBackgroundColor:[UIColor clearColor]];
-    [placeCategoryLabel setTextColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:1.0]];
-    [placeCategoryLabel setFont:[UIFont fontWithName:@"Lato-Bold" size:10.0]];
-    [placeCategoryLabel setNumberOfLines:0];
-    [placeCategoryLabel sizeToFit];
-    [placeDetailsView addSubview:placeCategoryLabel];
+    UILabel *placeAddressLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, placeNameLabel.frame.origin.y + placeNameLabel.frame.size.height + 5, self.view.frame.size.width - 40, 20)];
+    [placeAddressLabel setText:[place placeAddress]];
+    [placeAddressLabel setBackgroundColor:[UIColor clearColor]];
+    [placeAddressLabel setTextColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:1.0]];
+    [placeAddressLabel setFont:[UIFont fontWithName:@"Lato-Bold" size:10.0]];
+    [placeAddressLabel setNumberOfLines:0];
+    [placeAddressLabel sizeToFit];
+    [placeDetailsView addSubview:placeAddressLabel];
 
 
-    UILabel *placeDescriptionText = [[UILabel alloc] initWithFrame:CGRectMake(20, placeCategoryLabel.frame.origin.y + placeCategoryLabel.frame.size.height + 15, self.view.frame.size.width - 40, 20)];
+    UILabel *placeDescriptionText = [[UILabel alloc] initWithFrame:CGRectMake(20, placeAddressLabel.frame.origin.y + placeAddressLabel.frame.size.height + 15, self.view.frame.size.width - 40, 20)];
 //    [placeDescriptionText setText:[place placeDescription]];
     [placeDescriptionText setText:@"Proin sit amet dapibus purus, sit amet tempor erat. Suspendisse at enim vel lectus aliquet varius vel sed massa. Nunc bibendum scelerisque magna, id imperdiet nulla aliquam non. Nullam sed augue vestibulum, tincidunt orci sed, accumsan lectus. Phasellus non ornare leo, vel rhoncus quam. Donec id diam aliquet, lobortis sem nec, semper diam. Vivamus in eros nunc. Aenean tempor pretium lorem. Proin fringilla risus ac ipsum porttitor, non feugiat nulla iaculis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer metus dolor, fringilla sed feugiat in, hendrerit non ligula. Proin sit amet dapibus purus, sit amet tempor erat. Suspendisse at enim vel lectus aliquet varius vel sed massa. Nunc bibendum scelerisque magna, id imperdiet nulla aliquam non. Nullam sed augue vestibulum, tincidunt orci sed, accumsan lectus. Phasellus non ornare leo, vel rhoncus quam. Donec id diam aliquet, lobortis sem nec, semper diam. Vivamus in eros nunc. Aenean tempor pretium lorem. Proin fringilla risus ac ipsum porttitor, non feugiat nulla iaculis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer metus dolor, fringilla sed feugiat in, hendrerit non ligula."];
     [placeDescriptionText setBackgroundColor:[UIColor clearColor]];
@@ -97,20 +97,9 @@
     [placeDescriptionText sizeToFit];
     [placeDetailsView addSubview:placeDescriptionText];
     
-    
-    
 
-//    UILabel *placeUrlLabel = [[UILabel alloc] initWithFrame:[self makeFrameWithHeight:20 prevElement:placeDescriptionText paddingTop:5]];
-//    [placeUrlLabel setText:[place placeUrl]];
-//    [placeUrlLabel setFont:[UIFont fontWithName:@"Helvetica" size:14.0]];
-//    [placeUrlLabel setNumberOfLines:0];
-//    [placeUrlLabel sizeToFit];
-//    [placeDetails addSubview:placeUrlLabel];
-//    
-//    
-//    UIView *_lastElement = placeDetails;
-//    [mainView setFrame:CGRectMake(0, 0, self.view.frame.size.width, _lastElement.frame.origin.y + _lastElement.frame.size.height + 20)];
-    
+    [placeDetailsView setFrame:CGRectMake(0, 200, self.view.frame.size.width, placeDescriptionText.frame.origin.y + placeDescriptionText.frame.size.height)];
+    [placeWrapperView setFrame:CGRectMake(0, 0, self.view.frame.size.width, placeDetailsView.frame.origin.y + placeDetailsView.frame.size.height)];
     [scrollView addSubview:placeWrapperView];
     [scrollView setContentSize:CGSizeMake(placeWrapperView.frame.size.width, placeDetailsView.frame.size.height + placeDetailsView.frame.origin.y)];
 }
@@ -131,11 +120,9 @@
     if ([place favorited])
     {
         [place setFavorited:NO];
-        [favoriteButton setTitle:@"Add" forState:UIControlStateNormal];
     } else
     {
         [place setFavorited:YES];
-        [favoriteButton setTitle:@"Rem" forState:UIControlStateNormal];
     }
     
     NSError *error = nil;

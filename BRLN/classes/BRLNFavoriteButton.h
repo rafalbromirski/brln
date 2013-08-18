@@ -1,18 +1,13 @@
 //
-//  BRLNBadge.m
+//  BRLNFavoriteButton.h
 //  BRLN
 //
 //  Created by Weronika Zawila-Bromirska on 8/18/13.
 //  Copyright (c) 2013 home. All rights reserved.
 //
 
-#import "BRLNBadge.h"
+#import <UIKit/UIKit.h>
 
-@implementation BRLNBadge
-
-- (CGFloat)badgeHeight
-{
-    return 16.0;
-}
+@interface BRLNFavoriteButton : UIButton
 
 @end

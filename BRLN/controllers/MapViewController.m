@@ -170,7 +170,9 @@ static double location_distance = 7000;
             // if an existing pin view was not available, create one
             MKPinAnnotationView *customAnnotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:PlaceAnnotationIdentifier];
             [customAnnotationView setCanShowCallout:YES];
-            [customAnnotationView setAnimatesDrop:YES];
+
+            // to many pins...
+            // [customAnnotationView setAnimatesDrop:YES];
             
             if ([self mapAnnotatesClickable])
             {
