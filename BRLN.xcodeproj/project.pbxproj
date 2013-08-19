@@ -60,6 +60,10 @@
 		24D8645E17B2F18F00E0AB3C /* ImportDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D8645D17B2F18F00E0AB3C /* ImportDataHelper.m */; };
 		24ECE60217BF820C008674ED /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24ECE60017BF820C008674ED /* Lato-Regular.ttf */; };
 		24ECE60317BF820C008674ED /* Lato-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24ECE60117BF820C008674ED /* Lato-RegularItalic.ttf */; };
+		24F14E5617C2BB1400CEAE01 /* icon-address.png in Resources */ = {isa = PBXBuildFile; fileRef = 24F14E5417C2BB1400CEAE01 /* icon-address.png */; };
+		24F14E5717C2BB1400CEAE01 /* icon-address@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24F14E5517C2BB1400CEAE01 /* icon-address@2x.png */; };
+		24F14E5F17C2C3B400CEAE01 /* BRLNFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F14E5E17C2C3B300CEAE01 /* BRLNFlatButton.m */; };
+		24F14E6117C2D1D200CEAE01 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F14E6017C2D1D200CEAE01 /* MessageUI.framework */; };
 		24F7BB83179DCFAF003BA61D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F7BB82179DCFAF003BA61D /* UIKit.framework */; };
 		24F7BB85179DCFAF003BA61D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F7BB84179DCFAF003BA61D /* Foundation.framework */; };
 		24F7BB87179DCFAF003BA61D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F7BB86179DCFAF003BA61D /* CoreGraphics.framework */; };
@@ -151,6 +155,11 @@
 		24D8645D17B2F18F00E0AB3C /* ImportDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImportDataHelper.m; path = BRLN/helpers/ImportDataHelper.m; sourceTree = "<group>"; };
 		24ECE60017BF820C008674ED /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "resources/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
 		24ECE60117BF820C008674ED /* Lato-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-RegularItalic.ttf"; path = "resources/fonts/Lato-RegularItalic.ttf"; sourceTree = "<group>"; };
+		24F14E5417C2BB1400CEAE01 /* icon-address.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-address.png"; path = "resources/components/icon-address.png"; sourceTree = "<group>"; };
+		24F14E5517C2BB1400CEAE01 /* icon-address@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-address@2x.png"; path = "resources/components/icon-address@2x.png"; sourceTree = "<group>"; };
+		24F14E5D17C2C3B300CEAE01 /* BRLNFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRLNFlatButton.h; path = BRLN/classes/BRLNFlatButton.h; sourceTree = "<group>"; };
+		24F14E5E17C2C3B300CEAE01 /* BRLNFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRLNFlatButton.m; path = BRLN/classes/BRLNFlatButton.m; sourceTree = "<group>"; };
+		24F14E6017C2D1D200CEAE01 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		24F7BB7F179DCFAF003BA61D /* BRLN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRLN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F7BB82179DCFAF003BA61D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24F7BB84179DCFAF003BA61D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -184,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F14E6117C2D1D200CEAE01 /* MessageUI.framework in Frameworks */,
 				243FBC9917A82FE700825D1B /* CoreLocation.framework in Frameworks */,
 				244DB6BA17A052F100233839 /* CoreData.framework in Frameworks */,
 				24F7BBAE179DD27F003BA61D /* MapKit.framework in Frameworks */,
@@ -235,6 +245,8 @@
 				24B0E0C617BFDE46008ED81B /* icon-map@2x.png */,
 				24B0E0CE17C024D9008ED81B /* icon-disclosure.png */,
 				24B0E0CF17C024D9008ED81B /* icon-disclosure@2x.png */,
+				24F14E5417C2BB1400CEAE01 /* icon-address.png */,
+				24F14E5517C2BB1400CEAE01 /* icon-address@2x.png */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -258,13 +270,15 @@
 				243D563317BC36A600522DB3 /* CategoryViewCell.h */,
 				243D563417BC36A600522DB3 /* CategoryViewCell.m */,
 				243D563717BC371300522DB3 /* CategoryViewCell.xib */,
-				24523AFE17AD9B2900FAF7FA /* PlaceAnnotation.h */,
-				24523AFF17AD9B2900FAF7FA /* PlaceAnnotation.m */,
 				24AC8E9C17BD7F1E003584E6 /* PlaceViewCell.h */,
 				24AC8E9D17BD7F1E003584E6 /* PlaceViewCell.m */,
 				24AC8E9F17BD7F34003584E6 /* PlaceViewCell.xib */,
+				24523AFE17AD9B2900FAF7FA /* PlaceAnnotation.h */,
+				24523AFF17AD9B2900FAF7FA /* PlaceAnnotation.m */,
 				2411A27617C1483F00131C53 /* BRLNFavoriteButton.h */,
 				2411A27717C1483F00131C53 /* BRLNFavoriteButton.m */,
+				24F14E5D17C2C3B300CEAE01 /* BRLNFlatButton.h */,
+				24F14E5E17C2C3B300CEAE01 /* BRLNFlatButton.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -328,6 +342,7 @@
 		24F7BB81179DCFAF003BA61D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24F14E6017C2D1D200CEAE01 /* MessageUI.framework */,
 				243FBC9817A82FE700825D1B /* CoreLocation.framework */,
 				244DB6B917A052F100233839 /* CoreData.framework */,
 				24F7BBAD179DD27F003BA61D /* MapKit.framework */,
@@ -534,6 +549,8 @@
 				24B0E0D117C024D9008ED81B /* icon-disclosure@2x.png in Resources */,
 				2411A27B17C14E1600131C53 /* favorite-button-selected@2x.png in Resources */,
 				2411A27C17C14E1600131C53 /* favorite-button@2x.png in Resources */,
+				24F14E5617C2BB1400CEAE01 /* icon-address.png in Resources */,
+				24F14E5717C2BB1400CEAE01 /* icon-address@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +615,7 @@
 				2483BB6317C0F8420040B8A2 /* Category.m in Sources */,
 				2411A27817C1483F00131C53 /* BRLNFavoriteButton.m in Sources */,
 				2411A28217C1556F00131C53 /* Place.m in Sources */,
+				24F14E5F17C2C3B400CEAE01 /* BRLNFlatButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

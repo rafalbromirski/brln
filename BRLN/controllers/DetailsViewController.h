@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
 @class Place;
 @class BRLNFavoriteButton;
 
-@interface DetailsViewController : UIViewController
+@interface DetailsViewController : UIViewController <MFMailComposeViewControllerDelegate>
 {
     __weak IBOutlet UIScrollView *scrollView;
     UIBarButtonItem *mapButton;
@@ -26,6 +27,8 @@
 
 @property (nonatomic) BOOL mapButtonVisible;
 
-- (CGRect)makeFrameWithHeight:(CGFloat)height prevElement:(UIView *)element paddingTop:(CGFloat)pt;
+- (void)toggleFavorite:(id)sender;
+- (void)openLink:(id)sender;
+- (void)showMap:(id)sender;
 
 @end
