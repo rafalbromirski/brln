@@ -2,7 +2,7 @@
 //  Place.h
 //  BRLN
 //
-//  Created by Weronika Zawila-Bromirska on 8/18/13.
+//  Created by Weronika Zawila-Bromirska on 8/20/13.
 //  Copyright (c) 2013 home. All rights reserved.
 //
 
@@ -14,10 +14,10 @@
 @interface Place : NSManagedObject
 
 @property (nonatomic) BOOL favorited;
+@property (nonatomic, retain) NSString * placeAddress;
 @property (nonatomic, retain) NSString * placeDescription;
 @property (nonatomic, retain) NSString * placeName;
 @property (nonatomic, retain) NSString * placeUrl;
-@property (nonatomic, retain) NSString * placeAddress;
 @property (nonatomic, retain) Category *category;
 @property (nonatomic, retain) PlaceLocation *placeLocation;
 

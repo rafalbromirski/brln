@@ -123,7 +123,8 @@
     
     [request setEntity:entity];
     [request setSortDescriptors:[NSArray arrayWithObject:sort]];
-    [request setFetchBatchSize:20];
+    [request setFetchBatchSize:10];
+    [request setIncludesSubentities:YES];
     
     NSFetchedResultsController *theFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:@"CategoryCache"];
     

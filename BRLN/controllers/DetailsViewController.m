@@ -127,6 +127,7 @@
     [placeWrapperView setFrame:CGRectMake(0, 0, self.view.frame.size.width, placeDetailsView.frame.origin.y + placeDetailsView.frame.size.height)];
     [scrollView addSubview:placeWrapperView];
     [scrollView setContentSize:CGSizeMake(placeWrapperView.frame.size.width, placeDetailsView.frame.size.height + placeDetailsView.frame.origin.y)];
+    [scrollView setBackgroundColor:[UIColor colorWithRed:247.0/255.0 green:249.0/255.0 blue:250.0/255.0 alpha:1.0]];
 }
 
 - (void)viewDidLoad
@@ -138,6 +139,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)showMap:(id)sender
+{
+    MapViewController *mvc = [[MapViewController alloc] init];
+    [mvc setPlaces:[[NSMutableArray alloc] initWithObjects:place, nil]];
+    [mvc setMapAnnotatesClickable:NO];
+    
+    [self.navigationController pushViewController:mvc animated:YES];
 }
 
 - (void)toggleFavorite:(id)sender
@@ -177,15 +187,6 @@
 {
 	[self becomeFirstResponder];
 	[self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)showMap:(id)sender
-{
-    MapViewController *mvc = [[MapViewController alloc] init];
-    [mvc setPlaces:[[NSMutableArray alloc] initWithObjects:place, nil]];
-    [mvc setMapAnnotatesClickable:NO];
-    
-    [self.navigationController pushViewController:mvc animated:YES];
 }
 
 # pragma mark - helpers

@@ -20,8 +20,8 @@
         <relationship name="place" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Place" inverseName="placeLocation" inverseEntity="Place" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Category" positionX="369" positionY="239" width="128" height="90"/>
-        <element name="Place" positionX="142" positionY="239" width="128" height="150"/>
+        <element name="Category" positionX="378" positionY="234" width="128" height="88"/>
+        <element name="Place" positionX="142" positionY="239" width="128" height="148"/>
         <element name="PlaceLocation" positionX="-54" positionY="236" width="128" height="90"/>
     </elements>
 </model>

@@ -2,7 +2,7 @@
 //  Category.h
 //  BRLN
 //
-//  Created by Weronika Zawila-Bromirska on 8/18/13.
+//  Created by Weronika Zawila-Bromirska on 8/20/13.
 //  Copyright (c) 2013 home. All rights reserved.
 //
 
@@ -13,8 +13,8 @@
 
 @interface Category : NSManagedObject
 
-@property (nonatomic, retain) NSString * categoryName;
 @property (nonatomic, retain) NSString * categoryDescription;
+@property (nonatomic, retain) NSString * categoryName;
 @property (nonatomic, retain) NSSet *places;
 @end
 

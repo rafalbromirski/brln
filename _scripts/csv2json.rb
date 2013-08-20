@@ -6,25 +6,25 @@ require 'json'
 Encoding.default_external = Encoding::UTF_8
 Encoding.default_internal = Encoding::UTF_8
 
-if ARGV.size != 2
-  puts 'Usage: csv_to_json input_file.csv output_file.json'
-  puts 'This script uses the first line of the csv file as the keys for the JSON properties of the objects'
-  exit(1)
-end
+# if ARGV.size != 2
+#   puts 'Usage: csv_to_json input_file.csv output_file.json'
+#   puts 'This script uses the first line of the csv file as the keys for the JSON properties of the objects'
+#   exit(1)
+# end
 
-lines = CSV.open(ARGV[0]).readlines
+categories = ARGV.map do |file|
+  _lines = CSV.open(file).readlines
 
-categoryColumns = lines[0]
-categoryLines = lines[1]
-# remove category content
-lines.shift(3)
+  _categoryColumns = _lines[0]
+  _categoryLines = _lines[1]
+  # remove category content
+  _lines.shift(3)
 
-# core / parsing
+  # core / parsing
 
-columns = lines.delete lines.first
+  _columns = _lines.delete _lines.first
 
-File.open(ARGV[1], 'w') do |f|
-  places = lines.map do |values|
+  places = _lines.map do |values|
     res = {
       placeName: values[0],
       placeDescription: values[1],
@@ -37,11 +37,18 @@ File.open(ARGV[1], 'w') do |f|
     }
   end
 
-  data = {
-    categoryName: categoryLines[0],
-    categoryDescription: categoryLines[1],
+  category = {
+    categoryName: _categoryLines[0],
+    categoryDescription: _categoryLines[1],
     places: places
   }
+end
 
-  f.puts JSON.pretty_generate(data)
+db = {
+  version: 1.0,
+  data: categories
+}
+
+File.open('data.json', 'w') do |f|
+  f.puts JSON.pretty_generate(db)
 end
