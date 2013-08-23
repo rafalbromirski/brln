@@ -48,6 +48,15 @@
         CGContextSetFillColorWithColor(ctx, [[UIColor colorWithRed:200.0/255.0 green:211.0/255.0 blue:218.0/255.0 alpha:1.0] CGColor]);
         CGContextFillRect(ctx, buttonRectangle);
     }
+    else if (self.enabled == NO)
+    {
+        CGContextRef ctx = UIGraphicsGetCurrentContext();
+        
+        CGContextSetLineWidth(ctx, 1.0);
+        CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:200.0/255.0 green:211.0/255.0 blue:218.0/255.0 alpha:0.4] CGColor]);
+        CGContextAddRect(ctx, buttonRectangle);
+        CGContextStrokePath(ctx);
+    }
     else
     {
         CGContextRef ctx = UIGraphicsGetCurrentContext();
@@ -73,7 +82,8 @@
 - (void)applyStyle
 {
     [self setTitleColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:1.0] forState:UIControlStateNormal];
-    [self setTitleColor:[UIColor colorWithRed:247.0/255.0 green:249.0/255.0 blue:250.0/255.0 alpha:1.0] forState:UIControlStateHighlighted];
+    [self setTitleColor:[UIColor _whiteColor] forState:UIControlStateHighlighted];
+    [self setTitleColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:0.4] forState:UIControlStateDisabled];
 
     [[self titleLabel] setFont:[UIFont fontWithName:@"Lato-Light" size:12.0]];
 }

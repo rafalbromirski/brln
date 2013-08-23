@@ -57,7 +57,7 @@
                                                UITextAttributeFont:[UIFont fontWithName:@"Lato-Light" size:12.0],
                                                UITextAttributeTextShadowColor:[UIColor clearColor] };
     
-    NSDictionary *barButtonHighlifgtedTextAttributes = @{ UITextAttributeTextColor:[UIColor colorWithRed:249.0/255.0 green:107.0/255.0 blue:107.0/255.0 alpha:1.0],
+    NSDictionary *barButtonHighlifgtedTextAttributes = @{ UITextAttributeTextColor:[UIColor _primaryColor],
                                                UITextAttributeTextShadowColor:[UIColor clearColor] };
     
     [barButtonItemAppearance setTitleTextAttributes:barButtonTextAttributes forState:UIControlStateNormal];
@@ -82,8 +82,8 @@
     // --------------------------------------------------------------------------------------------------------------
     
     UITableView *tableViewAppearance = [UITableView appearance];
-    [tableViewAppearance setBackgroundColor:[UIColor colorWithRed:247.0/255.0 green:249.0/255.0 blue:250.0/255.0 alpha:1.0]];
-    [tableViewAppearance setSeparatorColor:[UIColor colorWithRed:209.0/255.0 green:214.0/255.0 blue:221.0/255.0 alpha:1.0]];
+    [tableViewAppearance setBackgroundColor:[UIColor _whiteColor]];
+    [tableViewAppearance setSeparatorColor:[UIColor _grayLightColor]];
     [tableViewAppearance setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
     
     UILabel *tableViewHeaderAppearance = [UILabel appearanceWhenContainedIn:[UITableViewHeaderFooterView class], nil];

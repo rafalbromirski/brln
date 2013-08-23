@@ -13,4 +13,6 @@
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
+- (NSInteger)numberOfPlacesForCategory:(NSString *)categoryName atIndexPath:(NSIndexPath *)indexPath;
+
 @end

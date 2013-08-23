@@ -59,7 +59,7 @@ static ImportDataHelper *sharedInstance = nil;
             [place setPlaceName:[enumeratorPlace valueForKey:@"placeName"]];
             [place setPlaceDescription:[enumeratorPlace valueForKey:@"placeDescription"]];
             [place setPlaceAddress:[enumeratorPlace valueForKey:@"placeAddress"]];
-            [place setPlaceUrl:[enumeratorPlace valueForKey:@"placeUrl"]];
+            [place setPlaceUrl:[enumeratorPlace valueForKey:@"placeUrl"]];            
             
             PlaceLocation *placeLocation = [NSEntityDescription insertNewObjectForEntityForName:@"PlaceLocation" inManagedObjectContext:managedObjectContext];
             [placeLocation setLatitude:[[[enumeratorPlace objectForKey:@"placeLocation"] valueForKey:@"lat"] doubleValue]];

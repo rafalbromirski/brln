@@ -124,7 +124,6 @@
     [request setEntity:entity];
     [request setSortDescriptors:[NSArray arrayWithObject:sort]];
     [request setFetchBatchSize:10];
-    [request setIncludesSubentities:YES];
     
     NSFetchedResultsController *theFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:@"CategoryCache"];
     
@@ -185,7 +184,24 @@
 - (void)configureCell:(CategoryViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     [[cell categoryNameLabel] setText:[[_fetchedResultsController objectAtIndexPath:indexPath] categoryName]];
     [[cell categoryDescriptionLabel] setText:[[_fetchedResultsController objectAtIndexPath:indexPath] categoryDescription]];
-    [[cell categoryBadge] setText:[NSString stringWithFormat:@"%d", [[[_fetchedResultsController objectAtIndexPath:indexPath] places] count]]];
+    [[cell categoryBadge] setText:[NSString stringWithFormat:@"%d", [[[_fetchedResultsController objectAtIndexPath:indexPath] places] count ]]];
+}
+
+- (NSInteger)numberOfPlacesForCategory:(NSString *)categoryName atIndexPath:(NSIndexPath *)indexPath
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:managedObjectContext];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"placeName" ascending:YES];    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"category.categoryName == %@", [[_fetchedResultsController objectAtIndexPath:indexPath] categoryName]];
+    [request setEntity:entity];
+    [request setPredicate:predicate];
+    [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+    [request setIncludesSubentities:NO];
+    
+    NSError *error = nil;
+    NSUInteger recordsCount = [managedObjectContext countForFetchRequest:request error:&error];
+    
+    return recordsCount;
 }
 
 @end

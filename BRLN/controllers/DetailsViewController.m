@@ -48,7 +48,6 @@
         [[self navigationItem] setRightBarButtonItem:mapButton];
     }
     
-    
     UIView *placeWrapperView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 500)];
     
     UIImageView *placeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
@@ -59,7 +58,7 @@
     
     
     UIView *placeDetailsView = [[UIView alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, 300)];
-    [placeDetailsView setBackgroundColor:[UIColor colorWithRed:247.0/255.0 green:249.0/255.0 blue:250.0/255.0 alpha:1.0]];
+    [placeDetailsView setBackgroundColor:[UIColor _whiteColor]];
     [placeWrapperView addSubview:placeDetailsView];
     
     
@@ -120,6 +119,7 @@
     [placeWebsiteButton setFrame:CGRectMake(placeButtonsView.frame.size.width/2 + 10, 0, placeButtonsView.frame.size.width/2 - 10, placeButtonsView.frame.size.height)];
     [placeWebsiteButton setTitle:@"Visit website" forState:UIControlStateNormal];
     [placeWebsiteButton addTarget:self action:@selector(openLink:) forControlEvents:UIControlEventTouchUpInside];
+    [placeWebsiteButton setEnabled:([[place placeUrl] isEqualToString:@"-"] ? NO : YES)];
     [placeButtonsView addSubview:placeWebsiteButton];
 
     
@@ -127,7 +127,7 @@
     [placeWrapperView setFrame:CGRectMake(0, 0, self.view.frame.size.width, placeDetailsView.frame.origin.y + placeDetailsView.frame.size.height)];
     [scrollView addSubview:placeWrapperView];
     [scrollView setContentSize:CGSizeMake(placeWrapperView.frame.size.width, placeDetailsView.frame.size.height + placeDetailsView.frame.origin.y)];
-    [scrollView setBackgroundColor:[UIColor colorWithRed:247.0/255.0 green:249.0/255.0 blue:250.0/255.0 alpha:1.0]];
+    [scrollView setBackgroundColor:[UIColor _whiteColor]];
 }
 
 - (void)viewDidLoad

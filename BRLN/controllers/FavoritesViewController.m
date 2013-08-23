@@ -138,7 +138,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectZero];
-    [headerView setBackgroundColor:[UIColor colorWithRed:209.0/255.0 green:214.0/255.0 blue:221.0/255.0 alpha:1.0]];
+    [headerView setBackgroundColor:[UIColor _grayLightColor]];
 
     NSString *headerText = [NSString stringWithString:[[[self.fetchedResultsController sections] objectAtIndex:section] name]];
     
