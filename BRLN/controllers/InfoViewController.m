@@ -8,51 +8,23 @@
 
 #import "InfoViewController.h"
 
+#import "BRLNFlatButton.h"
+
 @implementation InfoViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        
-        UILabel *whiteColorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, 44)];
-        [whiteColorLabel setTextAlignment:NSTextAlignmentCenter];
-        [whiteColorLabel setText:@"_whiteColor"];
-        [whiteColorLabel setBackgroundColor:[UIColor _whiteColor]];
-        
-        UILabel *grayLightColorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 44 * 2, self.view.frame.size.width, 44)];
-        [grayLightColorLabel setTextAlignment:NSTextAlignmentCenter];
-        [grayLightColorLabel setText:@"_grayLightColor"];
-        [grayLightColorLabel setBackgroundColor:[UIColor _grayLightColor]];
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//{
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+//        // Custom initialization      
+//    }
+//    return self;
+//}
 
-        UILabel *grayColorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 44 * 3, self.view.frame.size.width, 44)];
-        [grayColorLabel setTextAlignment:NSTextAlignmentCenter];
-        [grayColorLabel setText:@"_grayColor"];
-        [grayColorLabel setBackgroundColor:[UIColor _grayColor]];
-        
-        UILabel *grayDarkColorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 44 * 4, self.view.frame.size.width, 44)];
-        [grayDarkColorLabel setTextAlignment:NSTextAlignmentCenter];
-        [grayDarkColorLabel setText:@"_grayDarkColor"];
-        [grayDarkColorLabel setBackgroundColor:[UIColor _grayDarkColor]];
-        
-        UILabel *blackColorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 44 * 5, self.view.frame.size.width, 44)];
-        [blackColorLabel setTextAlignment:NSTextAlignmentCenter];
-        [blackColorLabel setText:@"_blackColor"];
-        [blackColorLabel setBackgroundColor:[UIColor _blackColor]];
-        
-        UILabel *primaryColorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 44 * 6, self.view.frame.size.width, 44)];
-        [primaryColorLabel setTextAlignment:NSTextAlignmentCenter];
-        [primaryColorLabel setText:@"_primaryColor"];
-        [primaryColorLabel setBackgroundColor:[UIColor _primaryColor]];
-        
-        [[self view] addSubview:whiteColorLabel];
-        [[self view] addSubview:grayLightColorLabel];
-        [[self view] addSubview:grayColorLabel];
-        [[self view] addSubview:grayDarkColorLabel];
-        [[self view] addSubview:blackColorLabel];
-        
-        [[self view] addSubview:primaryColorLabel];
+- (id)init
+{
+    self = [super init];
+    if (self) {
         
     }
     return self;
@@ -62,7 +34,48 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [[navigationBar topItem] setTitle:@"Info"];
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    [[self view] setBackgroundColor:[UIColor _primaryColor]];
+    
+    UILabel *logo = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, screenWidth, 150)];
+    [logo setFont:[UIFont fontWithName:@"Lato-Light" size:50.0]];
+    [logo setTextColor:[UIColor _whiteColor]];
+    [logo setBackgroundColor:[UIColor clearColor]];
+    [logo setTextAlignment:NSTextAlignmentCenter];
+    [logo setText:@"B  R  L  N"];
+    
+    UILabel *version = [[UILabel alloc] initWithFrame:CGRectMake(0, 110, screenWidth, 20)];
+    [version setFont:[UIFont fontWithName:@"Lato-Light" size:9.0]];
+    [version setTextColor:[UIColor _whiteColor]];
+    [version setBackgroundColor:[UIColor clearColor]];
+    [version setTextAlignment:NSTextAlignmentCenter];
+    [version setText:@"v 1.0"];
+    
+    
+    UIView *buttonsView = [[UIView alloc] initWithFrame:CGRectMake(20, screenHeight - 215, screenWidth - 40, 125)];
+    
+    BRLNFlatButton *rateButton = [[BRLNFlatButton alloc] initWithFrame:CGRectMake(0, 0, buttonsView.frame.size.width, 35)];
+    [rateButton setTitle:@"Rate on AppStore" forState:UIControlStateNormal];
+//    [rateButton setBaseColor:[UIColor whiteColor]];
+    [buttonsView addSubview:rateButton];
+
+    BRLNFlatButton *websiteButton = [[BRLNFlatButton alloc] initWithFrame:CGRectMake(0, 45, buttonsView.frame.size.width, 35)];
+    [websiteButton setTitle:@"Visit our website" forState:UIControlStateNormal];
+//    [websiteButton setBaseColor:[UIColor whiteColor]];
+    [buttonsView addSubview:websiteButton];
+
+    BRLNFlatButton *contactButton = [[BRLNFlatButton alloc] initWithFrame:CGRectMake(0, 90, buttonsView.frame.size.width, 35)];
+    [contactButton setTitle:@"Contact us: support@xyz.com" forState:UIControlStateNormal];
+//    [contactButton setBaseColor:[UIColor whiteColor]];    
+    [buttonsView addSubview:contactButton];
+    
+    [[self view] addSubview:logo];
+    [[self view] addSubview:version];
+    [[self view] addSubview:buttonsView];
 }
 
 - (void)didReceiveMemoryWarning

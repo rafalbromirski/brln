@@ -17,4 +17,6 @@
 + (UIColor *)_grayDarkColor;
 + (UIColor *)_blackColor;
 
+- (UIColor *)darkenColor:(CGFloat)value;
+
 @end

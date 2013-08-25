@@ -40,4 +40,18 @@
     return [UIColor colorWithRed:19.0/255.0 green:21.0/255.0 blue:26.0/255.0 alpha:1.0];
 }
 
+- (UIColor *)darkenColor:(CGFloat)value
+{
+    UIColor *newColor = nil;
+    CGFloat hue, saturation, brightness, alpha;
+    if ([self getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha])
+    {
+        // We wants the hue value to be between 0 - 1 after appending the offset
+        CGFloat newBrightness = fmodf((brightness + value), 1);
+        newColor = [UIColor colorWithHue:hue saturation:saturation brightness:newBrightness alpha:alpha];
+        
+    }
+    return newColor;
+}
+
 @end

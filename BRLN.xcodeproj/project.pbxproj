@@ -47,6 +47,9 @@
 		24523B0217ADC0EC00FAF7FA /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 24523B0117ADC0EC00FAF7FA /* TODO */; };
 		245A4EAA17C7D1D80099A27B /* UIColor+Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A4EA917C7D1D80099A27B /* UIColor+Palette.m */; };
 		2468D0B817A70195003CB08A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2468D0B717A70195003CB08A /* data.json */; };
+		2481FDFC17C8E33800CDD87C /* StyleguideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2481FDFA17C8E33800CDD87C /* StyleguideViewController.m */; };
+		2481FDFD17C8E33800CDD87C /* StyleguideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2481FDFB17C8E33800CDD87C /* StyleguideViewController.xib */; };
+		2481FE0017C95C3100CDD87C /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2481FDFF17C95C3100CDD87C /* InfoViewController.xib */; };
 		2493C0CA17C4172300DAD1CA /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 2493C0C917C4172300DAD1CA /* Place.m */; };
 		2493C0CD17C4172400DAD1CA /* PlaceLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2493C0CC17C4172400DAD1CA /* PlaceLocation.m */; };
 		2493C0D017C4172400DAD1CA /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2493C0CF17C4172400DAD1CA /* Category.m */; };
@@ -89,7 +92,6 @@
 		24F7BBB3179DD2CF003BA61D /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F7BBB1179DD2CF003BA61D /* FavoritesViewController.m */; };
 		24F7BBB4179DD2CF003BA61D /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7BBB2179DD2CF003BA61D /* FavoritesViewController.xib */; };
 		24F7BBB9179DD332003BA61D /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F7BBB7179DD332003BA61D /* InfoViewController.m */; };
-		24F7BBBA179DD332003BA61D /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7BBB8179DD332003BA61D /* InfoViewController.xib */; };
 		A364B44372114A53856F0813 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2CC949B22D4EDFA23B47BB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +147,10 @@
 		245A4EA817C7D1D80099A27B /* UIColor+Palette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Palette.h"; path = "BRLN/helpers/UIColor+Palette.h"; sourceTree = "<group>"; };
 		245A4EA917C7D1D80099A27B /* UIColor+Palette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Palette.m"; path = "BRLN/helpers/UIColor+Palette.m"; sourceTree = "<group>"; };
 		2468D0B717A70195003CB08A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		2481FDF917C8E33800CDD87C /* StyleguideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StyleguideViewController.h; path = BRLN/controllers/StyleguideViewController.h; sourceTree = "<group>"; };
+		2481FDFA17C8E33800CDD87C /* StyleguideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StyleguideViewController.m; path = BRLN/controllers/StyleguideViewController.m; sourceTree = "<group>"; };
+		2481FDFB17C8E33800CDD87C /* StyleguideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StyleguideViewController.xib; path = BRLN/controllers/StyleguideViewController.xib; sourceTree = "<group>"; };
+		2481FDFF17C95C3100CDD87C /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoViewController.xib; path = BRLN/controllers/InfoViewController.xib; sourceTree = "<group>"; };
 		2493C0C817C4172300DAD1CA /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Place.h; path = BRLN/models/Place.h; sourceTree = "<group>"; };
 		2493C0C917C4172300DAD1CA /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Place.m; path = BRLN/models/Place.m; sourceTree = "<group>"; };
 		2493C0CB17C4172400DAD1CA /* PlaceLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceLocation.h; path = BRLN/models/PlaceLocation.h; sourceTree = "<group>"; };
@@ -201,7 +207,6 @@
 		24F7BBB2179DD2CF003BA61D /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FavoritesViewController.xib; path = BRLN/controllers/FavoritesViewController.xib; sourceTree = "<group>"; };
 		24F7BBB6179DD332003BA61D /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoViewController.h; path = BRLN/controllers/InfoViewController.h; sourceTree = "<group>"; };
 		24F7BBB7179DD332003BA61D /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoViewController.m; path = BRLN/controllers/InfoViewController.m; sourceTree = "<group>"; };
-		24F7BBB8179DD332003BA61D /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoViewController.xib; path = BRLN/controllers/InfoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +345,16 @@
 			name = resources;
 			sourceTree = "<group>";
 		};
+		2481FDFE17C8E34000CDD87C /* Styleguide */ = {
+			isa = PBXGroup;
+			children = (
+				2481FDF917C8E33800CDD87C /* StyleguideViewController.h */,
+				2481FDFA17C8E33800CDD87C /* StyleguideViewController.m */,
+				2481FDFB17C8E33800CDD87C /* StyleguideViewController.xib */,
+			);
+			name = Styleguide;
+			sourceTree = "<group>";
+		};
 		24F7BB76179DCFAF003BA61D = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +430,7 @@
 				24F7BBAF179DD2B2003BA61D /* Favorites */,
 				24F7BBB5179DD30C003BA61D /* Info */,
 				2440FCAF179F32AF001FF0FB /* Details */,
+				2481FDFE17C8E34000CDD87C /* Styleguide */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -471,7 +487,7 @@
 			children = (
 				24F7BBB6179DD332003BA61D /* InfoViewController.h */,
 				24F7BBB7179DD332003BA61D /* InfoViewController.m */,
-				24F7BBB8179DD332003BA61D /* InfoViewController.xib */,
+				2481FDFF17C95C3100CDD87C /* InfoViewController.xib */,
 			);
 			name = Info;
 			sourceTree = "<group>";
@@ -537,7 +553,6 @@
 				24F7BBA5179DD10A003BA61D /* CategoriesViewController.xib in Resources */,
 				24F7BBAC179DD235003BA61D /* MapViewController.xib in Resources */,
 				24F7BBB4179DD2CF003BA61D /* FavoritesViewController.xib in Resources */,
-				24F7BBBA179DD332003BA61D /* InfoViewController.xib in Resources */,
 				2440FCA9179F2C5B001FF0FB /* PlacesViewController.xib in Resources */,
 				2468D0B817A70195003CB08A /* data.json in Resources */,
 				243FBC9D17A83D1100825D1B /* location.gpx in Resources */,
@@ -585,6 +600,8 @@
 				240C98AB17C546370094488B /* Icon.png in Resources */,
 				240C98AD17C546370094488B /* iTunesArtwork.png in Resources */,
 				240C98AE17C546370094488B /* iTunesArtwork@2x.png in Resources */,
+				2481FDFD17C8E33800CDD87C /* StyleguideViewController.xib in Resources */,
+				2481FE0017C95C3100CDD87C /* InfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +666,7 @@
 				2493C0CD17C4172400DAD1CA /* PlaceLocation.m in Sources */,
 				2493C0D017C4172400DAD1CA /* Category.m in Sources */,
 				245A4EAA17C7D1D80099A27B /* UIColor+Palette.m in Sources */,
+				2481FDFC17C8E33800CDD87C /* StyleguideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

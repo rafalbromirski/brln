@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface InfoViewController : UIViewController
-{
-    __weak IBOutlet UINavigationBar *navigationBar;
-}
 
 @end

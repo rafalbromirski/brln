@@ -15,6 +15,7 @@
 #import "MapViewController.h"
 #import "FavoritesViewController.h"
 #import "InfoViewController.h"
+#import "StyleguideViewController.h"
 
 #import "AKTabBarController.h"
 
@@ -29,7 +30,7 @@
     
     [self initWindows];
         
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor _whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -91,6 +92,9 @@
     // ### CONTROLLERS: INFO ###
     InfoViewController *infoController = [[InfoViewController alloc] init];
     
+    // ### CONTROLLERS: STYLEGUIDE ###
+//    StyleguideViewController *styleguideController = [[StyleguideViewController alloc] init];
+    
     // ### MAIN: TABBAR ###
     AKTabBarController *tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:50];
     [tabBarController setBackgroundImageName:@"tabbar"];
@@ -98,13 +102,12 @@
     [tabBarController setIconGlossyIsHidden:YES];
     [tabBarController setIconShadowColor:[UIColor clearColor]];
     [tabBarController setIconColors:[NSArray arrayWithObjects:[UIColor colorWithRed:89.0/255.0 green:95.0/255.0 blue:106.0/255.0 alpha:1.0], [UIColor colorWithRed:89.0/255.0 green:95.0/255.0 blue:106.0/255.0 alpha:1.0], nil]];
-    [tabBarController setSelectedIconColors:[NSArray arrayWithObjects:[UIColor whiteColor], [UIColor whiteColor], nil]];
+    [tabBarController setSelectedIconColors:[NSArray arrayWithObjects:[UIColor _whiteColor], [UIColor _whiteColor], nil]];
     
     [tabBarController setTabTitleIsHidden:YES];
     [tabBarController setTabStrokeColor:[UIColor clearColor]];
     [tabBarController setTabInnerStrokeColor:[UIColor clearColor]];
     [tabBarController setTabEdgeColor:[UIColor clearColor]];
-    [tabBarController setTopEdgeColor:[UIColor redColor]];
     [tabBarController setSelectedIconOuterGlowColor:[UIColor clearColor]];
     [tabBarController setTabColors:[NSArray arrayWithObjects:[UIColor clearColor], [UIColor clearColor], nil]];
     

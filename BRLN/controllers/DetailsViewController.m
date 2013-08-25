@@ -109,14 +109,14 @@
     [placeDetailsView addSubview:placeButtonsView];
     
     BRLNFlatButton *placeShareButton = [BRLNFlatButton buttonWithType:UIButtonTypeCustom];
-    [placeShareButton setFrame:CGRectMake(0, 0, placeButtonsView.frame.size.width/2 - 10, placeButtonsView.frame.size.height)];
+    [placeShareButton setFrame:CGRectMake(0, 0, placeButtonsView.frame.size.width/2 - 5, placeButtonsView.frame.size.height)];
     [placeShareButton setTitle:@"Share via email" forState:UIControlStateNormal];
     [placeShareButton addTarget:self action:@selector(shareViaEmail:) forControlEvents:UIControlEventTouchUpInside];
     [placeButtonsView addSubview:placeShareButton];
     
     
     BRLNFlatButton *placeWebsiteButton = [BRLNFlatButton buttonWithType:UIButtonTypeCustom];
-    [placeWebsiteButton setFrame:CGRectMake(placeButtonsView.frame.size.width/2 + 10, 0, placeButtonsView.frame.size.width/2 - 10, placeButtonsView.frame.size.height)];
+    [placeWebsiteButton setFrame:CGRectMake(placeButtonsView.frame.size.width/2 + 5, 0, placeButtonsView.frame.size.width/2 - 5, placeButtonsView.frame.size.height)];
     [placeWebsiteButton setTitle:@"Visit website" forState:UIControlStateNormal];
     [placeWebsiteButton addTarget:self action:@selector(openLink:) forControlEvents:UIControlEventTouchUpInside];
     [placeWebsiteButton setEnabled:([[place placeUrl] isEqualToString:@"-"] ? NO : YES)];
