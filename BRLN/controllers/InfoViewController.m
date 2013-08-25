@@ -59,18 +59,33 @@
     UIView *buttonsView = [[UIView alloc] initWithFrame:CGRectMake(20, screenHeight - 215, screenWidth - 40, 125)];
     
     BRLNFlatButton *rateButton = [[BRLNFlatButton alloc] initWithFrame:CGRectMake(0, 0, buttonsView.frame.size.width, 35)];
-    [rateButton setTitle:@"Rate on AppStore" forState:UIControlStateNormal];
-//    [rateButton setBaseColor:[UIColor whiteColor]];
+    [rateButton setText:@"Rate on AppStore"];
+    [rateButton setBackgroundColor:[UIColor _primaryColor]];
+    [rateButton setBackgroundHighlightedColor:[UIColor whiteColor]];
+    [rateButton setBorderColor:[[UIColor whiteColor] colorWithAlphaComponent:0.4]];
+    [rateButton setBorderHighlightedColor:[UIColor whiteColor]];
+    [rateButton setTextColor:[UIColor _whiteColor]];
+    [rateButton setTextHighlightedColor:[UIColor _primaryColor]];
     [buttonsView addSubview:rateButton];
 
     BRLNFlatButton *websiteButton = [[BRLNFlatButton alloc] initWithFrame:CGRectMake(0, 45, buttonsView.frame.size.width, 35)];
-    [websiteButton setTitle:@"Visit our website" forState:UIControlStateNormal];
-//    [websiteButton setBaseColor:[UIColor whiteColor]];
-    [buttonsView addSubview:websiteButton];
-
+    [websiteButton setText:@"Visit our website"];
+    [websiteButton setBackgroundColor:[UIColor _primaryColor]];
+    [websiteButton setBackgroundHighlightedColor:[UIColor whiteColor]];    
+    [websiteButton setBorderColor:[[UIColor whiteColor] colorWithAlphaComponent:0.3]];
+    [websiteButton setBorderHighlightedColor:[UIColor whiteColor]];
+    [websiteButton setTextColor:[UIColor _whiteColor]];
+    [websiteButton setTextHighlightedColor:[UIColor _primaryColor]];
+    [buttonsView addSubview:websiteButton];    
+    
     BRLNFlatButton *contactButton = [[BRLNFlatButton alloc] initWithFrame:CGRectMake(0, 90, buttonsView.frame.size.width, 35)];
-    [contactButton setTitle:@"Contact us: support@xyz.com" forState:UIControlStateNormal];
-//    [contactButton setBaseColor:[UIColor whiteColor]];    
+    [contactButton setText:@"Contact us: support@xyz.com"];
+    [contactButton setBackgroundColor:[UIColor _primaryColor]];
+    [contactButton setBackgroundHighlightedColor:[UIColor whiteColor]];        
+    [contactButton setBorderColor:[[UIColor whiteColor] colorWithAlphaComponent:0.4]];
+    [contactButton setBorderHighlightedColor:[UIColor whiteColor]];
+    [contactButton setTextColor:[UIColor _whiteColor]];
+    [contactButton setTextHighlightedColor:[UIColor _primaryColor]];
     [buttonsView addSubview:contactButton];
     
     [[self view] addSubview:logo];

@@ -243,7 +243,10 @@
 
 - (void)showOnMap:(id)sender
 {
-    NSLog(@"show on map");
+    MapViewController *mvc = [[MapViewController alloc] initWithMapPredicateType:@"favorites"];
+    [mvc setMapAnnotatesClickable:NO];
+    
+    [self.navigationController pushViewController:mvc animated:YES];
 }
 
 

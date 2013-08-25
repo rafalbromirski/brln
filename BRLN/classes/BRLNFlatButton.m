@@ -10,6 +10,21 @@
 
 @implementation BRLNFlatButton
 
+@synthesize text = _text;
+
+@synthesize textColor = _textColor;
+@synthesize textHighlightedColor = _textHighlightedColor;
+@synthesize textDisabledColor = _textDisabledColor;
+
+@synthesize borderColor = _borderColor;
+@synthesize borderHighlightedColor = _borderHighlightedColor;
+@synthesize borderDisabledColor = _borderDisabledColor;
+
+@synthesize backgroundColor = _backgroundColor;
+@synthesize backgroundHighlightedColor = _backgroundHighlightedColor;
+@synthesize backgroundDisabledColor = _backgroundDisabledColor;
+
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -36,36 +51,54 @@
     CGSize size = self.bounds.size;
     CGRect buttonRectangle = CGRectMake(0, 0, size.width, size.height);
     
+    UIColor *buttonTitleColor = nil;
+    UIFont *buttonFont = [UIFont fontWithName:@"Lato-Light" size:12.0];
+    NSString *buttonTitle = [self text];
+    CGSize buttonTitleSize = [buttonTitle sizeWithFont:buttonFont constrainedToSize:buttonRectangle.size];
+
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    
     if (self.highlighted == YES)
-    {        
-        CGContextRef ctx = UIGraphicsGetCurrentContext();
+    {                
+        CGContextSetFillColorWithColor(ctx, [[self backgroundHighlightedColor] CGColor]);
+        CGContextFillRect(ctx, buttonRectangle);
         
         CGContextSetLineWidth(ctx, 1.0);
-        CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:200.0/255.0 green:211.0/255.0 blue:218.0/255.0 alpha:1.0] CGColor]);
+        CGContextSetStrokeColorWithColor(ctx, [[self borderHighlightedColor] CGColor]);
         CGContextAddRect(ctx, buttonRectangle);
         CGContextStrokePath(ctx);
         
-        CGContextSetFillColorWithColor(ctx, [[UIColor colorWithRed:200.0/255.0 green:211.0/255.0 blue:218.0/255.0 alpha:1.0] CGColor]);
-        CGContextFillRect(ctx, buttonRectangle);
+        buttonTitleColor = [self textHighlightedColor];
     }
     else if (self.enabled == NO)
-    {
-        CGContextRef ctx = UIGraphicsGetCurrentContext();
+    {        
+        CGContextSetFillColorWithColor(ctx, [[self backgroundDisabledColor] CGColor]);
+        CGContextFillRect(ctx, buttonRectangle);
         
         CGContextSetLineWidth(ctx, 1.0);
-        CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:200.0/255.0 green:211.0/255.0 blue:218.0/255.0 alpha:0.4] CGColor]);
+        CGContextSetStrokeColorWithColor(ctx, [[self borderDisabledColor] CGColor]);
         CGContextAddRect(ctx, buttonRectangle);
         CGContextStrokePath(ctx);
+        
+        buttonTitleColor = [self textDisabledColor];
     }
     else
     {
-        CGContextRef ctx = UIGraphicsGetCurrentContext();
+        CGContextSetFillColorWithColor(ctx, [[self backgroundColor] CGColor]);
+        CGContextFillRect(ctx, buttonRectangle);
         
         CGContextSetLineWidth(ctx, 1.0);
-        CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:200.0/255.0 green:211.0/255.0 blue:218.0/255.0 alpha:1.0] CGColor]);
+        CGContextSetStrokeColorWithColor(ctx, [[self borderColor] CGColor]);
         CGContextAddRect(ctx, buttonRectangle);
         CGContextStrokePath(ctx);
+        
+        buttonTitleColor = [self textColor];
     }
+    
+    NSLog(@"color: %@", buttonTitleColor);
+    
+    CGContextSetFillColorWithColor(ctx, [buttonTitleColor CGColor]);
+    [buttonTitle drawInRect:CGRectMake( (buttonRectangle.size.width / 2) - (buttonTitleSize.width / 2) , (buttonRectangle.size.height / 2) - (buttonTitleSize.height / 2), buttonTitleSize.width, buttonTitleSize.height) withFont:buttonFont lineBreakMode:NSLineBreakByTruncatingTail alignment:NSTextAlignmentCenter];
 
     // helpers:
     //    NSString *buttonTitle = @"test";
@@ -81,11 +114,17 @@
 
 - (void)applyStyle
 {
-    [self setTitleColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:1.0] forState:UIControlStateNormal];
-    [self setTitleColor:[UIColor _whiteColor] forState:UIControlStateHighlighted];
-    [self setTitleColor:[UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:0.4] forState:UIControlStateDisabled];
-
-    [[self titleLabel] setFont:[UIFont fontWithName:@"Lato-Light" size:12.0]];
+    self.backgroundColor = [UIColor _whiteColor];
+    self.backgroundHighlightedColor = [UIColor colorWithRed:200.0/255.0 green:211.0/255.0 blue:218.0/255.0 alpha:1.0];
+    self.backgroundDisabledColor = [self backgroundColor];
+    
+    self.textColor = [UIColor colorWithRed:97.0/255.0 green:106.0/255.0 blue:119.0/255.0 alpha:1.0];
+    self.textHighlightedColor = [self backgroundColor];
+    self.textDisabledColor = [[self textColor] colorWithAlphaComponent:0.4];
+    
+    self.borderColor = [self backgroundHighlightedColor];
+    self.borderHighlightedColor = [self borderColor];
+    self.borderDisabledColor = [[self borderColor] colorWithAlphaComponent:0.4];
 }
 
 @end
