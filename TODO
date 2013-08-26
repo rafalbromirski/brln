@@ -1,20 +1,21 @@
 [ ] check TODO
-[ ] subentities / check if I need them (eg. places - I need title and number)
-[ ] detailsView - FetchedRequest instead of passing an object / initWithPlaceName
-[ ] remove unused fonts
 [ ] check reusedIdentifier
-[ ] check icon-list tabbar (1px diff?)
+[ ] add rating (https://github.com/arashpayan/appirater/)
 
-[-] check tabbar with only one navigationView (right now I have 3)
+[x] subentities / check if I need them (eg. places - I need title and number)
+[x] remove unused fonts
+[x] check icon-list tabbar (1px diff?)
 [x] trigger rootControllers for navigationViews
-[-] FlatUI / can't replay on it - dependencies (ios7)
 [x] read about fetchrequestcontroller
 [x] extract importData from CategoriesController (Singleton bitch!)
-
-[-] extract Places / Categories as a separate Class like STORAGE
-    since I decided to use NSFetchedRequestController I don't need it
-
-[-] fast enumerator for Entity / json is not a EntityDescription
-
 [x] check delete method; should be: [managedObjectContext deleteObject:eventToDelete];
     http://developer.apple.com/library/ios/#documentation/DataManagement/Conceptual/iPhoneCoreData01/Articles/
+
+
+[-] check tabbar with only one navigationView (right now I have 3)
+[-] FlatUI / can't replay on it - dependencies (ios7)
+[-] extract Places / Categories as a separate Class like STORAGE
+    since I decided to use NSFetchedRequestController I don't need it
+[-] fast enumerator for Entity / json is not a EntityDescription
+[-] detailsView - FetchedRequest instead of passing an object / initWithPlaceName
+

@@ -339,6 +339,12 @@ typedef enum {
     }
     else
     {
+        // popToRoot (avoid many eg. 'maps' at the same tabs)
+        // same as delegate for TabBarController
+        if ([[self selectedViewController] isKindOfClass:[UINavigationController class]]) {
+            [(UINavigationController *)[self selectedViewController] popToRootViewControllerAnimated:YES];
+        }
+        
         [[self navigationItem] setTitle:[vc title]];
         self.selectedViewController = vc;
     }

@@ -94,8 +94,7 @@
         
         buttonTitleColor = [self textColor];
     }
-    
-    NSLog(@"color: %@", buttonTitleColor);
+
     
     CGContextSetFillColorWithColor(ctx, [buttonTitleColor CGColor]);
     [buttonTitle drawInRect:CGRectMake( (buttonRectangle.size.width / 2) - (buttonTitleSize.width / 2) , (buttonRectangle.size.height / 2) - (buttonTitleSize.height / 2), buttonTitleSize.width, buttonTitleSize.height) withFont:buttonFont lineBreakMode:NSLineBreakByTruncatingTail alignment:NSTextAlignmentCenter];

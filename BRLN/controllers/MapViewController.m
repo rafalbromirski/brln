@@ -72,8 +72,13 @@ static double location_distance = 7000;
     
     if (!places) {
         [self initPlaces];
+        [self initMapView];
+    } else {
+        CLLocationDegrees lat = [[[places objectAtIndex:0] placeLocation] latitude];
+        CLLocationDegrees lng = [[[places objectAtIndex:0] placeLocation] longitude];
+        CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(lat, lng);
+        [self initMapViewWith:loc];
     }
-    [self initMapView];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -126,6 +131,15 @@ static double location_distance = 7000;
     // TODO - CONST file
     CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(location_lat, location_long);
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, location_distance, location_distance);
+    [mapView setRegion:region];
+    [mapView setShowsUserLocation:YES];
+    [mapView addAnnotations:[self getPlacesAnnotations]];
+}
+
+- (void)initMapViewWith:(CLLocationCoordinate2D)location
+{
+    // TODO - CONST file
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location, location_distance, location_distance);
     [mapView setRegion:region];
     [mapView setShowsUserLocation:YES];
     [mapView addAnnotations:[self getPlacesAnnotations]];

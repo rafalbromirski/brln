@@ -259,6 +259,7 @@
 				245A4EA917C7D1D80099A27B /* UIColor+Palette.m */,
 			);
 			name = Helpers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		24196EBD17BBF9E70083185C /* components */ = {
@@ -322,6 +323,7 @@
 				24F14E5E17C2C3B300CEAE01 /* BRLNFlatButton.m */,
 			);
 			name = Classes;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2440FCAF179F32AF001FF0FB /* Details */ = {
@@ -345,6 +347,20 @@
 			name = resources;
 			sourceTree = "<group>";
 		};
+		2452A0E117CC069400E28304 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				24F7BB9F179DCFC6003BA61D /* Controllers */,
+				2416663417B1A01800C145AE /* Helpers */,
+				24F7BBA0179DCFCD003BA61D /* Models */,
+				243D563617BC36BF00522DB3 /* Classes */,
+				24F7BB91179DCFAF003BA61D /* BRLNAppDelegate.h */,
+				24F7BB92179DCFAF003BA61D /* BRLNAppDelegate.m */,
+			);
+			name = App;
+			path = BRLN;
+			sourceTree = "<group>";
+		};
 		2481FDFE17C8E34000CDD87C /* Styleguide */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,11 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				24523B0117ADC0EC00FAF7FA /* TODO */,
-				24F7BB9F179DCFC6003BA61D /* Controllers */,
-				2416663417B1A01800C145AE /* Helpers */,
-				24F7BBA0179DCFCD003BA61D /* Models */,
-				243D563617BC36BF00522DB3 /* Classes */,
-				24F7BB88179DCFAF003BA61D /* Main */,
+				2452A0E117CC069400E28304 /* App */,
 				24F7BB89179DCFAF003BA61D /* Supporting Files */,
 				24F7BB81179DCFAF003BA61D /* Frameworks */,
 				24F7BB80179DCFAF003BA61D /* Products */,
@@ -392,16 +404,6 @@
 				0D2CC949B22D4EDFA23B47BB /* libPods.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		24F7BB88179DCFAF003BA61D /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				24F7BB91179DCFAF003BA61D /* BRLNAppDelegate.h */,
-				24F7BB92179DCFAF003BA61D /* BRLNAppDelegate.m */,
-			);
-			name = Main;
-			path = BRLN;
 			sourceTree = "<group>";
 		};
 		24F7BB89179DCFAF003BA61D /* Supporting Files */ = {
@@ -433,6 +435,7 @@
 				2481FDFE17C8E34000CDD87C /* Styleguide */,
 			);
 			name = Controllers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		24F7BBA0179DCFCD003BA61D /* Models */ = {
@@ -447,6 +450,7 @@
 				2493C0C917C4172300DAD1CA /* Place.m */,
 			);
 			name = Models;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		24F7BBA6179DD204003BA61D /* List */ = {
